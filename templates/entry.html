@@ -9,6 +9,10 @@
         <script>
             const t = localStorage.getItem('theme');
             if (t) document.documentElement.setAttribute('data-theme', t);
+            const p = new URLSearchParams(location.search).get('lang');
+            const lg = p === 'zh' || p === 'en' ? p : (localStorage.getItem('lang') || 'en');
+            document.documentElement.setAttribute('data-lang', lg);
+            document.documentElement.setAttribute('lang', lg);
         </script>
     </head>
     <body>
@@ -17,6 +21,7 @@
                 {{breadcrumb}}
             </nav>
         <script src="/theme.js" defer></script>
+        <script src="/lang.js" defer></script>
         </header>
         <hr>
         <main>

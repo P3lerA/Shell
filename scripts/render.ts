@@ -137,10 +137,14 @@ function splitChildLinks(md: string): string {
 }
 
 function resolveLinks(md: string, urlMap: Map<string, UrlInfo>): string {
-  return md.replace(/\{\{link:([0-9a-f-]+)\|([^}]+)\}\}/g, (_, id, text) => {
+  // Use the manifest's current title as the link text rather than whatever was
+  // captured in the .md (which goes stale when a referenced page is renamed
+  // — Notion doesn't bump the parent's last_edited when a child renames, so
+  // the parent's .md keeps the old child name forever otherwise).
+  return md.replace(/\{\{link:([0-9a-f-]+)\|([^}]+)\}\}/g, (_, id, fallbackText) => {
     const info = urlMap.get(id);
-    if (!info) return text;
-    return `[${text}](${info.url})`;
+    if (!info) return fallbackText; // target outside our wiki — keep original text
+    return `[${info.title}](${info.url})`;
   });
 }
 
@@ -148,29 +152,90 @@ function rewriteImagePaths(html: string): string {
   return html.replace(/src="\/images\//g, 'src="/wiki/images/');
 }
 
+async function renderMd(path: string, urlMap: Map<string, UrlInfo>): Promise<string> {
+  const md = readFileSync(path, 'utf8');
+  const resolved = resolveLinks(splitChildLinks(md), urlMap);
+  const html = await marked.parse(resolved);
+  return rewriteImagePaths(html);
+}
+
+const THEME_BTN = `<button class="theme-toggle" aria-label="Toggle theme"></button>`;
+const LANG_BTN =
+  `<button class="lang-toggle" aria-label="Switch language">` +
+  `<span data-show-lang="en">ZH</span><span data-show-lang="zh">EN</span></button>`;
+
 // === breadcrumb builders ===
-function wikiBreadcrumb(ancestors: Node[], leafTitle: string, urlMap: Map<string, UrlInfo>): string {
+function wikiBreadcrumb(
+  ancestors: Node[],
+  leaf: Node,
+  hasZh: boolean,
+  urlMap: Map<string, UrlInfo>,
+): string {
   const parts: string[] = [
     `<a href="/">~</a>`,
     `<a href="/${RAGRIFF_OUT}/">Ragriff</a>`,
   ];
   for (const a of ancestors) {
-    const info = urlMap.get(a.enEntry.notionID);
-    parts.push(`<a href="${info?.url ?? '#'}">${escapeHtml(a.enEntry.title)}</a>`);
+    const url = urlMap.get(a.enEntry.notionID)?.url ?? '#';
+    const enT = escapeHtml(a.enEntry.title);
+    const zhT = a.zhEntry ? escapeHtml(a.zhEntry.title) : enT;
+    if (hasZh) {
+      parts.push(
+        `<a href="${url}"><span data-show-lang="en">${enT}</span><span data-show-lang="zh">${zhT}</span></a>`,
+      );
+    } else {
+      parts.push(`<a href="${url}">${enT}</a>`);
+    }
   }
-  parts.push(
-    `<span class="leaf">${escapeHtml(leafTitle)}<button class="theme-toggle" aria-label="Toggle theme"></button></span>`,
-  );
+  if (hasZh) parts.push(LANG_BTN);
+  const enLeaf = escapeHtml(leaf.enEntry.title);
+  const leafInner = hasZh && leaf.zhEntry
+    ? `<span data-show-lang="en">${enLeaf}</span><span data-show-lang="zh">${escapeHtml(leaf.zhEntry.title)}</span>`
+    : enLeaf;
+  parts.push(`<span class="leaf">${leafInner}${THEME_BTN}</span>`);
   return parts.join('\n                ');
 }
 
 function postBreadcrumb(title: string): string {
-  const parts: string[] = [
+  return [
     `<a href="/">~</a>`,
     `<a href="/${POST_OUT}/">Posts</a>`,
-    `<span class="leaf">${escapeHtml(title)}<button class="theme-toggle" aria-label="Toggle theme"></button></span>`,
-  ];
-  return parts.join('\n                ');
+    `<span class="leaf">${escapeHtml(title)}${THEME_BTN}</span>`,
+  ].join('\n                ');
+}
+
+// === entry content (notes above body + dual-lang body) ===
+function buildEntryContent(node: Node, enHtml: string, zhHtml: string, hasZh: boolean): string {
+  const enNotes: string[] = [];
+  const zhNotes: string[] = [];
+
+  if (node.enEntry.etymology) {
+    enNotes.push(`<p>Etymology: ${escapeHtml(node.enEntry.etymology)}</p>`);
+  }
+  if (node.zhEntry?.etymology) {
+    zhNotes.push(`<p>词源: ${escapeHtml(node.zhEntry.etymology)}</p>`);
+  }
+  if (hasZh && node.enEntry.stat === 'Auto Translated') {
+    enNotes.push(`<p>This Entry is Machine-translated from the Chinese original and requires review.</p>`);
+  }
+
+  const parts: string[] = [];
+  if (hasZh) {
+    if (enNotes.length > 0) {
+      parts.push(`<blockquote class="notes" data-show-lang="en">${enNotes.join('')}</blockquote>`);
+    }
+    if (zhNotes.length > 0) {
+      parts.push(`<blockquote class="notes" data-show-lang="zh">${zhNotes.join('')}</blockquote>`);
+    }
+    parts.push(`<article data-show-lang="en">${enHtml}</article>`);
+    parts.push(`<article data-show-lang="zh">${zhHtml}</article>`);
+  } else {
+    if (enNotes.length > 0) {
+      parts.push(`<blockquote class="notes">${enNotes.join('')}</blockquote>`);
+    }
+    parts.push(enHtml);
+  }
+  return parts.join('\n');
 }
 
 // === per-entry render ===
@@ -183,18 +248,21 @@ async function renderWikiEntry(
   const info = pathMap.get(id);
   if (!info) return false;
 
-  const mdPath = join(CONTENT_DIR, 'en', ...info.segs, `${id}.md`);
-  if (!existsSync(mdPath)) return false;
+  const enMdPath = join(CONTENT_DIR, 'en', ...info.segs, `${id}.md`);
+  if (!existsSync(enMdPath)) return false;
+  const enHtml = await renderMd(enMdPath, urlMap);
 
-  const md = readFileSync(mdPath, 'utf8');
-  const resolved = resolveLinks(splitChildLinks(md), urlMap);
-  const html = await marked.parse(resolved);
-  const fixed = rewriteImagePaths(html);
+  let zhHtml = '';
+  if (node.zhEntry) {
+    const zhMdPath = join(CONTENT_DIR, 'zh', ...info.segs, `${node.zhEntry.notionID}.md`);
+    if (existsSync(zhMdPath)) zhHtml = await renderMd(zhMdPath, urlMap);
+  }
+  const hasZh = zhHtml !== '';
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
     title: escapeHtml(node.enEntry.title),
-    breadcrumb: wikiBreadcrumb(info.ancestors, node.enEntry.title, urlMap),
-    content: fixed,
+    breadcrumb: wikiBreadcrumb(info.ancestors, node, hasZh, urlMap),
+    content: buildEntryContent(node, enHtml, zhHtml, hasZh),
   });
 
   const outDir = join(RAGRIFF_OUT, ...info.segs);
@@ -206,16 +274,12 @@ async function renderWikiEntry(
 async function renderPost(post: BlogEntry, urlMap: Map<string, UrlInfo>): Promise<boolean> {
   const mdPath = join(CONTENT_DIR, 'posts', `${post.notionID}.md`);
   if (!existsSync(mdPath)) return false;
-
-  const md = readFileSync(mdPath, 'utf8');
-  const resolved = resolveLinks(splitChildLinks(md), urlMap);
-  const html = await marked.parse(resolved);
-  const fixed = rewriteImagePaths(html);
+  const html = await renderMd(mdPath, urlMap);
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
     title: escapeHtml(post.title),
     breadcrumb: postBreadcrumb(post.title),
-    content: fixed,
+    content: html,
   });
 
   const slug = slugify(post.title);
@@ -226,18 +290,21 @@ async function renderPost(post: BlogEntry, urlMap: Map<string, UrlInfo>): Promis
 }
 
 // === listing pages (reuse entry.html template) ===
-function landingBreadcrumb(leafTitle: string): string {
-  return [
-    `<a href="/">~</a>`,
-    `<span class="leaf">${escapeHtml(leafTitle)}<button class="theme-toggle" aria-label="Toggle theme"></button></span>`,
-  ].join('\n                ');
+function landingBreadcrumb(leafTitle: string, withLangToggle: boolean): string {
+  const parts = [`<a href="/">~</a>`];
+  if (withLangToggle) parts.push(LANG_BTN);
+  parts.push(`<span class="leaf">${escapeHtml(leafTitle)}${THEME_BTN}</span>`);
+  return parts.join('\n                ');
 }
 
 function renderRagriffLanding(tree: Node[]): void {
   const items = tree
     .map(n => {
       const slug = slugify(n.enEntry.title);
-      return `    <li><a href="/${RAGRIFF_OUT}/${slug}/">${escapeHtml(n.enEntry.title)}</a></li>`;
+      const enT = escapeHtml(n.enEntry.title);
+      const zhT = n.zhEntry ? escapeHtml(n.zhEntry.title) : enT;
+      const label = `<span data-show-lang="en">${enT}</span><span data-show-lang="zh">${zhT}</span>`;
+      return `    <li><a href="/${RAGRIFF_OUT}/${slug}/">${label}</a></li>`;
     })
     .join('\n');
 
@@ -245,7 +312,7 @@ function renderRagriffLanding(tree: Node[]): void {
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
     title: 'Ragriff',
-    breadcrumb: landingBreadcrumb('Ragriff'),
+    breadcrumb: landingBreadcrumb('Ragriff', true),
     content,
   });
 
@@ -303,7 +370,7 @@ function renderPostListing(posts: BlogEntry[]): void {
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
     title: 'Posts',
-    breadcrumb: landingBreadcrumb('Posts'),
+    breadcrumb: landingBreadcrumb('Posts', false),
     content,
   });
 

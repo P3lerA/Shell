@@ -20,6 +20,7 @@ jobs:
       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       ZH_DS_ID: 17a0aee4-fbad-81a4-8a6f-000b6b236f69
       EN_DS_ID: 35b0aee4-fbad-81b7-bd9d-000b8c176dd5
+      BLOG_DS_ID: 35c0aee4-fbad-8001-a903-000bcd336c3e
       EN_RELATION_PROPERTY: zh
     steps:
       - uses: actions/checkout@v4

@@ -1,0 +1,7 @@
+{{link:17a0aee4-fbad-8191-9c46-c467e54ab152|欧戈斯[Argos]}} 自诞生以来，就处于与{{link:17a0aee4-fbad-810c-803f-e457272a6925|山臣[Hillkind]}} 的长期矛盾中。
+
+在欧戈斯作为新兴之国尚未站稳脚跟，寻求向外扩张之际，就窥求于{{link:17a0aee4-fbad-81c6-8577-cd69329b0d85|山臣群山[Hillkind Mountains]}} 与欧戈斯之间暧昧不清的交界地。
+
+长期受欧戈斯[Argos]的侵略性行为烦扰不堪的山臣籍此发起战争，即两者之间的第一次战争。彼时，{{link:17a0aee4-fbad-81fd-bec1-f158b29d5e44|阿尔戈斯[ALLGOES]}} 与{{link:17a0aee4-fbad-81d2-af6a-caa6c8382fe5|斐迪南•C•欧戈斯[Ferdinand•C•Argos]}} 尚在{{link:17a0aee4-fbad-81e5-b211-ce81ba2f9878|俄瑞亚[Ourea]}} 门下。
+
+&nbsp;

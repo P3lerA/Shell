@@ -108,3 +108,37 @@ nav ul {
 .theme-toggle:hover {
   background: var(--toggle-preview);
 }
+
+[data-lang="en"] [data-show-lang="zh"] { display: none; }
+[data-lang="zh"] [data-show-lang="en"] { display: none; }
+
+.lang-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: var(--link);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+}
+.lang-toggle:hover {
+  color: var(--fg);
+  text-decoration-color: var(--fg);
+}
+
+.notes {
+  margin: 0.4rem 0 1.5rem;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9em;
+  font-style: italic;
+}
+.notes p {
+  margin: 0.2rem 0;
+}

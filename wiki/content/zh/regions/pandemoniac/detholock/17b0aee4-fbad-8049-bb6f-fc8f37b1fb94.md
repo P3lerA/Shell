@@ -1,0 +1,15 @@
+德索拉克，即终焉高原。
+
+&nbsp;
+
+位于{{link:17a0aee4-fbad-8181-af83-fd5db697f362|特诺奇蒂特兰[Tenochtitlan]}} 北部的高原，四周是诡异的断崖。
+
+&nbsp;
+
+为数不多活着从终焉高原回来的人，已经无法正常描述他们所见的不可名状之物。
+
+&nbsp;
+
+{{link:17b0aee4-fbad-80b1-85c8-e889c19b6d77|晨曦高塔[Sunglow Tower]}}
+
+&nbsp;
