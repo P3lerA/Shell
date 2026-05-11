@@ -21,5 +21,3 @@ The four Elemental Lords corresponding to the four elements are as follows:
 {{link:35b0aee4-fbad-81e9-8853-c5321636d303|Hephaestus}}
 
 &nbsp;
-
-### **the Legates**

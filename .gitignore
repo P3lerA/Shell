@@ -8,5 +8,5 @@ dist/
 *.log
 *.tsbuildinfo
 /.scripts
-ragriff/
-post/
+/ragriff/
+/post/

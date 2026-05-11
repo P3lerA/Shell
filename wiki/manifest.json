@@ -67,8 +67,8 @@
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-8124-89bc-cca8ca5aa019",
-            "title": "辛德拉试验",
-            "lastModified": "2026-05-09T20:33:00.000Z",
+            "title": "Cysindera Test",
+            "lastModified": "2026-05-11T19:25:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [],
@@ -82,14 +82,14 @@
           "enEntry": {
             "notionID": "35b0aee4-fbad-8126-aa93-c422b2f64b85",
             "title": "Mana",
-            "lastModified": "2026-05-10T21:24:00.000Z",
+            "lastModified": "2026-05-11T19:26:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [],
           "zhEntry": {
             "notionID": "1b90aee4-fbad-80e0-b7cd-df18d082eb9d",
             "title": "魔力",
-            "lastModified": "2026-04-16T06:30:00.000Z"
+            "lastModified": "2026-05-11T19:23:00.000Z"
           }
         },
         {
@@ -4072,7 +4072,7 @@
       "enEntry": {
         "notionID": "35b0aee4-fbad-81d8-a044-ee05cdddfef1",
         "title": "Higher Beings",
-        "lastModified": "2026-05-11T18:06:00.000Z",
+        "lastModified": "2026-05-11T19:27:00.000Z",
         "stat": "Reviewed"
       },
       "children": [
@@ -4223,7 +4223,7 @@
           "enEntry": {
             "notionID": "35b0aee4-fbad-8196-ac0f-c12f7b9e4ea4",
             "title": "Lord",
-            "lastModified": "2026-05-10T05:13:00.000Z",
+            "lastModified": "2026-05-11T19:27:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [
