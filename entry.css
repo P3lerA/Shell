@@ -1,0 +1,45 @@
+h1 {
+  color: var(--fg);
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+h2, h3 {
+  color: var(--fg);
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-size: 0.95em;
+  font-weight: bold;
+  color: var(--muted);
+}
+
+.trail a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.trail a:hover {
+  color: var(--link);
+}
+
+.trail a::after {
+  content: '/';
+  margin: 0 0.3em;
+  color: var(--muted);
+}
+
+.trail .leaf {
+  flex-basis: 100%;
+  font-size: 2.8em;
+  color: var(--fg);
+  margin-top: 0.1rem;
+}
+
+.leaf .theme-toggle {
+  margin-left: 0.3rem;
+}

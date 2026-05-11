@@ -1,0 +1,25 @@
+{
+  "name": "shell",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && npm run render",
+    "sync": "tsx scripts/sync.ts",
+    "render": "tsx scripts/render.ts",
+    "dev": "npm run render && serve . -p 3000"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.20.0",
+    "dotenv": "^16.4.0",
+    "marked": "^14.1.4",
+    "p-limit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "serve": "^14.2.6",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

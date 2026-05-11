@@ -1,0 +1,46 @@
+name: Sync wiki
+
+on:
+  schedule:
+    - cron: '0 16 * * *'  # 16:00 UTC = 00:00 Asia/Shanghai (next day). GH cron may delay 5-30 min.
+  workflow_dispatch:        # allow manual trigger from Actions tab
+
+permissions:
+  contents: write           # needed to push the sync commit
+
+concurrency:
+  group: sync-wiki          # never run two syncs concurrently
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      ZH_DS_ID: 17a0aee4-fbad-81a4-8a6f-000b6b236f69
+      EN_DS_ID: 35b0aee4-fbad-81b7-bd9d-000b8c176dd5
+      EN_RELATION_PROPERTY: zh
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run sync
+
+      - name: Commit if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add wiki/
+          if git diff --cached --quiet; then
+            echo 'No changes; skipping commit.'
+          else
+            git commit -m "sync: $(date -u +%Y-%m-%d)"
+            git push
+          fi

@@ -1,0 +1,110 @@
+*, *::before, *::after { box-sizing: border-box; }
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol) { margin: 0; }
+:where(ul, ol) { padding: 0; list-style: none; }
+button { font: inherit; cursor: pointer; }
+img { max-width: 100%; display: block; }
+
+:root {
+  font-family: Georgia, 'Times New Roman', 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', serif;
+  --bg:             #F4ECD8;
+  --fg:             #1A1A2E;
+  --muted:          #7A6F5C;
+  --rule:           #D4CCB8;
+  --link:           #8C5A2B;
+  --toggle-fill:    transparent;     /* light = hollow */
+  --toggle-preview: var(--fg);       /* hover = filled (preview dark) */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:             #0F0F1A;
+    --fg:             #EDE5D6;
+    --muted:          #8B7E5E;
+    --rule:           #2A2A3E;
+    --link:           #A48D6F;
+    --toggle-fill:    var(--fg);     /* dark = filled */
+    --toggle-preview: transparent;   /* hover = hollow (preview light) */
+  }
+}
+
+[data-theme="light"] {
+  --bg:             #F4ECD8;
+  --fg:             #1A1A2E;
+  --muted:          #7A6F5C;
+  --rule:           #D4CCB8;
+  --link:           #8C5A2B;
+  --toggle-fill:    transparent;
+  --toggle-preview: var(--fg);
+}
+[data-theme="dark"] {
+  --bg:             #0F0F1A;
+  --fg:             #EDE5D6;
+  --muted:          #8B7E5E;
+  --rule:           #2A2A3E;
+  --link:           #A48D6F;
+  --toggle-fill:    var(--fg);
+  --toggle-preview: transparent;
+}
+
+
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  max-width: 48rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  color: var(--fg);
+  margin-bottom: 0.8rem;
+}
+
+p {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: var(--link);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+  text-decoration-skip-ink: auto;
+}
+a:hover {
+  text-decoration-color: var(--fg);
+  text-decoration-thickness: 2px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+.theme-toggle {
+  width: 0.7rem;
+  height: 0.7rem;
+  padding: 0;
+  border: 1.5px solid var(--fg);
+  border-radius: 50%;
+  background: var(--toggle-fill);
+  cursor: pointer;
+  vertical-align: baseline;
+}
+.theme-toggle:hover {
+  background: var(--toggle-preview);
+}
