@@ -1,4 +1,4 @@
-恩波利亚[Emporiae] (2352 - ), {{link:17a0aee4-fbad-810c-803f-e457272a6925|山臣[Hillkind]}} ，{{link:17b0aee4-fbad-80ff-8780-eb0b7d689868|新洲[SingLand]}} 人，大魔法师{{link:17a0aee4-fbad-813d-9ef7-cf8df1feb483|加贝拉•索兰达尔[Keaperra•Thurandare]}} 的故友，自加贝拉死后便蛰伏于{{link:1840aee4-fbad-807b-a0d9-dd50657b4061|望潮山脉[Mountains of Tide]}} 。
+恩波利亚[Emporiae] (2352 - ), {{link:17a0aee4-fbad-810c-803f-e457272a6925|山臣}} ，{{link:17b0aee4-fbad-80ff-8780-eb0b7d689868|新洲}} 人，大魔法师{{link:17a0aee4-fbad-813d-9ef7-cf8df1feb483|加贝拉•索兰达尔}} 的故友，自加贝拉死后便蛰伏于{{link:1840aee4-fbad-807b-a0d9-dd50657b4061|望潮山脉}} 。
 
 &nbsp;
 

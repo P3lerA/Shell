@@ -2,7 +2,7 @@
 
 &nbsp;
 
-位于{{link:17a0aee4-fbad-8181-af83-fd5db697f362|特诺奇蒂特兰[Tenochtitlan]}} 北部的高原，四周是诡异的断崖。
+位于{{link:17a0aee4-fbad-8181-af83-fd5db697f362|特诺奇蒂特兰}} 北部的高原，四周是诡异的断崖。
 
 &nbsp;
 
@@ -10,6 +10,6 @@
 
 &nbsp;
 
-{{link:17b0aee4-fbad-80b1-85c8-e889c19b6d77|晨曦高塔[Sunglow Tower]}}
+{{link:17b0aee4-fbad-80b1-85c8-e889c19b6d77|晨曦高塔}}
 
 &nbsp;
