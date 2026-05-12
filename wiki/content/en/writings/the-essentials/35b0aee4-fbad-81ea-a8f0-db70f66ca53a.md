@@ -14,7 +14,7 @@ A book written by {{link:35b0aee4-fbad-8145-a0d7-de7b90d7a205|Ryne Lynne}} cover
 
 &nbsp;
 
-The book documents the costs and regrets of studying magic, as well as the fundamental principles of wielding it — the magnum opus of Grand Magician Ryne Lynne in their later years, during the budding era.
+The book documents the costs and regrets of studying magic, as well as the fundamental principles of wielding it — the magnum opus of ArchMage Ryne Lynne in their later years, during the budding age.
 
 &nbsp;
 
