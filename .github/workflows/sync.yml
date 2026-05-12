@@ -35,6 +35,7 @@ jobs:
       - run: npm run sync
 
       - name: Commit if changed
+        id: commit
         env:
           TRIGGER: ${{ github.event_name == 'workflow_dispatch' && 'manual' || 'cron' }}
         run: |
@@ -43,7 +44,15 @@ jobs:
           git add wiki/
           if git diff --cached --quiet; then
             echo 'No changes; skipping commit.'
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "sync: $(date -u +%Y-%m-%d)-$TRIGGER"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Trigger Vercel deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: curl -fsS -X POST "$HOOK" > /dev/null
