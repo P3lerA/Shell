@@ -433,10 +433,78 @@
       "enEntry": {
         "notionID": "35b0aee4-fbad-81c7-9c09-f1686c22bce3",
         "title": "Writings",
-        "lastModified": "2026-05-11T15:42:00.000Z",
+        "lastModified": "2026-05-12T03:09:00.000Z",
         "stat": "Auto Translated"
       },
       "children": [
+        {
+          "enEntry": {
+            "notionID": "35e0aee4-fbad-8039-9beb-e03882d52e4f",
+            "title": "Gentleman's Joke Collection",
+            "lastModified": "2026-05-12T03:40:00.000Z"
+          },
+          "children": [
+            {
+              "enEntry": {
+                "notionID": "35e0aee4-fbad-8003-9be9-f99a92100ff0",
+                "title": "Gentleman’s Joke-IV",
+                "lastModified": "2026-05-12T03:17:00.000Z"
+              },
+              "children": [],
+              "zhEntry": {
+                "notionID": "35e0aee4-fbad-80c4-9da5-c6096ca05338",
+                "title": "绅士笑话集 其四",
+                "lastModified": "2026-05-12T03:36:00.000Z"
+              }
+            },
+            {
+              "enEntry": {
+                "notionID": "35b0aee4-fbad-81e0-bbee-ee41ce8cf23a",
+                "title": "Gentleman's Joke-III",
+                "lastModified": "2026-05-12T03:09:00.000Z"
+              },
+              "children": [],
+              "zhEntry": {
+                "notionID": "22e0aee4-fbad-8084-ba0d-f8bb1924d154",
+                "title": "绅士笑话集 其三",
+                "lastModified": "2026-05-12T03:36:00.000Z"
+              }
+            },
+            {
+              "enEntry": {
+                "notionID": "35b0aee4-fbad-8182-b9b8-f1d995c6bf0c",
+                "title": "Gentleman's Joke-II",
+                "lastModified": "2026-05-12T03:10:00.000Z",
+                "stat": "Auto Translated"
+              },
+              "children": [],
+              "zhEntry": {
+                "notionID": "18f0aee4-fbad-80c7-aec4-d698238b3608",
+                "title": "绅士笑话集 其二",
+                "lastModified": "2026-05-12T03:09:00.000Z"
+              }
+            },
+            {
+              "enEntry": {
+                "notionID": "35b0aee4-fbad-815e-b5f5-d08ed3567bc3",
+                "title": "Gentleman's Joke-I",
+                "lastModified": "2026-05-12T03:09:00.000Z",
+                "stat": "Auto Translated"
+              },
+              "children": [],
+              "zhEntry": {
+                "notionID": "18a0aee4-fbad-8077-ad98-d087e316b103",
+                "title": "绅士笑话集 其一",
+                "lastModified": "2026-05-12T03:08:00.000Z"
+              }
+            }
+          ],
+          "zhEntry": {
+            "notionID": "35e0aee4-fbad-806d-b9b1-e8ad1b6eb08b",
+            "title": "绅士笑话集",
+            "lastModified": "2026-05-12T03:16:00.000Z"
+          }
+        },
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-810c-8c03-df9fc6d4c3a9",
@@ -537,19 +605,6 @@
         },
         {
           "enEntry": {
-            "notionID": "35b0aee4-fbad-81e0-bbee-ee41ce8cf23a",
-            "title": "Gentleman's Joke-III",
-            "lastModified": "2026-05-12T00:14:00.000Z"
-          },
-          "children": [],
-          "zhEntry": {
-            "notionID": "22e0aee4-fbad-8084-ba0d-f8bb1924d154",
-            "title": " 绅士笑话集 其三",
-            "lastModified": "2025-07-12T10:32:00.000Z"
-          }
-        },
-        {
-          "enEntry": {
             "notionID": "35b0aee4-fbad-8109-af81-e4152eba5714",
             "title": "林中之恶 其一",
             "lastModified": "2026-05-09T21:00:00.000Z",
@@ -635,8 +690,8 @@
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-81bc-97d4-f6237d8ecc18",
-            "title": "缇希尔的日记 其二",
-            "lastModified": "2026-05-09T21:30:00.000Z",
+            "title": "Tithiel's Diary Vol. II",
+            "lastModified": "2026-05-12T03:06:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [],
@@ -663,8 +718,8 @@
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-81cf-83dd-e88d43b5fd76",
-            "title": "缇希尔的日记 其一",
-            "lastModified": "2026-05-09T21:31:00.000Z",
+            "title": "Tithiel's Diary Vol. I",
+            "lastModified": "2026-05-12T03:06:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [],
@@ -912,20 +967,6 @@
         },
         {
           "enEntry": {
-            "notionID": "35b0aee4-fbad-8182-b9b8-f1d995c6bf0c",
-            "title": "Gentleman's Joke-II",
-            "lastModified": "2026-05-11T06:32:00.000Z",
-            "stat": "Auto Translated"
-          },
-          "children": [],
-          "zhEntry": {
-            "notionID": "18f0aee4-fbad-80c7-aec4-d698238b3608",
-            "title": "绅士笑话集 其二",
-            "lastModified": "2026-05-11T17:50:00.000Z"
-          }
-        },
-        {
-          "enEntry": {
             "notionID": "35b0aee4-fbad-81d9-90e5-f2c48cabb389",
             "title": "Shiki Takaaki‘s Grace-I",
             "lastModified": "2026-05-11T15:40:00.000Z",
@@ -955,14 +996,14 @@
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-8105-ba4b-e8c7f0c02285",
-            "title": "龃龉诸年",
-            "lastModified": "2026-05-09T20:57:00.000Z",
+            "title": "Years of Discord",
+            "lastModified": "2026-05-12T01:02:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [],
           "zhEntry": {
             "notionID": "18b0aee4-fbad-8098-a084-f52b8e8cf474",
-            "title": "龃龉诸年",
+            "title": "Years of Discord",
             "lastModified": "2026-05-11T18:00:00.000Z"
           }
         },
@@ -978,20 +1019,6 @@
             "notionID": "18b0aee4-fbad-80ab-a132-ea4447424f31",
             "title": "白色问答",
             "lastModified": "2025-04-12T19:25:00.000Z"
-          }
-        },
-        {
-          "enEntry": {
-            "notionID": "35b0aee4-fbad-815e-b5f5-d08ed3567bc3",
-            "title": "Gentleman's Joke-I",
-            "lastModified": "2026-05-11T06:32:00.000Z",
-            "stat": "Auto Translated"
-          },
-          "children": [],
-          "zhEntry": {
-            "notionID": "18a0aee4-fbad-8077-ad98-d087e316b103",
-            "title": "绅士笑话集 其一",
-            "lastModified": "2026-05-11T17:50:00.000Z"
           }
         },
         {
@@ -1053,8 +1080,8 @@
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-81ea-a8f0-db70f66ca53a",
-            "title": "须知纪要",
-            "lastModified": "2026-05-10T22:05:00.000Z",
+            "title": "The Essentials",
+            "lastModified": "2026-05-12T03:05:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [],
@@ -1068,7 +1095,7 @@
       "zhEntry": {
         "notionID": "18a0aee4-fbad-8048-874c-d85f52c5234e",
         "title": "文献",
-        "lastModified": "2026-05-11T17:54:00.000Z"
+        "lastModified": "2026-05-12T03:08:00.000Z"
       }
     },
     {
@@ -1081,16 +1108,16 @@
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-819f-8935-f9e9f07d7ca1",
-            "title": "饮品",
-            "lastModified": "2026-05-09T20:27:00.000Z",
+            "title": "Beverage",
+            "lastModified": "2026-05-12T00:20:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [
             {
               "enEntry": {
                 "notionID": "35b0aee4-fbad-81c8-8dd1-f6a46d9709f2",
-                "title": "蓝灯香槟",
-                "lastModified": "2026-05-09T20:32:00.000Z",
+                "title": "Blueglow Champagne",
+                "lastModified": "2026-05-12T00:29:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
@@ -1110,8 +1137,8 @@
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-8184-8685-f74e2cb793a3",
-            "title": "植物",
-            "lastModified": "2026-05-09T19:12:00.000Z"
+            "title": "Plant",
+            "lastModified": "2026-05-12T00:33:00.000Z"
           },
           "children": [
             {
@@ -1132,7 +1159,7 @@
               "enEntry": {
                 "notionID": "35b0aee4-fbad-8145-a907-da35d909cd1c",
                 "title": "Everblossom",
-                "lastModified": "2026-05-09T20:28:00.000Z",
+                "lastModified": "2026-05-12T00:29:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
@@ -1146,7 +1173,7 @@
               "enEntry": {
                 "notionID": "35b0aee4-fbad-8154-b805-e96fa930e179",
                 "title": "Siment Flower",
-                "lastModified": "2026-05-09T22:11:00.000Z",
+                "lastModified": "2026-05-12T00:29:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
@@ -1159,8 +1186,8 @@
             {
               "enEntry": {
                 "notionID": "35b0aee4-fbad-8166-baee-e27d4035cd31",
-                "title": "集声植株",
-                "lastModified": "2026-05-09T20:29:00.000Z",
+                "title": "Echopod",
+                "lastModified": "2026-05-12T00:30:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
@@ -1172,22 +1199,9 @@
             },
             {
               "enEntry": {
-                "notionID": "35b0aee4-fbad-81cb-b360-d93f954e6f7d",
-                "title": "三季花",
-                "lastModified": "2026-05-09T19:12:00.000Z"
-              },
-              "children": [],
-              "zhEntry": {
-                "notionID": "1c40aee4-fbad-804a-b347-f124b8e5a10f",
-                "title": "三季花",
-                "lastModified": "2025-03-28T01:20:00.000Z"
-              }
-            },
-            {
-              "enEntry": {
                 "notionID": "35b0aee4-fbad-81cd-9761-f7778937930a",
-                "title": "灯草",
-                "lastModified": "2026-05-09T20:29:00.000Z",
+                "title": "Glowgrass",
+                "lastModified": "2026-05-12T00:33:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
@@ -1201,14 +1215,14 @@
           "zhEntry": {
             "notionID": "1850aee4-fbad-8058-bcc6-f9008ed97d1d",
             "title": "植物",
-            "lastModified": "2025-07-31T18:32:00.000Z"
+            "lastModified": "2026-05-12T00:32:00.000Z"
           }
         },
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-818f-be98-e73e93b1fea0",
-            "title": "矿物",
-            "lastModified": "2026-05-09T19:12:00.000Z"
+            "title": "Mineral",
+            "lastModified": "2026-05-12T00:19:00.000Z"
           },
           "children": [
             {
@@ -1229,42 +1243,42 @@
               "enEntry": {
                 "notionID": "35b0aee4-fbad-8186-b2da-e37e6e07fd80",
                 "title": "Copper Ore",
-                "lastModified": "2026-05-09T22:11:00.000Z",
+                "lastModified": "2026-05-12T00:30:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
               "zhEntry": {
                 "notionID": "1a70aee4-fbad-8076-9383-e52bb03d43fe",
                 "title": "铜",
-                "lastModified": "2026-05-11T18:56:00.000Z"
+                "lastModified": "2026-05-12T00:22:00.000Z"
               }
             },
             {
               "enEntry": {
                 "notionID": "35b0aee4-fbad-81a6-bcb2-d48181d6e898",
-                "title": "Sillver Ore",
-                "lastModified": "2026-05-09T22:11:00.000Z",
+                "title": "Silver Ore",
+                "lastModified": "2026-05-12T00:22:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
               "zhEntry": {
                 "notionID": "1a60aee4-fbad-809f-9fba-cef49767500c",
                 "title": "默银",
-                "lastModified": "2026-05-11T18:56:00.000Z"
+                "lastModified": "2026-05-12T00:22:00.000Z"
               }
             },
             {
               "enEntry": {
                 "notionID": "35b0aee4-fbad-8108-8a69-e11387e4baec",
                 "title": "Argingo Ore",
-                "lastModified": "2026-05-10T05:43:00.000Z",
+                "lastModified": "2026-05-12T00:21:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
               "zhEntry": {
                 "notionID": "1840aee4-fbad-80f3-b5eb-da86b596c26b",
                 "title": "靛银矿",
-                "lastModified": "2026-05-11T18:56:00.000Z"
+                "lastModified": "2026-05-12T00:22:00.000Z"
               }
             }
           ],
