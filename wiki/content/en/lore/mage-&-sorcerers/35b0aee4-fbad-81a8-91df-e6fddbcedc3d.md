@@ -1,25 +1,21 @@
-In practice, it is generally thought that Mages and Sorcerers are simply different Japanese-style and Western-style terms for the same thing. However, since this is Japanese-style Western fantasy, perhaps we can consider splitting this concept:
+In practice, it is generally thought that Mage and Sorcerer are simply different Japanese-style and Western-style terms for the same thing. However, since this is Japanese-style Western fantasy, perhaps we can split the concept:
 
-Mage: a being that cast magic.
+**Mage**: a being that **commands** magic.
 
-Sorcerers: A being born already knowing how to **wield** magic.
-
-&nbsp;
-
-Especially after Lynn, magic became widespread, and compared to the Mage that can be found everywhere in the broad sense, the Sorcerers is **extremely** rare. Instinctive mastery of magic is a very rare talent.
-
-However, among the magi, there are almost no individuals who have polished their magical skills to the extreme like {{link:35b0aee4-fbad-8129-9d52-fe1a37949be0|ArchMages}}. This is because, for them, magic is simply something that exists naturally by virtue of their birth.
+**Sorcerer**: a being born already knowing how to **wield** magic.
 
 &nbsp;
 
-Regarding "魔力", a Mage's魔力 relies mainly on post-training development, and魔力 can continuously grow. In contrast, a Sorcerers's魔力 is essentially fixed, in other words, the amount of魔力 they possess is a innate talent.
-
-However, the astonishing magical reserves that an ordinary Sorcerers innately possesses are already beyond what the vast majority of mages could ever attain in their entire lifetime.
+Especially after {{link:35b0aee4-fbad-8145-a0d7-de7b90d7a205|Ryne Lynne}}, magic became widespread. Compared to Mages, who can be found everywhere in the broad sense, Sorcerers are **extremely** rare. Instinctive mastery of magic is a very uncommon talent. However, among Sorcerers, there are almost no individuals who have polished their magical skills to the extreme the way {{link:35b0aee4-fbad-8129-9d52-fe1a37949be0|ArchMage}}s have. This is because, for them, magic is simply something that has always existed as a matter of course since birth.
 
 &nbsp;
 
-A simple way to distinguish Mage from Sorcerers is that Sorcerers possess an innate ability to control magic without guidance before reaching adulthood. Moreover, because this ability operates through a different mechanism than that of Mage, those with sensitivity to magic can typically distinguish between the two with ease.
+Regarding {{link:35b0aee4-fbad-8126-aa93-c422b2f64b85|Mana}}: a Mage's Mana relies mainly on post-training development and can grow continuously. A Sorcerer's Mana, in contrast, is essentially fixed — the Mana Capacity they possess is an innate talent. Even so, the Mana Capacity that an ordinary Sorcerer innately possesses already surpasses what the vast majority of Mages could ever attain in their entire lifetime.
 
 &nbsp;
 
-Additionally, Magi generally possess a certain distinctive kind of magic that is equally innate and cannot be learned by others—what we refer to as {{link:35c0aee4-fbad-80d0-8686-f8520f07f261|Innate Magic}}. Most Magi come to recognize their Innate Magic once they develop preliminary control over magical power.
+A simple way to distinguish Mage from Sorcerer: Sorcerers develop the ability to control Mana without guidance before reaching adulthood. Moreover, because this ability operates through a different mechanism than that of Mages, those with sensitivity to Mana can typically distinguish between the two with ease.
+
+&nbsp;
+
+Additionally, Sorcerers generally possess a certain distinctive magic that is equally innate and cannot be learned by others — the {{link:35c0aee4-fbad-80d0-8686-f8520f07f261|Innate Magic}}. Most Sorcerers come to recognize their Innate Magic once they develop preliminary control over Mana.
