@@ -218,6 +218,9 @@ function buildEntryContent(node: Node, enHtml: string, zhHtml: string, hasZh: bo
   if (hasZh && node.enEntry.stat === 'Auto Translated') {
     enNotes.push(`<p>This Entry is Machine-translated from the Chinese original and requires review.</p>`);
   }
+  if (node.enEntry.stat === 'Empty') {
+    enNotes.push(`<p>This entry is written in Chinese and is waiting for translation.</p>`);
+  }
 
   const parts: string[] = [];
   if (hasZh) {

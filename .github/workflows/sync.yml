@@ -51,8 +51,8 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Trigger Vercel deploy
-        if: steps.commit.outputs.changed == 'true'
-        env:
-          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
-        run: curl -fsS -X POST "$HOOK" > /dev/null
+      # - name: Trigger Vercel deploy
+      #   if: steps.commit.outputs.changed == 'true'
+      #   env:
+      #     HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+      #   run: curl -fsS -X POST "$HOOK" > /dev/null

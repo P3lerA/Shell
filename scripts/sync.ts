@@ -393,6 +393,7 @@ async function createOrphanStub(
           properties: {
             [PROP_TITLE]: { title: [{ type: 'text', text: { content: zh.title } }] },
             [EN_RELATION_PROPERTY]: { relation: [{ id: zh.id }] },
+            [PROP_STAT]: { select: { name: 'Empty' satisfies Status } },
           },
         }),
       `create stub ${zh.title}`,
