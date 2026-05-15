@@ -5,8 +5,9 @@
  *
  * Algorithm:
  *   1. Fetch all pages from both data sources with full properties.
- *   2. Detect orphans (zh entries no en page's `zh` relation points at).
- *      Default: warn. With --fix-orphans: create empty en stubs (recursively).
+ *   2. Detect orphans (zh entries no en page's `zh` relation points at) and
+ *      create empty en stubs with the `zh` relation set, recursively up the parent
+ *      chain so position mirrors the zh tree. Skipped only in --dry.
  *   3. Build manifest from en tree (en = structural authority); resolve zhEntry
  *      via the en page's `zh` relation property.
  *   4. For pages where last_edited_time > sync-state.lastSyncTime (or --full),
@@ -26,7 +27,6 @@
  * Run:  npm run sync                   incremental, write
  *       npm run sync -- --dry          no writes anywhere
  *       npm run sync -- --full         re-render every .md, ignore lastSyncTime
- *       npm run sync -- --fix-orphans     also create en stubs for unpaired zh pages
  *       npm run sync -- --root-page <id>  limit scope to descendants of an en page (testing)
  */
 
@@ -59,7 +59,6 @@ const EN_RELATION_PROPERTY = process.env.EN_RELATION_PROPERTY ?? 'zh';
 
 const DRY_RUN = process.argv.includes('--dry');
 const FULL = process.argv.includes('--full');
-const FIX_ORPHANS = process.argv.includes('--fix-orphans');
 const ROOT_PAGE = argValue('--root-page');
 
 function argValue(name: string): string | undefined {
@@ -361,39 +360,48 @@ async function createOrphanStub(
   zh: PageData,
   zhById: Map<string, PageData>,
   enByZhId: Map<string, string>,
-  stubMap: Map<string, string>,
+  pending: Map<string, Promise<string>>,
 ): Promise<string> {
-  const cached = stubMap.get(zh.id) ?? enByZhId.get(zh.id);
-  if (cached) return cached;
+  const existing = enByZhId.get(zh.id);
+  if (existing) return existing;
 
-  let parent:
-    | { type: 'page_id'; page_id: string }
-    | { type: 'data_source_id'; data_source_id: string };
-  if (zh.parentId) {
-    const zhParent = zhById.get(zh.parentId);
-    if (zhParent) {
-      const enParentId = await createOrphanStub(zhParent, zhById, enByZhId, stubMap);
-      parent = { type: 'page_id', page_id: enParentId };
+  // Cache the in-flight promise BEFORE awaiting anything, so concurrent callers
+  // sharing an ancestor reuse the same creation instead of racing duplicate stubs.
+  const inFlight = pending.get(zh.id);
+  if (inFlight) return inFlight;
+
+  const work = (async (): Promise<string> => {
+    let parent:
+      | { type: 'page_id'; page_id: string }
+      | { type: 'data_source_id'; data_source_id: string };
+    if (zh.parentId) {
+      const zhParent = zhById.get(zh.parentId);
+      if (zhParent) {
+        const enParentId = await createOrphanStub(zhParent, zhById, enByZhId, pending);
+        parent = { type: 'page_id', page_id: enParentId };
+      } else {
+        parent = { type: 'data_source_id', data_source_id: EN_DS_ID };
+      }
     } else {
       parent = { type: 'data_source_id', data_source_id: EN_DS_ID };
     }
-  } else {
-    parent = { type: 'data_source_id', data_source_id: EN_DS_ID };
-  }
 
-  const created = await withRetry(
-    () =>
-      notion.pages.create({
-        parent,
-        properties: {
-          [PROP_TITLE]: { title: [{ type: 'text', text: { content: zh.title } }] },
-          [EN_RELATION_PROPERTY]: { relation: [{ id: zh.id }] },
-        },
-      }),
-    `create stub ${zh.title}`,
-  );
-  stubMap.set(zh.id, created.id);
-  return created.id;
+    const created = await withRetry(
+      () =>
+        notion.pages.create({
+          parent,
+          properties: {
+            [PROP_TITLE]: { title: [{ type: 'text', text: { content: zh.title } }] },
+            [EN_RELATION_PROPERTY]: { relation: [{ id: zh.id }] },
+          },
+        }),
+      `create stub ${zh.title}`,
+    );
+    return created.id;
+  })();
+
+  pending.set(zh.id, work);
+  return work;
 }
 
 // === manifest ===
@@ -639,8 +647,7 @@ async function main() {
   const startTime = new Date();
   console.log(
     `Mode: ${DRY_RUN ? 'DRY' : 'LIVE'}` +
-      `${FULL ? ' --full' : ''}` +
-      `${FIX_ORPHANS ? ' --fix-orphans' : ''}`,
+      `${FULL ? ' --full' : ''}`,
   );
 
   const prevLastMod = loadPreviousLastModified();
@@ -674,29 +681,27 @@ async function main() {
     console.log(`--root-page filter: ${enPages.length} en, ${zhPages.length} zh under ${ROOT_PAGE.slice(0, 8)}`);
   }
 
-  // orphans
+  // orphans — auto-create en stubs (with zh relation) so cron stays self-healing.
   const orphans = findOrphans(zhPages, enPages);
   if (orphans.length > 0) {
     console.log(`\nOrphan zh pages (no en counterpart): ${orphans.length}`);
     for (const o of orphans.slice(0, 20)) console.log(`  ${o.title}  (${o.id.slice(0, 8)})`);
     if (orphans.length > 20) console.log(`  ...and ${orphans.length - 20} more`);
 
-    if (FIX_ORPHANS && !DRY_RUN) {
+    if (!DRY_RUN) {
       console.log(`\nCreating en stubs for ${orphans.length} orphan(s)...`);
       const zhById = new Map(zhPages.map(z => [z.id, z]));
       const enByZhId = new Map<string, string>();
       for (const e of enPages) {
         if (e.zhRelationId) enByZhId.set(e.zhRelationId, e.id);
       }
-      const stubMap = new Map<string, string>();
+      const pending = new Map<string, Promise<string>>();
       const limit = pLimit(2);
       await Promise.all(
-        orphans.map(o => limit(() => createOrphanStub(o, zhById, enByZhId, stubMap))),
+        orphans.map(o => limit(() => createOrphanStub(o, zhById, enByZhId, pending))),
       );
-      console.log(`Created ${stubMap.size} stub(s). Re-fetching en pages...`);
+      console.log(`Created ${pending.size} stub(s). Re-fetching en pages...`);
       enPages = await fetchAllPages(EN_DS_ID, true);
-    } else if (orphans.length > 0) {
-      console.log('  (run with --fix-orphans to auto-create en stubs)');
     }
   }
 
