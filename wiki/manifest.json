@@ -110,7 +110,7 @@
           "zhEntry": {
             "notionID": "34f0aee4-fbad-80bb-9b9b-e5cbb2b205a8",
             "title": "记忆",
-            "lastModified": "2026-04-27T23:47:00.000Z"
+            "lastModified": "2026-05-16T03:36:00.000Z"
           }
         },
         {
@@ -384,22 +384,22 @@
           "enEntry": {
             "notionID": "35b0aee4-fbad-8119-a6fa-fcfeee701401",
             "title": "the Throne",
-            "lastModified": "2026-05-15T17:28:00.000Z",
+            "lastModified": "2026-05-15T17:32:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [
             {
               "enEntry": {
                 "notionID": "3610aee4-fbad-81d6-baea-e68023c024a4",
-                "title": "权柄",
-                "lastModified": "2026-05-15T17:28:00.000Z",
-                "stat": "Empty"
+                "title": "authority ",
+                "lastModified": "2026-05-15T17:45:00.000Z",
+                "stat": "Reviewed"
               },
               "children": [],
               "zhEntry": {
                 "notionID": "3610aee4-fbad-806e-b065-fa7552c43cf0",
                 "title": "权柄",
-                "lastModified": "2026-05-15T17:19:00.000Z"
+                "lastModified": "2026-05-15T17:34:00.000Z"
               }
             }
           ],
@@ -5340,7 +5340,7 @@
               "enEntry": {
                 "notionID": "35b0aee4-fbad-81c9-afa6-edd10655ccf0",
                 "title": "Alice",
-                "lastModified": "2026-05-11T18:07:00.000Z",
+                "lastModified": "2026-05-16T03:40:00.000Z",
                 "etymology": "Greek: Tháleia (θάλεια) — prosperity, flourishing.",
                 "stat": "Reviewed"
               },
@@ -5348,7 +5348,7 @@
               "zhEntry": {
                 "notionID": "17a0aee4-fbad-8168-a2e5-df7a32d0b845",
                 "title": "Alice",
-                "lastModified": "2026-05-10T04:43:00.000Z",
+                "lastModified": "2026-05-16T03:41:00.000Z",
                 "etymology": "希腊语：Tháleia (θάλεια) — 繁盛、盛开."
               }
             }
