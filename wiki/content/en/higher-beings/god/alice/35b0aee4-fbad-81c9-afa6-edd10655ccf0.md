@@ -1,12 +1,12 @@
-Native of {{link:35b0aee4-fbad-81cd-962d-d1261b77d3b5|the Peírama}}. The weary God of Time, the very first God. Her true name is **Tháleia**. 
+Native of {{link:35b0aee4-fbad-81cd-962d-d1261b77d3b5|the Peírama}}. The weary God of Time, the very first God. Her original name as a mortal is **Tháleia**. 
 
 &nbsp;
 
 ### Authorities
 
-Time - possess memories from every loop, but lose the [temporality](https://en.wikipedia.org/wiki/Temporality).
+Time: possess memories from every loop, but lose the [temporality](https://en.wikipedia.org/wiki/Temporality).
 
-Fate - can enumerate any entity’s future.
+Fate: can enumerate any entity’s future.
 
 &nbsp;
 

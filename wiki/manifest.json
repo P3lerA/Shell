@@ -19,7 +19,7 @@
           "zhEntry": {
             "notionID": "17f0aee4-fbad-805b-ae17-de3e752128ee",
             "title": "时间线",
-            "lastModified": "2025-07-31T16:52:00.000Z"
+            "lastModified": "2026-05-16T03:53:00.000Z"
           }
         },
         {
@@ -1748,7 +1748,7 @@
               "zhEntry": {
                 "notionID": "1890aee4-fbad-80c3-ae53-fb4dada35770",
                 "title": "星辰魔法",
-                "lastModified": "2026-05-10T22:14:00.000Z"
+                "lastModified": "2026-05-16T18:45:00.000Z"
               }
             }
           ],
@@ -1891,7 +1891,7 @@
                   "enEntry": {
                     "notionID": "35b0aee4-fbad-8193-b596-cb1181f81b89",
                     "title": "Eschaton: End",
-                    "lastModified": "2026-05-11T03:11:00.000Z",
+                    "lastModified": "2026-05-16T18:41:00.000Z",
                     "stat": "Auto Translated"
                   },
                   "children": [],
@@ -2207,7 +2207,7 @@
               "zhEntry": {
                 "notionID": "1c40aee4-fbad-80cb-9d41-d9df1f635660",
                 "title": "存护魔法",
-                "lastModified": "2025-12-01T20:08:00.000Z"
+                "lastModified": "2026-05-16T06:01:00.000Z"
               }
             },
             {
@@ -2966,6 +2966,19 @@
       "children": [
         {
           "enEntry": {
+            "notionID": "3620aee4-fbad-8199-af83-df1f5e0c0c86",
+            "title": "the Dawn Meteor",
+            "lastModified": "2026-05-16T05:48:00.000Z"
+          },
+          "children": [],
+          "zhEntry": {
+            "notionID": "3620aee4-fbad-804f-800b-cbdaf3aebf4e",
+            "title": "黎明流星",
+            "lastModified": "2026-05-16T05:48:00.000Z"
+          }
+        },
+        {
+          "enEntry": {
             "notionID": "35b0aee4-fbad-8101-82b7-cef410a79be3",
             "title": "the Guidance",
             "lastModified": "2026-05-11T00:54:00.000Z",
@@ -2975,7 +2988,7 @@
           "zhEntry": {
             "notionID": "17a0aee4-fbad-81de-bf9f-e4e25c58a912",
             "title": "指引",
-            "lastModified": "2025-02-27T12:50:00.000Z"
+            "lastModified": "2026-05-16T04:21:00.000Z"
           }
         },
         {
@@ -3009,21 +3022,21 @@
           "enEntry": {
             "notionID": "35b0aee4-fbad-816f-a7c4-c5a88a062907",
             "title": "Wars",
-            "lastModified": "2026-05-09T19:09:00.000Z"
+            "lastModified": "2026-05-16T04:21:00.000Z"
           },
           "children": [
             {
               "enEntry": {
                 "notionID": "35b0aee4-fbad-8101-a593-e9fc8abf6718",
                 "title": "First Argos-Hillkind War(Roadright War I)",
-                "lastModified": "2026-05-11T01:05:00.000Z",
+                "lastModified": "2026-05-16T18:17:00.000Z",
                 "stat": "Reviewed"
               },
               "children": [],
               "zhEntry": {
                 "notionID": "17a0aee4-fbad-81be-a2fe-f0b92d5205a4",
                 "title": "第一次山臣-欧戈斯战争（第一次路权战争）",
-                "lastModified": "2026-05-11T00:55:00.000Z"
+                "lastModified": "2026-05-16T18:17:00.000Z"
               }
             },
             {
@@ -3043,7 +3056,7 @@
           "zhEntry": {
             "notionID": "1a70aee4-fbad-80ff-815e-fcc856185fc4",
             "title": "战争",
-            "lastModified": "2025-06-30T18:00:00.000Z"
+            "lastModified": "2026-05-16T04:21:00.000Z"
           }
         },
         {
@@ -3063,14 +3076,14 @@
           "enEntry": {
             "notionID": "35b0aee4-fbad-81d1-9301-efe8edb2301d",
             "title": "The Hillax Uprising",
-            "lastModified": "2026-05-11T00:55:00.000Z",
+            "lastModified": "2026-05-16T04:28:00.000Z",
             "stat": "Auto Translated"
           },
           "children": [],
           "zhEntry": {
             "notionID": "1b60aee4-fbad-80dc-9182-ee0913985426",
             "title": "山灵起义",
-            "lastModified": "2025-03-28T13:27:00.000Z"
+            "lastModified": "2026-05-16T04:21:00.000Z"
           }
         },
         {
@@ -3084,7 +3097,7 @@
           "zhEntry": {
             "notionID": "1b60aee4-fbad-8056-88cd-e35c9bccfaa3",
             "title": "晨曦高塔倒悬",
-            "lastModified": "2025-03-14T17:53:00.000Z"
+            "lastModified": "2026-05-16T04:20:00.000Z"
           }
         },
         {
@@ -3099,7 +3112,7 @@
       "zhEntry": {
         "notionID": "17a0aee4-fbad-81b2-9aa4-ef40bcd2e595",
         "title": "事件",
-        "lastModified": "2025-03-21T14:38:00.000Z"
+        "lastModified": "2026-05-16T04:21:00.000Z"
       }
     },
     {
@@ -4391,10 +4404,24 @@
       "enEntry": {
         "notionID": "35b0aee4-fbad-81df-b26a-e63ae871452a",
         "title": "Being",
-        "lastModified": "2026-05-11T23:53:00.000Z",
+        "lastModified": "2026-05-16T04:28:00.000Z",
         "stat": "Reviewed"
       },
       "children": [
+        {
+          "enEntry": {
+            "notionID": "3620aee4-fbad-8195-9897-da635e9d0582",
+            "title": "Strabo",
+            "lastModified": "2026-05-16T04:29:00.000Z",
+            "etymology": "Greek: Στράβων (Strábōn) — 'squinting'; the name of the ancient Greek geographer."
+          },
+          "children": [],
+          "zhEntry": {
+            "notionID": "3620aee4-fbad-805d-963d-f2a7c44627bd",
+            "title": "斯特拉波",
+            "lastModified": "2026-05-16T04:27:00.000Z"
+          }
+        },
         {
           "enEntry": {
             "notionID": "35b0aee4-fbad-8130-a5b7-fefcafe7f449",
@@ -5007,7 +5034,7 @@
       "zhEntry": {
         "notionID": "17a0aee4-fbad-8164-a533-c693904b5612",
         "title": "造物",
-        "lastModified": "2026-04-27T22:49:00.000Z"
+        "lastModified": "2026-05-16T04:17:00.000Z"
       }
     },
     {
@@ -5242,28 +5269,28 @@
               "enEntry": {
                 "notionID": "35b0aee4-fbad-810b-bfc0-c7412c6c5109",
                 "title": "Daemon R. Brigid",
-                "lastModified": "2026-05-10T04:44:00.000Z",
+                "lastModified": "2026-05-16T03:59:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
               "zhEntry": {
                 "notionID": "1870aee4-fbad-809e-b658-f47c33aeabf7",
                 "title": "布里吉德",
-                "lastModified": "2026-05-11T18:56:00.000Z"
+                "lastModified": "2026-05-16T18:54:00.000Z"
               }
             },
             {
               "enEntry": {
                 "notionID": "35b0aee4-fbad-810f-ae55-ff63e9fedae6",
                 "title": "Solace",
-                "lastModified": "2026-05-09T19:11:00.000Z",
+                "lastModified": "2026-05-16T18:58:00.000Z",
                 "stat": "Auto Translated"
               },
               "children": [],
               "zhEntry": {
                 "notionID": "1870aee4-fbad-80b7-bf4f-d28f1be58ac6",
                 "title": "索拉斯",
-                "lastModified": "2026-05-11T18:56:00.000Z"
+                "lastModified": "2026-05-16T18:58:00.000Z"
               }
             },
             {
@@ -5305,7 +5332,7 @@
               "zhEntry": {
                 "notionID": "1870aee4-fbad-8096-9e70-ee115dc5074c",
                 "title": "伊西斯",
-                "lastModified": "2026-05-11T18:56:00.000Z"
+                "lastModified": "2026-05-16T04:03:00.000Z"
               }
             },
             {
@@ -5333,14 +5360,14 @@
               "zhEntry": {
                 "notionID": "17a0aee4-fbad-81fd-bec1-f158b29d5e44",
                 "title": "阿尔戈斯",
-                "lastModified": "2026-05-11T18:56:00.000Z"
+                "lastModified": "2026-05-16T18:52:00.000Z"
               }
             },
             {
               "enEntry": {
                 "notionID": "35b0aee4-fbad-81c9-afa6-edd10655ccf0",
                 "title": "Alice",
-                "lastModified": "2026-05-16T03:40:00.000Z",
+                "lastModified": "2026-05-16T04:02:00.000Z",
                 "etymology": "Greek: Tháleia (θάλεια) — prosperity, flourishing.",
                 "stat": "Reviewed"
               },
@@ -5348,7 +5375,7 @@
               "zhEntry": {
                 "notionID": "17a0aee4-fbad-8168-a2e5-df7a32d0b845",
                 "title": "Alice",
-                "lastModified": "2026-05-16T03:41:00.000Z",
+                "lastModified": "2026-05-16T18:10:00.000Z",
                 "etymology": "希腊语：Tháleia (θάλεια) — 繁盛、盛开."
               }
             }
@@ -5356,7 +5383,7 @@
           "zhEntry": {
             "notionID": "17a0aee4-fbad-8196-bc4e-f5c5157b4ec1",
             "title": "受位者",
-            "lastModified": "2026-05-11T18:55:00.000Z"
+            "lastModified": "2026-05-16T04:03:00.000Z"
           }
         }
       ],
