@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/entry.css">
+    <script>
+      const t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    </script>
+    <script src="/theme.js" defer></script>
+    <style>
+      /* section underlines stand in for the divider — no top rule needed */
+      .cv { margin-top: 2rem; }
+      .cv section { margin-bottom: 1.6rem; }
+      .cv h2 {
+        font-size: 1.1rem;
+        margin: 0 0 0.6rem;
+        padding-bottom: 0.15rem;
+        border-bottom: 1px solid var(--rule);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* title on the left, place / dates on the right */
+      .cv-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+      }
+      .cv-row h3 { font-size: 1rem; margin: 0; }
+      .cv-meta { color: var(--muted); font-size: 0.9em; white-space: nowrap; }
+      .cv-sub { color: var(--muted); font-size: 0.92em; margin: 0.1rem 0 0.3rem; }
+      .cv-stack { color: var(--muted); font-weight: normal; font-size: 0.9em; }
+
+      .cv ul.bullets { list-style: disc; padding-left: 1.2rem; margin: 0.3rem 0; }
+      .cv ul.bullets li { margin: 0.2rem 0; }
+
+      .cv .entry + .entry { margin-top: 0.8rem; }
+      .cv .skills p { margin: 0.25rem 0; }
+
+      .cv-actions { margin: 1.5rem 0 0; }
+
+      @media print {
+        body { margin: 0; max-width: none; color: #000; background: #fff; font-size: 10.5pt; }
+        .theme-toggle, .cv-actions { display: none; }
+        .cv section { margin-bottom: 1rem; }
+        a { color: #000; text-decoration: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="trail">
+        <a href="/">~</a>
+        <span class="leaf">CV<button class="theme-toggle" aria-label="Toggle theme"></button></span>
+      </nav>
+    </header>
+    <main class="cv">
+      <section>
+        <h2>Education</h2>
+
+        <div class="entry">
+          <div class="cv-row">
+            <h3>University of Michigan</h3>
+            <span class="cv-meta">Ann Arbor, MI</span>
+          </div>
+          <div class="cv-row">
+            <p class="cv-sub">B.S. in Computer Science</p>
+            <span class="cv-meta">Starting Fall 2026</span>
+          </div>
+          <p class="cv-sub">Planned coursework: EECS 280 (Programming &amp; Data Structures), EECS 203 (Discrete Mathematics)</p>
+        </div>
+
+        <div class="entry">
+          <div class="cv-row">
+            <h3>Kean University</h3>
+            <span class="cv-meta">Union, NJ</span>
+          </div>
+          <div class="cv-row">
+            <p class="cv-sub">B.A. in Mathematical Sciences — Data Analytics Option · GPA: 3.98/4.0</p>
+            <span class="cv-meta">Aug. 2024 – May 2026</span>
+          </div>
+          <p class="cv-sub">Relevant coursework: Linear Algebra, Calculus I–III, Probability &amp; Mathematical Statistics, Differential Equations, Introduction to Proofs, Discrete Structures, Computer Programming</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+
+        <div class="entry">
+          <div class="cv-row">
+            <h3>Diffusion Model Fine-Tuning &amp; Architecture Analysis <span class="cv-stack">· Python, PyTorch</span></h3>
+            <span class="cv-meta">Oct. 2023 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Trained LoRA adapters on a DiT-based text-to-image model (Anima, a Cosmos-Predict2 derivative) using diffusion-pipe; systematically compared output quality across learning rate, LoRA rank, and captioning strategy variations.</li>
+            <li>Built an automated dataset annotation pipeline using vision-language models (Qwen-VL) to generate structured captions for illustration-domain training data, replacing manual tagging workflows.</li>
+            <li>Developed a custom ComfyUI node for XY-grid parameter sweeps, enabling controlled visual evaluation of generation quality across hyperparameter axes.</li>
+            <li>Analyzed model architecture: identified that character and style knowledge concentrates in a small LLM adapter on the text encoder rather than in the diffusion backbone, consistent with but independent of developer findings.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="cv-row">
+            <h3>ECLIA — Modular AI Assistant Platform <span class="cv-stack">· TypeScript, Python, React</span></h3>
+            <span class="cv-meta">Jan. 2026 – May 2026</span>
+          </div>
+          <ul class="bullets">
+            <li>Architected and built a self-hosted AI platform with modular design: multi-provider LLM backend, tool-use subsystem, and cross-platform adapters (Discord, Telegram, email via IMAP).</li>
+            <li>Designed Symphony, a DAG-based visual automation engine enabling users to compose multi-step LLM-powered workflows without writing code.</li>
+            <li>Implemented a retrieval-augmented memory system using dual-layer entity graphs with Personalized PageRank scoring for context-aware recall.</li>
+            <li>Built a cross-platform computer-use module for LLM-driven desktop interaction via native OS APIs (C# on Windows, Swift on macOS).</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="cv-row">
+            <h3>Project Amadeus — LLM Character Fine-Tuning <span class="cv-stack">· Python, PyTorch</span></h3>
+            <span class="cv-meta">Aug. 2025 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Constructed a 2,084-turn character dialogue dataset by reverse-engineering the MAGES visual novel engine, extracting and processing 84,000+ lines of game scripts.</li>
+            <li>Conducted supervised fine-tuning on Qwen3-8B-Base; evaluated character voice consistency and multilingual coherence across training configurations.</li>
+            <li>Benchmarked dense open-weight base models on multilingual tokenization efficiency to inform architecture selection for bilingual dialogue generation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <p><strong>Programming:</strong> Python, TypeScript, C#, Swift, GDScript</p>
+        <p><strong>ML/AI:</strong> PyTorch, Transformers, Diffusers, LoRA training, VLM pipelines</p>
+        <p><strong>Systems:</strong> React, Node.js, Electron, FastAPI, Git, Linux</p>
+        <p><strong>Languages:</strong> Chinese (native), English (fluent)</p>
+      </section>
+    </main>
+  </body>
+</html>
