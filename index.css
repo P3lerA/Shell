@@ -95,6 +95,46 @@ nav ul {
 
 
 
+/* header title row: the theme dot lives inside the h1 as the
+   sentence's period, so the whole line is one inline text flow
+   and baseline alignment comes for free */
+.title-row {
+  margin-bottom: 0.4rem;
+}
+
+.site-title {
+  margin-bottom: 0;
+}
+
+.site-title .theme-toggle {
+  margin-left: 0.3rem;
+}
+
+/* one cursor element, always inside the h1:
+   while typing it hugs the last typed character; when the dot
+   lands between text and cursor, the sibling rule loosens the gap */
+.tw-cursor {
+  display: inline-block;
+  width: 0.42ch;
+  height: 0.82em;
+  background: var(--fg);
+  animation: tw-blink 1.1s steps(1) infinite;
+}
+
+.site-title .tw-cursor {
+  margin-left: 0.12ch;
+  vertical-align: -0.1em;
+}
+
+.site-title .theme-toggle + .tw-cursor {
+  margin-left: 0.25rem;
+}
+
+@keyframes tw-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
 .theme-toggle {
   width: 0.7rem;
   height: 0.7rem;
