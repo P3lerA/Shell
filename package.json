@@ -14,7 +14,8 @@
     "@notionhq/client": "^5.20.0",
     "dotenv": "^16.4.0",
     "marked": "^14.1.4",
-    "p-limit": "^5.0.0"
+    "p-limit": "^5.0.0",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
