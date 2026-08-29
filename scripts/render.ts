@@ -23,13 +23,18 @@
 import {
   copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs';
+import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { marked } from 'marked';
 import { parse as parseYaml } from 'yaml';
 import type { Entry, Post, Stat } from '../types/vault.js';
 
 // === paths ===
-const VAULT = process.env.VAULT ?? 'SoD';
+/** The committed copy when there is one (that is what Vercel builds), else the
+ *  live vault, so `npm run dev` previews what Obsidian has right now. */
+const VAULT = process.env.VAULT
+  ?? ['SoD', join(homedir(), 'Documents', 'SoD')].find(existsSync)
+  ?? 'SoD';
 const WIKI_SRC = join(VAULT, 'Ragriff');
 const POST_SRC = join(VAULT, 'BlogPosts');
 
