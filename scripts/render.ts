@@ -38,13 +38,8 @@ const VAULT = process.env.VAULT
 const WIKI_SRC = join(VAULT, 'Ragriff');
 const POST_SRC = join(VAULT, 'BlogPosts');
 
-/** The novel itself. It still sits unpublished under `_miscellaneous/剧本/本传`,
- *  so it is read from the live vault; once it moves to a top-level `Story/`
- *  this is just `join(VAULT, 'Story')` like the other two. */
-const STORY_SRC = process.env.STORY ?? [
-  join(VAULT, 'Story'),
-  join(homedir(), 'Documents', 'SoD', '_miscellaneous', '剧本', '本传'),
-].find(existsSync);
+/** The novel. A published top-level folder like the other two. */
+const STORY_SRC = join(VAULT, 'Story');
 
 const RAGRIFF_OUT = 'ragriff';
 const POST_OUT = 'post';
@@ -210,8 +205,8 @@ function readPosts(): Post[] {
   return posts.sort((a, b) => b.date.localeCompare(a.date));
 }
 
-/** A chapter is a top-level note whose name starts with its number — the plot
- *  outline and the `又是旧案` drafts sit beside them and are not chapters. */
+/** A chapter is a top-level note whose name starts with its number, so notes
+ *  and drafts can sit beside them in the folder without becoming chapters. */
 interface Chapter {
   n: number;
   slug: string;
@@ -220,7 +215,7 @@ interface Chapter {
 }
 
 function readChapters(): Chapter[] {
-  if (!STORY_SRC) return [];
+  if (!existsSync(STORY_SRC)) return [];
   const out: Chapter[] = [];
   for (const item of readdirSync(STORY_SRC, { withFileTypes: true })) {
     const m = /^(\d+)[ .-]+(.+)\.md$/.exec(item.name);
@@ -605,7 +600,7 @@ async function main(): Promise<void> {
   for (const c of chapters) {
     if (c.body.trim()) await renderChapter(c, index, dangling);
   }
-  console.log(`Story: ${chapters.filter(c => c.body.trim()).length}/${chapters.length} chapters written${STORY_SRC ? '' : ' (no story source found)'}.`);
+  console.log(`Story: ${chapters.filter(c => c.body.trim()).length}/${chapters.length} chapters written.`);
 
   renderRagriffLanding(count, chapters.length, buildCorpus(tree));
   renderWikiIndex(tree);

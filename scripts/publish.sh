@@ -6,7 +6,7 @@
 #   ./scripts/publish.sh              # vault at ~/Documents/SoD
 #   VAULT=/path/to/SoD ./scripts/publish.sh
 #
-# Ragriff/ and BlogPosts/ are copied by name -- a whitelist, not a .gitignore
+# Ragriff/, BlogPosts/ and Story/ are copied by name -- a whitelist, not a .gitignore
 # blacklist, so nothing private (_miscellaneous, _scripts, .obsidian) can reach
 # a public repo because a rule was forgotten.
 set -euo pipefail
@@ -19,7 +19,7 @@ REPO=$(cd "$(dirname "$0")/.." && pwd)
 cd "$REPO"
 git pull --rebase -q
 
-for dir in Ragriff BlogPosts; do
+for dir in Ragriff BlogPosts Story; do
   mkdir -p "SoD/$dir"
   rsync -a --delete --exclude '.*' --exclude '_*' "$VAULT/$dir/" "SoD/$dir/"
 done
