@@ -422,13 +422,13 @@ function buildCorpus(tree: Entry[], limit = 200): string[] {
   const out = new Set<string>();
   const clean = (s: string): string => s
     .replace(WIKILINK, (_, bang: string, target: string, alias?: string) => (bang ? '' : alias ?? target))
-    .replace(/[#>*_`\[\]()]/g, '')
+    .replace(/[#>*`\[\]()]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 
   const walk = (es: Entry[]): void => {
     for (const e of es) {
-      out.add(e.title);
+      if (!e.title.endsWith('_deprecated')) out.add(e.title);
       const opening = clean(e.body.en).slice(0, 96).trim();   // about one row wide
       if (opening) out.add(opening);
       walk(e.children);
@@ -437,7 +437,7 @@ function buildCorpus(tree: Entry[], limit = 200): string[] {
   walk(tree);
 
   return [...out]
-    .filter(s => s.length > 3 && /^[\x20-\x7E]+$/.test(s))
+    .filter(s => s.length > 3 && !s.includes('_deprecated') && /^[\x20-\x7E]+$/.test(s))
     .slice(0, limit);
 }
 

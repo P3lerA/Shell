@@ -24,6 +24,7 @@ const SX = 2;                    // a monospace cell is ~2x as tall as it is wid
 const W = 88, H = 24;
 const STEP_MS = 700;             // ~1.4fps: each line is a move, not a transition
 const FADE = 0.35;               // opacity of the farthest row
+const DRIFT = 40;                // how far into its own text a row may start
 const SETTLED = 0.65;            // by this depth every cell has surfaced, so the
                                  // near third of the field is unbroken text
 
@@ -61,12 +62,14 @@ function pick() {
 
 function newRow() {
   let text = '';
-  while (text.length < W) text += pick() + '   ';
-  // hard cut, flush edge: a word that runs off the end is split, not moved.
-  // Retreating to a word boundary leaves a ragged margin, which reads as
-  // browser word-wrap and breaks the illusion of a character field.
+  while (text.length < W + DRIFT) text += pick() + '   ';
+  // Both edges cut hard: a word that runs off the end is split rather than
+  // moved, and the row starts at a random offset so the left margin is not a
+  // column of fragment openings. A ragged edge reads as browser word-wrap and
+  // undoes the character field.
+  const off = Math.floor(Math.random() * DRIFT);
   return {
-    text: text.slice(0, W),
+    text: text.slice(off, off + W),
     noise: Array.from({ length: W }, grain),
     // how far down a cell must travel before it surfaces; squared so a line
     // comes up unevenly rather than all at once
