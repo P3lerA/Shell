@@ -1,32 +1,46 @@
 /**
  * scripts/render.ts
  *
- * Read wiki/manifest.json + content/*.md, produce static HTML at:
- *   ragriff/<en-slug-path>/index.html   (per wiki entry)
- *   post/<slug>/index.html              (per blog post)
- *   ragriff/index.html                   (wiki landing — top-level entries list)
- *   post/index.html                      (blog list — cards)
+ * Walk the Obsidian vault and produce the static site:
+ *   ragriff/<folder-path>/index.html   (per wiki entry)
+ *   ragriff/index.html                 (wiki landing)
+ *   post/<slug>/index.html             (per blog post)
+ *   post/index.html                    (blog list)
+ *   index.html                         (home)
  *
- * Inline link tokens `{{link:notionID|text}}` (used for page mentions and
- * child_page blocks) get resolved to real anchor URLs via a notionID → URL map
- * built from the manifest. Image refs `/images/...` get rewritten to
- * `/wiki/images/...` so the served files are reachable.
+ * There is no manifest: the folder layout *is* the tree. `Foo/Foo.md` is the
+ * note for folder `Foo` and the rest of that folder are its children; a note
+ * carries both languages in `:::lang en` / `:::lang zh` blocks; `[[wikilinks]]`
+ * resolve through a filename + alias index.
+ *
+ * VAULT points at the vault root (default `SoD`, the copy committed to this
+ * repo). Point it at the live vault to preview unpublished edits:
+ *   VAULT=~/Documents/SoD npm run dev
  *
  * Run:  npm run render
  */
 
-import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import {
+  copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync,
+} from 'node:fs';
+import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { marked } from 'marked';
-import type { Manifest, Node, BlogEntry } from '../types/manifest.js';
+import { parse as parseYaml } from 'yaml';
+import type { Entry, Post, Stat } from '../types/vault.js';
 
 // === paths ===
-const WIKI_DIR = 'wiki';
-const MANIFEST_PATH = join(WIKI_DIR, 'manifest.json');
-const CONTENT_DIR = join(WIKI_DIR, 'content');
+/** The committed copy when there is one (that is what Vercel builds), else the
+ *  live vault, so `npm run dev` previews what Obsidian has right now. */
+const VAULT = process.env.VAULT
+  ?? ['SoD', join(homedir(), 'Documents', 'SoD')].find(existsSync)
+  ?? 'SoD';
+const WIKI_SRC = join(VAULT, 'Ragriff');
+const POST_SRC = join(VAULT, 'BlogPosts');
 
 const RAGRIFF_OUT = 'ragriff';
 const POST_OUT = 'post';
+const IMG_OUT = 'images';
 
 const ENTRY_TEMPLATE = readFileSync('templates/entry.html', 'utf8');
 const INDEX_TEMPLATE = readFileSync('templates/index.html', 'utf8');
@@ -62,101 +76,192 @@ function fillTemplate(template: string, vars: Record<string, string>): string {
   return out;
 }
 
-// === maps ===
-interface UrlInfo {
-  url: string;
-  title: string;
+/** `_foo` is unpublished, `.obsidian` is Obsidian's own. */
+const isHidden = (name: string): boolean => name.startsWith('_') || name.startsWith('.');
+
+// === note parsing ===
+interface Note {
+  fm: Record<string, unknown>;
+  en: string;
+  zh: string;
 }
 
-interface PathInfo {
-  segs: string[];     // en-slug path under /ragriff/
-  ancestors: Node[];  // ancestor nodes (for breadcrumb)
+const FRONTMATTER = /^---\r?\n([\s\S]*?)\r?\n---[^\S\r\n]*\r?\n?/;
+
+/** Split the body into its `:::lang` blocks. A note with no block at all (blog
+ *  shape, or a stray hand-written note) counts as single-language content. */
+function splitLangs(body: string): { en: string; zh: string } {
+  const buf = { en: [] as string[], zh: [] as string[] };
+  let cur: 'en' | 'zh' | null = null;
+  let tagged = false;
+  for (const line of body.split('\n')) {
+    const open = /^:::lang\s+(en|zh)\s*$/.exec(line.trim());
+    if (open) {
+      cur = open[1] as 'en' | 'zh';
+      tagged = true;
+      continue;
+    }
+    if (line.trim() === ':::') {
+      cur = null;
+      continue;
+    }
+    if (cur) buf[cur].push(line);
+  }
+  if (!tagged) return { en: body.trim(), zh: '' };
+  return { en: buf.en.join('\n').trim(), zh: buf.zh.join('\n').trim() };
 }
 
-function buildUrlMap(m: Manifest): Map<string, UrlInfo> {
-  const out = new Map<string, UrlInfo>();
-  function walk(nodes: Node[], ancestors: string[]): void {
-    const seen = new Set<string>();
-    for (const node of nodes) {
-      let slug = slugify(node.enEntry.title);
-      if (seen.has(slug)) slug = `${slug}-${node.enEntry.notionID.slice(0, 4)}`;
-      seen.add(slug);
-      const segs = [...ancestors, slug];
-      const url = `/${RAGRIFF_OUT}/${segs.join('/')}/`;
-      out.set(node.enEntry.notionID, { url, title: node.enEntry.title });
-      if (node.zhEntry) out.set(node.zhEntry.notionID, { url, title: node.zhEntry.title });
-      walk(node.children, segs);
+function parseNote(path: string): Note {
+  const raw = readFileSync(path, 'utf8');
+  const m = FRONTMATTER.exec(raw);
+  let fm: Record<string, unknown> = {};
+  if (m) {
+    try {
+      fm = (parseYaml(m[1]!) ?? {}) as Record<string, unknown>;
+    } catch (e) {
+      console.warn(`  ! bad frontmatter in ${path}: ${e instanceof Error ? e.message : e}`);
     }
   }
-  walk(m.tree, []);
-  for (const post of m.posts) {
-    const slug = slugify(post.title);
-    out.set(post.notionID, { url: `/${POST_OUT}/${slug}/`, title: post.title });
+  return { fm, ...splitLangs(m ? raw.slice(m[0].length) : raw) };
+}
+
+const str = (v: unknown): string | undefined =>
+  typeof v === 'string' && v.trim() !== '' ? v.trim() : undefined;
+
+function firstAlias(v: unknown): string | undefined {
+  if (typeof v === 'string') return str(v);
+  return Array.isArray(v) ? str(v[0]) : undefined;
+}
+
+// === vault walk ===
+function toEntry(path: string, title: string, slug: string[]): Entry {
+  const { fm, en, zh } = parseNote(path);
+  const stat = str(fm['stat.en']);
+  return {
+    slug,
+    title,
+    zhTitle: firstAlias(fm['aliases']),
+    stat: stat === 'Auto Translated' || stat === 'Reviewed' ? (stat as Stat) : undefined,
+    etymology: { en: str(fm['etymology.en']), zh: str(fm['etymology.zh']) },
+    tentative: { en: fm['name_tentative.en'] === true, zh: fm['name_tentative.zh'] === true },
+    body: { en, zh },
+    children: [],
+  };
+}
+
+/** `selfNote` is the folder note of `dir` — it is this level's own page, not a child. */
+function readTree(dir: string, segs: string[], selfNote: string | null): Entry[] {
+  const out: Entry[] = [];
+  const items = readdirSync(dir, { withFileTypes: true })
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  for (const item of items) {
+    if (isHidden(item.name) || item.name === selfNote) continue;
+    const path = join(dir, item.name);
+
+    if (item.isDirectory()) {
+      const note = `${item.name}.md`;
+      const slug = [...segs, slugify(item.name)];
+      const entry = existsSync(join(path, note))
+        ? toEntry(join(path, note), item.name, slug)
+        : blankEntry(item.name, slug);
+      entry.children = readTree(path, slug, note);
+      out.push(entry);
+    } else if (item.name.endsWith('.md')) {
+      const title = item.name.slice(0, -3);
+      out.push(toEntry(path, title, [...segs, slugify(title)]));
+    }
   }
   return out;
 }
 
-function buildPathMap(m: Manifest): Map<string, PathInfo> {
-  const out = new Map<string, PathInfo>();
-  function walk(nodes: Node[], ancestors: Node[], segPath: string[]): void {
-    const seen = new Set<string>();
-    for (const node of nodes) {
-      let slug = slugify(node.enEntry.title);
-      if (seen.has(slug)) slug = `${slug}-${node.enEntry.notionID.slice(0, 4)}`;
-      seen.add(slug);
-      const segs = [...segPath, slug];
-      out.set(node.enEntry.notionID, { segs, ancestors });
-      if (node.zhEntry) out.set(node.zhEntry.notionID, { segs, ancestors });
-      walk(node.children, [...ancestors, node], segs);
+/** A folder with no folder note still needs a page so its children have a parent. */
+function blankEntry(title: string, slug: string[]): Entry {
+  console.warn(`  ! no folder note for ${slug.join('/')} — rendering an empty page`);
+  return {
+    slug, title, etymology: {}, tentative: {}, body: { en: '', zh: '' }, children: [],
+  };
+}
+
+function readPosts(): Post[] {
+  if (!existsSync(POST_SRC)) return [];
+  const posts: Post[] = [];
+  for (const item of readdirSync(POST_SRC, { withFileTypes: true })) {
+    if (isHidden(item.name) || !item.name.endsWith('.md')) continue;
+    const path = join(POST_SRC, item.name);
+    const { fm, en } = parseNote(path);
+    const title = item.name.slice(0, -3);
+    posts.push({
+      slug: slugify(title),
+      title,
+      date: str(fm['date']) ?? statSync(path).mtime.toISOString().slice(0, 10),
+      body: en,
+    });
+  }
+  return posts.sort((a, b) => b.date.localeCompare(a.date));
+}
+
+/** Attachments live beside the notes; flatten them into /images/. */
+function copyAttachments(dir: string, into: Set<string>): void {
+  for (const item of readdirSync(dir, { withFileTypes: true })) {
+    if (isHidden(item.name)) continue;
+    const path = join(dir, item.name);
+    if (item.isDirectory()) copyAttachments(path, into);
+    else if (!item.name.endsWith('.md')) {
+      if (into.has(item.name)) {
+        console.warn(`  ! two attachments named ${item.name} — the later one wins`);
+      }
+      ensureDir(IMG_OUT);
+      copyFileSync(path, join(IMG_OUT, item.name));
+      into.add(item.name);
     }
   }
-  walk(m.tree, [], []);
+}
+
+// === links ===
+/** filename and alias both address a note, the way Obsidian resolves them. */
+function buildIndex(tree: Entry[], posts: Post[]): Map<string, string> {
+  const out = new Map<string, string>();
+  const add = (key: string | undefined, url: string): void => {
+    if (!key) return;
+    if (out.has(key) && out.get(key) !== url) {
+      console.warn(`  ! "${key}" addresses two notes — keeping ${out.get(key)}`);
+      return;
+    }
+    out.set(key, url);
+  };
+  const walk = (entries: Entry[]): void => {
+    for (const e of entries) {
+      const url = `/${RAGRIFF_OUT}/${e.slug.join('/')}/`;
+      add(e.title, url);
+      add(e.zhTitle, url);
+      walk(e.children);
+    }
+  };
+  walk(tree);
+  for (const p of posts) add(p.title, `/${POST_OUT}/${p.slug}/`);
   return out;
 }
 
-// === content transforms ===
-/**
- * sync.ts emits child_page blocks as bare `{{link:...}}` lines (same syntax
- * as inline mentions). Without blank lines between, marked joins them into
- * one paragraph. We separate them: any line that is *only* a link token gets
- * a blank line inserted after, so each becomes its own paragraph.
- * Inline mentions (link tokens embedded in sentences) are unaffected.
- */
-function splitChildLinks(md: string): string {
-  const lines = md.split('\n');
-  const out: string[] = [];
-  const isLinkOnly = (s: string) => /^\{\{link:[^|]+\|[^}]+\}\}$/.test(s.trim());
-  for (let i = 0; i < lines.length; i++) {
-    out.push(lines[i]!);
-    const next = lines[i + 1];
-    if (isLinkOnly(lines[i]!) && next !== undefined && next.trim() !== '') {
-      out.push('');
-    }
-  }
-  return out.join('\n');
-}
+const WIKILINK = /(!?)\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
 
-function resolveLinks(md: string, urlMap: Map<string, UrlInfo>): string {
-  // Use the manifest's current title as the link text rather than whatever was
-  // captured in the .md (which goes stale when a referenced page is renamed
-  // — Notion doesn't bump the parent's last_edited when a child renames, so
-  // the parent's .md keeps the old child name forever otherwise).
-  return md.replace(/\{\{link:([0-9a-f-]+)\|([^}]+)\}\}/g, (_, id, fallbackText) => {
-    const info = urlMap.get(id);
-    if (!info) return fallbackText; // target outside our wiki — keep original text
-    return `[${info.title}](${info.url})`;
+function resolveLinks(md: string, index: Map<string, string>, dangling: Set<string>): string {
+  return md.replace(WIKILINK, (_, bang: string, target: string, alias?: string) => {
+    const name = target.trim();
+    const text = alias?.trim() ?? name;
+    if (bang) return `![${text}](${encodeURI(`/${IMG_OUT}/${name}`)})`;
+    const url = index.get(name);
+    if (!url) {
+      dangling.add(name);
+      return text;                    // outside the wiki — plain text, as the old site did
+    }
+    return `[${text}](${url})`;
   });
 }
 
-function rewriteImagePaths(html: string): string {
-  return html.replace(/src="\/images\//g, 'src="/wiki/images/');
-}
-
-async function renderMd(path: string, urlMap: Map<string, UrlInfo>): Promise<string> {
-  const md = readFileSync(path, 'utf8');
-  const resolved = resolveLinks(splitChildLinks(md), urlMap);
-  const html = await marked.parse(resolved);
-  return rewriteImagePaths(html);
+async function renderMd(md: string, index: Map<string, string>, dangling: Set<string>): Promise<string> {
+  if (!md.trim()) return '';
+  return marked.parse(resolveLinks(md, index, dangling));
 }
 
 const THEME_BTN = `<button class="theme-toggle" aria-label="Toggle theme"></button>`;
@@ -165,20 +270,15 @@ const LANG_BTN =
   `<span data-show-lang="en">ZH</span><span data-show-lang="zh">EN</span></button>`;
 
 // === breadcrumb builders ===
-function wikiBreadcrumb(
-  ancestors: Node[],
-  leaf: Node,
-  hasZh: boolean,
-  urlMap: Map<string, UrlInfo>,
-): string {
+function wikiBreadcrumb(ancestors: Entry[], leaf: Entry, hasZh: boolean): string {
   const parts: string[] = [
     `<a href="/">~</a>`,
     `<a href="/${RAGRIFF_OUT}/">Ragriff</a>`,
   ];
   for (const a of ancestors) {
-    const url = urlMap.get(a.enEntry.notionID)?.url ?? '#';
-    const enT = escapeHtml(a.enEntry.title);
-    const zhT = a.zhEntry ? escapeHtml(a.zhEntry.title) : enT;
+    const url = `/${RAGRIFF_OUT}/${a.slug.join('/')}/`;
+    const enT = escapeHtml(a.title);
+    const zhT = a.zhTitle ? escapeHtml(a.zhTitle) : enT;
     if (hasZh) {
       parts.push(
         `<a href="${url}"><span data-show-lang="en">${enT}</span><span data-show-lang="zh">${zhT}</span></a>`,
@@ -188,9 +288,9 @@ function wikiBreadcrumb(
     }
   }
   if (hasZh) parts.push(LANG_BTN);
-  const enLeaf = escapeHtml(leaf.enEntry.title);
-  const leafInner = hasZh && leaf.zhEntry
-    ? `<span data-show-lang="en">${enLeaf}</span><span data-show-lang="zh">${escapeHtml(leaf.zhEntry.title)}</span>`
+  const enLeaf = escapeHtml(leaf.title);
+  const leafInner = hasZh && leaf.zhTitle
+    ? `<span data-show-lang="en">${enLeaf}</span><span data-show-lang="zh">${escapeHtml(leaf.zhTitle)}</span>`
     : enLeaf;
   parts.push(`<span class="leaf">${leafInner}${THEME_BTN}</span>`);
   return parts.join('\n                ');
@@ -205,91 +305,72 @@ function postBreadcrumb(title: string): string {
 }
 
 // === entry content (notes above body + dual-lang body) ===
-function buildEntryContent(node: Node, enHtml: string, zhHtml: string, hasZh: boolean): string {
+/** zh is the original, en is the translation, so every warning about the state
+ *  of a text belongs to the side that reads it. */
+function buildEntryContent(e: Entry, enHtml: string, zhHtml: string): string {
+  const hasEn = enHtml !== '';
+  const hasZh = zhHtml !== '';
   const enNotes: string[] = [];
   const zhNotes: string[] = [];
+  const line = (s: string): string => `<p>${escapeHtml(s).replace(/\n/g, '<br>')}</p>`;
 
-  if (node.enEntry.etymology) {
-    enNotes.push(`<p>Etymology: ${escapeHtml(node.enEntry.etymology)}</p>`);
+  if (e.etymology.en) enNotes.push(line(`Etymology: ${e.etymology.en}`));
+  if (e.etymology.zh) zhNotes.push(line(`词源: ${e.etymology.zh}`));
+  if (e.tentative.en) enNotes.push(line('The name of this entry is tentative.'));
+  if (e.tentative.zh) zhNotes.push(line('此条目的名称尚为暂定。'));
+  if (hasZh && e.stat === 'Auto Translated') {
+    enNotes.push(line('This Entry is Machine-translated from the Chinese original and requires review.'));
   }
-  if (node.zhEntry?.etymology) {
-    zhNotes.push(`<p>词源: ${escapeHtml(node.zhEntry.etymology)}</p>`);
+  if (hasZh && !hasEn) {
+    enNotes.push(line('This entry is written in Chinese and is waiting for translation.'));
   }
-  if (hasZh && node.enEntry.stat === 'Auto Translated') {
-    enNotes.push(`<p>This Entry is Machine-translated from the Chinese original and requires review.</p>`);
-  }
-  if (node.enEntry.stat === 'Empty') {
-    enNotes.push(`<p>This entry is written in Chinese and is waiting for translation.</p>`);
+  if (!hasZh && !hasEn) {
+    enNotes.push(line('This entry is a stub — nothing has been written here yet.'));
   }
 
   const parts: string[] = [];
   if (hasZh) {
-    if (enNotes.length > 0) {
-      parts.push(`<blockquote class="notes" data-show-lang="en">${enNotes.join('')}</blockquote>`);
-    }
-    if (zhNotes.length > 0) {
-      parts.push(`<blockquote class="notes" data-show-lang="zh">${zhNotes.join('')}</blockquote>`);
-    }
+    if (enNotes.length > 0) parts.push(`<blockquote class="notes" data-show-lang="en">${enNotes.join('')}</blockquote>`);
+    if (zhNotes.length > 0) parts.push(`<blockquote class="notes" data-show-lang="zh">${zhNotes.join('')}</blockquote>`);
     parts.push(`<article data-show-lang="en">${enHtml}</article>`);
     parts.push(`<article data-show-lang="zh">${zhHtml}</article>`);
   } else {
-    if (enNotes.length > 0) {
-      parts.push(`<blockquote class="notes">${enNotes.join('')}</blockquote>`);
-    }
+    if (enNotes.length > 0) parts.push(`<blockquote class="notes">${enNotes.join('')}</blockquote>`);
     parts.push(enHtml);
   }
   return parts.join('\n');
 }
 
 // === per-entry render ===
-async function renderWikiEntry(
-  node: Node,
-  urlMap: Map<string, UrlInfo>,
-  pathMap: Map<string, PathInfo>,
-): Promise<boolean> {
-  const id = node.enEntry.notionID;
-  const info = pathMap.get(id);
-  if (!info) return false;
-
-  const enMdPath = join(CONTENT_DIR, 'en', ...info.segs, `${id}.md`);
-  if (!existsSync(enMdPath)) return false;
-  const enHtml = await renderMd(enMdPath, urlMap);
-
-  let zhHtml = '';
-  if (node.zhEntry) {
-    const zhMdPath = join(CONTENT_DIR, 'zh', ...info.segs, `${node.zhEntry.notionID}.md`);
-    if (existsSync(zhMdPath)) zhHtml = await renderMd(zhMdPath, urlMap);
-  }
-  const hasZh = zhHtml !== '';
+async function renderEntry(
+  e: Entry,
+  ancestors: Entry[],
+  index: Map<string, string>,
+  dangling: Set<string>,
+): Promise<void> {
+  const enHtml = await renderMd(e.body.en, index, dangling);
+  const zhHtml = await renderMd(e.body.zh, index, dangling);
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
-    title: escapeHtml(node.enEntry.title),
-    breadcrumb: wikiBreadcrumb(info.ancestors, node, hasZh, urlMap),
-    content: buildEntryContent(node, enHtml, zhHtml, hasZh),
+    title: escapeHtml(e.title),
+    breadcrumb: wikiBreadcrumb(ancestors, e, zhHtml !== ''),
+    content: buildEntryContent(e, enHtml, zhHtml),
   });
 
-  const outDir = join(RAGRIFF_OUT, ...info.segs);
+  const outDir = join(RAGRIFF_OUT, ...e.slug);
   ensureDir(outDir);
   writeFileSync(join(outDir, 'index.html'), filled);
-  return true;
 }
 
-async function renderPost(post: BlogEntry, urlMap: Map<string, UrlInfo>): Promise<boolean> {
-  const mdPath = join(CONTENT_DIR, 'posts', `${post.notionID}.md`);
-  if (!existsSync(mdPath)) return false;
-  const html = await renderMd(mdPath, urlMap);
-
+async function renderPost(p: Post, index: Map<string, string>, dangling: Set<string>): Promise<void> {
   const filled = fillTemplate(ENTRY_TEMPLATE, {
-    title: escapeHtml(post.title),
-    breadcrumb: postBreadcrumb(post.title),
-    content: html,
+    title: escapeHtml(p.title),
+    breadcrumb: postBreadcrumb(p.title),
+    content: await renderMd(p.body, index, dangling),
   });
-
-  const slug = slugify(post.title);
-  const outDir = join(POST_OUT, slug);
+  const outDir = join(POST_OUT, p.slug);
   ensureDir(outDir);
   writeFileSync(join(outDir, 'index.html'), filled);
-  return true;
 }
 
 // === listing pages (reuse entry.html template) ===
@@ -300,23 +381,20 @@ function landingBreadcrumb(leafTitle: string, withLangToggle: boolean): string {
   return parts.join('\n                ');
 }
 
-function renderRagriffLanding(tree: Node[]): void {
+function renderRagriffLanding(tree: Entry[]): void {
   const items = tree
-    .map(n => {
-      const slug = slugify(n.enEntry.title);
-      const enT = escapeHtml(n.enEntry.title);
-      const zhT = n.zhEntry ? escapeHtml(n.zhEntry.title) : enT;
+    .map(e => {
+      const enT = escapeHtml(e.title);
+      const zhT = e.zhTitle ? escapeHtml(e.zhTitle) : enT;
       const label = `<span data-show-lang="en">${enT}</span><span data-show-lang="zh">${zhT}</span>`;
-      return `    <li><a href="/${RAGRIFF_OUT}/${slug}/">${label}</a></li>`;
+      return `    <li><a href="/${RAGRIFF_OUT}/${e.slug.join('/')}/">${label}</a></li>`;
     })
     .join('\n');
-
-  const content = `<ul class="entry-list">\n${items}\n</ul>`;
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
     title: 'Ragriff',
     breadcrumb: landingBreadcrumb('Ragriff', true),
-    content,
+    content: `<ul class="entry-list">\n${items}\n</ul>`,
   });
 
   ensureDir(RAGRIFF_OUT);
@@ -324,11 +402,9 @@ function renderRagriffLanding(tree: Node[]): void {
 }
 
 function extractExcerpt(md: string, maxLen = 200): string {
-  // Strip the {{link:...}} markup, keep the visible text
-  const cleaned = md.replace(/\{\{link:[^|]+\|([^}]+)\}\}/g, '$1');
-  // First non-empty paragraph
+  const cleaned = md.replace(WIKILINK, (_, bang: string, target: string, alias?: string) =>
+    bang ? '' : (alias ?? target));
   const para = cleaned.split(/\n{2,}/).find(s => s.trim().length > 0) ?? '';
-  // Strip markdown headings/bullets/etc.
   const plain = para
     .replace(/^[#>\-*]+\s*/gm, '')
     .replace(/[*_`]/g, '')
@@ -336,87 +412,78 @@ function extractExcerpt(md: string, maxLen = 200): string {
   return plain.length > maxLen ? plain.slice(0, maxLen).trimEnd() + '…' : plain;
 }
 
-function renderIndex(posts: BlogEntry[]): void {
-  const latest = posts[0];
-  let recentHtml: string;
-  if (!latest) {
-    recentHtml = '<p class="muted">No posts yet.</p>';
-  } else {
-    const slug = slugify(latest.title);
-    const date = latest.date ?? new Date(latest.created).toISOString().slice(0, 10);
-    const dt = latest.date ?? latest.created;
-    recentHtml = `<article class="recent-post">
-        <h3><a href="/${POST_OUT}/${slug}/">${escapeHtml(latest.title)}</a></h3>
-        <time datetime="${dt}">${escapeHtml(date)}</time>
-      </article>`;
-  }
-  const filled = fillTemplate(INDEX_TEMPLATE, { recent_post: recentHtml });
-  writeFileSync('index.html', filled);
-}
-
-function renderPostListing(posts: BlogEntry[]): void {
+function renderPostListing(posts: Post[]): void {
   const cards = posts
-    .map(p => {
-      const slug = slugify(p.title);
-      const dateStr = p.date ?? new Date(p.created).toISOString().slice(0, 10);
-      const mdPath = join(CONTENT_DIR, 'posts', `${p.notionID}.md`);
-      const excerpt = existsSync(mdPath) ? extractExcerpt(readFileSync(mdPath, 'utf8')) : '';
-      return `    <li class="post-card">
-        <h2><a href="/${POST_OUT}/${slug}/">${escapeHtml(p.title)}</a></h2>
-        <p class="excerpt">${escapeHtml(excerpt)}</p>
-        <div class="meta"><time datetime="${p.created}">${dateStr}</time></div>
-    </li>`;
-    })
+    .map(p => `    <li class="post-card">
+        <h2><a href="/${POST_OUT}/${p.slug}/">${escapeHtml(p.title)}</a></h2>
+        <p class="excerpt">${escapeHtml(extractExcerpt(p.body))}</p>
+        <div class="meta"><time datetime="${p.date}">${p.date}</time></div>
+    </li>`)
     .join('\n');
-
-  const content = `<ul class="post-list">\n${cards}\n</ul>`;
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
     title: 'Posts',
     breadcrumb: landingBreadcrumb('Posts', false),
-    content,
+    content: `<ul class="post-list">\n${cards}\n</ul>`,
   });
 
   ensureDir(POST_OUT);
   writeFileSync(join(POST_OUT, 'index.html'), filled);
 }
 
+function renderIndex(posts: Post[]): void {
+  const latest = posts[0];
+  const recentHtml = latest
+    ? `<article class="recent-post">
+        <h3><a href="/${POST_OUT}/${latest.slug}/">${escapeHtml(latest.title)}</a></h3>
+        <time datetime="${latest.date}">${latest.date}</time>
+      </article>`
+    : '<p class="muted">No posts yet.</p>';
+  writeFileSync('index.html', fillTemplate(INDEX_TEMPLATE, { recent_post: recentHtml }));
+}
+
 // === main ===
 async function main(): Promise<void> {
-  if (!existsSync(MANIFEST_PATH)) {
-    throw new Error(`No manifest at ${MANIFEST_PATH}. Run \`npm run sync\` first.`);
+  if (!existsSync(WIKI_SRC)) {
+    throw new Error(`No vault at ${WIKI_SRC}. Set VAULT to the vault root.`);
   }
-  const manifest = JSON.parse(readFileSync(MANIFEST_PATH, 'utf8')) as Manifest;
-  console.log(
-    `Manifest: ${manifest.tree.length} root(s), ${manifest.posts.length} post(s).`,
-  );
 
-  const urlMap = buildUrlMap(manifest);
-  const pathMap = buildPathMap(manifest);
+  // renaming a note moves its page, so old output has to go or it lingers
+  for (const dir of [RAGRIFF_OUT, POST_OUT, IMG_OUT]) rmSync(dir, { recursive: true, force: true });
 
-  let entriesOk = 0;
-  let entriesSkip = 0;
-  async function renderTree(nodes: Node[]): Promise<void> {
-    for (const node of nodes) {
-      const ok = await renderWikiEntry(node, urlMap, pathMap);
-      if (ok) entriesOk++;
-      else entriesSkip++;
-      await renderTree(node.children);
+  const tree = readTree(WIKI_SRC, [], null);
+  const posts = readPosts();
+  const index = buildIndex(tree, posts);
+  const dangling = new Set<string>();
+
+  const attachments = new Set<string>();
+  copyAttachments(WIKI_SRC, attachments);
+  if (existsSync(POST_SRC)) copyAttachments(POST_SRC, attachments);
+
+  let count = 0;
+  async function walk(entries: Entry[], ancestors: Entry[]): Promise<void> {
+    for (const e of entries) {
+      await renderEntry(e, ancestors, index, dangling);
+      count++;
+      await walk(e.children, [...ancestors, e]);
     }
   }
-  await renderTree(manifest.tree);
-  console.log(`Wiki entries: ${entriesOk} rendered, ${entriesSkip} skipped (no .md).`);
+  await walk(tree, []);
+  console.log(`Wiki: ${count} entries from ${tree.length} root(s).`);
 
-  let postsOk = 0;
-  for (const post of manifest.posts) {
-    if (await renderPost(post, urlMap)) postsOk++;
-  }
-  console.log(`Posts: ${postsOk}/${manifest.posts.length} rendered.`);
+  for (const p of posts) await renderPost(p, index, dangling);
+  console.log(`Posts: ${posts.length} rendered.`);
 
-  renderRagriffLanding(manifest.tree);
-  renderPostListing(manifest.posts);
-  renderIndex(manifest.posts);
+  renderRagriffLanding(tree);
+  renderPostListing(posts);
+  renderIndex(posts);
   console.log(`Listings: index.html + ragriff/index.html + post/index.html written.`);
+  if (attachments.size > 0) console.log(`Attachments: ${attachments.size} copied to ${IMG_OUT}/.`);
+
+  if (dangling.size > 0) {
+    console.log(`\n${dangling.size} dangling link(s), rendered as plain text:`);
+    for (const name of [...dangling].sort()) console.log(`   [[${name}]]`);
+  }
 }
 
 main().catch(e => {

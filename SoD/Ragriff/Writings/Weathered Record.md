@@ -1,0 +1,100 @@
+---
+id: 581d2337-6a21-405e-97cc-c9b7485eecb5
+aliases: ["破旧的记录"]
+stat.en: Auto Translated
+modified: 2026-05-12 02:47:00
+---
+
+:::lang en
+
+An investigation record, worn and deteriorated, concerning the petrification curse incident in Stone-in-the-Middle Town. It appears to be conversation records between the investigator and the petrification incident survivors, along with the latter's personal account.
+
+
+---
+
+I was born and raised in that little town—the one I think you call 石中镇. I can still remember everything about the town. I can remember how that child used to call out my name.
+
+The expression on her face when she spoke, her features, her long hair caught by the wind — I remember it all. Had it not been for her, these memories would have been preserved forever in stone.
+
+Now they have all turned to stubborn stones, and I can no longer distinguish the因果 from the报应 within it.
+
+—No, not a stone carving, it's just ordinary stone.
+
+—Fortunately so.
+
+—Why did you use the word "fortunately"? I think, if she had turned into a stone sculpture, I would be afraid to see her expression in that final moment.
+
+…
+
+When she pushed open the door of the prayer room in panic that day, I failed to realize it was the beginning of a nightmare. She kept repeating for me to leave, and when I tried to ask why, all I received was silence.
+
+Looking back now, she must have summoned considerable courage to warn the entire town upon hearing the news. In contrast, I am merely an ordinary fool — someone as unremarkable as me is incapable of mustering the resolve to cast aside everything I have, even though I believed in her so deeply.
+
+I believe in her conviction, but it could not surpass my decayed perception.
+
+Before the deadline she had announced, I only deceived myself, letting the unease in my heart grow unchecked. What absurd behavior. Her warnings failed to catch the townspeople's attention, so when I slipped away quietly on the announced day, no one connected my disappearance with her prediction. Was it I, the coward, who abandoned them that day? I am always asking myself such questions that can never be answered.
+
+Upon my return, from a great distance I could already see that heart-wrenching gray. In the lifeless town, I beheld Purgatory for the first time. I sat in the prayer room for a long while, realizing that I couldn't even pick her out from among the countless ordinary stones.
+
+Yes, it seems only 生命体 turned to stone.
+
+Are you disgusted by those miners? I don't understand what you mean. They have nothing to do with me. I think they're neither especially wicked nor particularly noble.
+
+- The karma of all this?
+
+…
+
+Please speak.
+
+---
+
+The subsequent records appear to have been erased by someone and cannot be deciphered.
+
+:::
+
+:::lang zh
+
+一份破旧不堪的，关于石中镇的石化诅咒事件的调查记录。看起来是调查者与石化事件幸存者的交谈记录与后者的自述。
+
+
+---
+
+我在那个小镇——我想你们称之为石中镇——出生，长大成人。我仍然可以记起镇上的一切。我可以记起那孩子怎样呼唤我的名字。
+
+她说话时的神情，面容，为风拂动的长发，我全都记得。如不是她，这些记忆都将永存石中。
+
+—如今他们化为顽石，我已经分不清其中的因果与报应。
+
+—不，不是石雕，是普通的石头。
+
+—幸好如此。
+
+—为什么用“幸好”一词？我想，如果她化作了石雕，我会害怕见到她最后一刻的神情。
+
+…
+
+那天她惊惶地推开祈祷间的门时，我没能意识到那是噩梦的发端。她一味重复着让我离开的话，试图询问原因，所得只有沉默。
+
+如今再看，那时闻讯后警告全镇人的她一定鼓起了相当的勇气。相比之下，我只是一个平凡的愚者，像我这样平凡的人，做不出抛弃现有的一切的觉悟，即使我那么相信她。
+
+—我相信她的信念，没能越过我腐朽的认知。
+
+在她所预告的最后期限前，我只是自我安慰，任由心中的不安肆意生长。多么可笑的行为啊。她的警告没能引起镇民的注意，以至于我在预告之日悄悄离开时，没人将消失的我与她的警告联系起来。那天是怯懦的我抛弃了他们吗？我总是进行着这样无法回答的自问。
+
+返回时，在很远的距离外我就能看见那种令人绞痛的灰色。在毫无生机的小镇中，我第一次见到了炼狱。我在祈祷间坐了很久，意识到自己甚至无法从无数平凡的石头中辨认出她。
+
+-是的，似乎只有生命体变成了石头。
+
+-是否反感那些开采者？我不明白你的意思。他们与我没有什么干系，我想他们既非极恶之辈，也不是多么高尚的家伙。
+
+-这一切的因果？
+
+…
+
+-请说吧。
+
+---
+
+后面的记录似乎为人抹去，无法辨认。
+
+:::

@@ -1,0 +1,26 @@
+---
+id: 48209890-23cd-4529-b009-80b7ea041afe
+aliases: ["风矢魔法"]
+stat.en: Auto Translated
+modified: 2026-05-10 23:55:00
+---
+
+:::lang en
+
+A magic that compress wind into high-density arrows and fire them at targets, based on [[WindCrafting]].
+
+Since wind arrows are elemental constructs, they carry only the magic power that was imbued during their shaping. Their speed also being very fast makes them difficult to perceive in time to mount a defense, making them a type of magic that is extremely easy to hit with.
+
+Correspondingly, wind arrows have low lethality; even [[Keaperra Thurandare]] cannot tear through overly hard rigid bodies such as sturdy city walls with wind arrows. Ordinary mages' wind arrow magic cannot even cut through skin.
+
+:::
+
+:::lang zh
+
+驱役魔力压缩风使之成为高密度风矢，再向目标发射的魔法，基于[[WindCrafting|塑风魔法]] 。
+
+由于风矢是元素造物，只携带被塑造时所沾染的魔力，速度亦快，难以及时察觉并展开防御，是极易命中的魔法。
+
+相对应的，风矢的杀伤力较低，即使是[[Keaperra Thurandare|加贝拉•索兰达尔]] 也无法以风矢撕裂过硬的刚体，如坚固的城墙。普通魔法师的风矢魔法甚至无法割破皮肉。
+
+:::
