@@ -8,7 +8,7 @@ body.gate {
   display: grid;
   place-content: center;
   justify-items: center;
-  gap: 3rem;
+  gap: 3.5rem;
 }
 
 #hero {
@@ -38,8 +38,4 @@ body.gate {
   display: block;
   color: var(--muted);
   font-size: 0.85em;
-}
-
-.back {
-  font-size: 0.9em;
 }
