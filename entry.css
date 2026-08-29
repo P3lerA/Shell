@@ -43,28 +43,3 @@ h2, h3 {
 .leaf .theme-toggle {
   margin-left: 0.3rem;
 }
-
-/* --- story index --- */
-
-.chapter-list {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.chapter {
-  display: flex;
-  align-items: baseline;
-  gap: 0.8rem;
-}
-
-.chapter-n {
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  min-width: 1.5em;
-  text-align: right;
-}
-
-.chapter.unwritten span:last-child {
-  color: var(--muted);
-  font-style: italic;
-}

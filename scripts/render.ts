@@ -42,6 +42,8 @@ const POST_SRC = join(VAULT, 'BlogPosts');
 const STORY_SRC = join(VAULT, 'Story');
 
 const RAGRIFF_OUT = 'ragriff';
+const ARCHIVE = 'archive';       // the wiki half of /ragriff
+const STORY = 'story';           // the novel half
 const POST_OUT = 'post';
 const IMG_OUT = 'images';
 
@@ -205,25 +207,18 @@ function readPosts(): Post[] {
   return posts.sort((a, b) => b.date.localeCompare(a.date));
 }
 
-/** A chapter is a top-level note whose name starts with its number, so notes
- *  and drafts can sit beside them in the folder without becoming chapters. */
-interface Chapter {
-  n: number;
-  slug: string;
-  title: string;
-  body: string;
-}
-
-function readChapters(): Chapter[] {
+/** Every top-level note in Story/ is a chapter, read exactly like a wiki
+ *  entry: two `:::lang` blocks, the same notes, the same stub notice when a
+ *  side is empty. Order is filename order, which is what Obsidian shows. */
+function readChapters(): Entry[] {
   if (!existsSync(STORY_SRC)) return [];
-  const out: Chapter[] = [];
-  for (const item of readdirSync(STORY_SRC, { withFileTypes: true })) {
-    const m = /^(\d+)[ .-]+(.+)\.md$/.exec(item.name);
-    if (!item.isFile() || !m) continue;
-    const { en } = parseNote(join(STORY_SRC, item.name));   // untagged note: all of it lands in `en`
-    out.push({ n: Number(m[1]), slug: String(Number(m[1])), title: m[2]!, body: en });
-  }
-  return out.sort((a, b) => a.n - b.n);
+  return readdirSync(STORY_SRC, { withFileTypes: true })
+    .filter(i => i.isFile() && i.name.endsWith('.md') && !isHidden(i.name))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map(i => {
+      const title = i.name.slice(0, -3);
+      return toEntry(join(STORY_SRC, i.name), title, [STORY, slugify(title)]);
+    });
 }
 
 /** Attachments live beside the notes; flatten them into /images/. */
@@ -245,7 +240,7 @@ function copyAttachments(dir: string, into: Set<string>): void {
 
 // === links ===
 /** filename and alias both address a note, the way Obsidian resolves them. */
-function buildIndex(tree: Entry[], posts: Post[]): Map<string, string> {
+function buildIndex(tree: Entry[], chapters: Entry[], posts: Post[]): Map<string, string> {
   const out = new Map<string, string>();
   const add = (key: string | undefined, url: string): void => {
     if (!key) return;
@@ -264,6 +259,7 @@ function buildIndex(tree: Entry[], posts: Post[]): Map<string, string> {
     }
   };
   walk(tree);
+  walk(chapters);
   for (const p of posts) add(p.title, `/${POST_OUT}/${p.slug}/`);
   return out;
 }
@@ -299,7 +295,7 @@ function wikiBreadcrumb(ancestors: Entry[], leaf: Entry, hasZh: boolean): string
   const parts: string[] = [
     `<a href="/">~</a>`,
     `<a href="/${RAGRIFF_OUT}/">Ragriff</a>`,
-    `<a href="/${RAGRIFF_OUT}/wiki/">Wiki</a>`,
+    `<a href="/${RAGRIFF_OUT}/${ARCHIVE}/">Archive</a>`,
   ];
   for (const a of ancestors) {
     const url = `/${RAGRIFF_OUT}/${a.slug.join('/')}/`;
@@ -370,7 +366,7 @@ function buildEntryContent(e: Entry, enHtml: string, zhHtml: string): string {
 // === per-entry render ===
 async function renderEntry(
   e: Entry,
-  ancestors: Entry[],
+  trail: (hasZh: boolean) => string,
   index: Map<string, string>,
   dangling: Set<string>,
 ): Promise<void> {
@@ -379,7 +375,7 @@ async function renderEntry(
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
     title: escapeHtml(e.title),
-    breadcrumb: wikiBreadcrumb(ancestors, e, zhHtml !== ''),
+    breadcrumb: trail(zhHtml !== ''),
     content: buildEntryContent(e, enHtml, zhHtml),
   });
 
@@ -443,9 +439,9 @@ function renderRagriffLanding(entries: number, chapters: number, corpus: string[
                 <span class="door-note">${dual(noteEn, noteZh)}</span></li>`;
 
   const doors = [
-    door(`/${RAGRIFF_OUT}/wiki/`, 'the Wiki', '辞典',
+    door(`/${RAGRIFF_OUT}/${ARCHIVE}/`, 'the Archive', '档案室',
       `${entries} entries`, `${entries} 条`),
-    door(`/${RAGRIFF_OUT}/story/`, 'the Story', '本传',
+    door(`/${RAGRIFF_OUT}/${STORY}/`, 'the Story', '本传',
       `${chapters} chapter${chapters === 1 ? '' : 's'}`, `${chapters} 章`),
   ].join('\n').trimStart();                  // the template already indents the first line
 
@@ -457,45 +453,44 @@ function renderRagriffLanding(entries: number, chapters: number, corpus: string[
     fillTemplate(RAGRIFF_TEMPLATE, { doors, corpus: corpusJson }));
 }
 
-/** /ragriff/wiki/ — the section index. Entries keep their old URLs one level
+/** /ragriff/archive/ — the section index. Entries keep their URLs one level
  *  up (/ragriff/being/...), so nothing that is already linked breaks. */
-function renderWikiIndex(tree: Entry[]): void {
+function renderArchiveIndex(tree: Entry[]): void {
   const items = tree
     .map(e => `    <li><a href="/${RAGRIFF_OUT}/${e.slug.join('/')}/">${dual(e.title, e.zhTitle ?? e.title)}</a></li>`)
     .join('\n');
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
-    title: 'Wiki',
+    title: 'Archive',
     breadcrumb: [
       `<a href="/">~</a>`,
       `<a href="/${RAGRIFF_OUT}/">Ragriff</a>`,
       LANG_BTN,
-      `<span class="leaf">${dual('Wiki', '辞典')}${THEME_BTN}</span>`,
+      `<span class="leaf">${dual('Archive', '档案室')}${THEME_BTN}</span>`,
     ].join('\n                '),
     content: `<ul class="entry-list">\n${items}\n</ul>`,
   });
 
-  ensureDir(join(RAGRIFF_OUT, 'wiki'));
-  writeFileSync(join(RAGRIFF_OUT, 'wiki', 'index.html'), filled);
+  ensureDir(join(RAGRIFF_OUT, ARCHIVE));
+  writeFileSync(join(RAGRIFF_OUT, ARCHIVE, 'index.html'), filled);
 }
 
-function storyBreadcrumb(leaf: string): string {
-  return [
+function storyBreadcrumb(leaf: Entry, hasZh: boolean): string {
+  const parts = [
     `<a href="/">~</a>`,
     `<a href="/${RAGRIFF_OUT}/">Ragriff</a>`,
-    `<a href="/${RAGRIFF_OUT}/story/">Story</a>`,
-    `<span class="leaf">${escapeHtml(leaf)}${THEME_BTN}</span>`,
-  ].join('\n                ');
+    `<a href="/${RAGRIFF_OUT}/${STORY}/">Story</a>`,
+  ];
+  if (hasZh) parts.push(LANG_BTN);
+  parts.push(`<span class="leaf">${
+    hasZh && leaf.zhTitle ? dual(leaf.title, leaf.zhTitle) : escapeHtml(leaf.title)
+  }${THEME_BTN}</span>`);
+  return parts.join('\n                ');
 }
 
-function renderStoryIndex(chapters: Chapter[]): void {
+function renderStoryIndex(chapters: Entry[]): void {
   const items = chapters
-    .map(c => `    <li class="chapter${c.body.trim() ? '' : ' unwritten'}">
-        <span class="chapter-n">${c.n}</span>
-        ${c.body.trim()
-          ? `<a href="/${RAGRIFF_OUT}/story/${c.slug}/">${escapeHtml(c.title)}</a>`
-          : `<span>${escapeHtml(c.title)}</span>`}
-    </li>`)
+    .map(c => `    <li><a href="/${RAGRIFF_OUT}/${c.slug.join('/')}/">${dual(c.title, c.zhTitle ?? c.title)}</a></li>`)
     .join('\n');
 
   const filled = fillTemplate(ENTRY_TEMPLATE, {
@@ -503,24 +498,14 @@ function renderStoryIndex(chapters: Chapter[]): void {
     breadcrumb: [
       `<a href="/">~</a>`,
       `<a href="/${RAGRIFF_OUT}/">Ragriff</a>`,
-      `<span class="leaf">Story${THEME_BTN}</span>`,
+      LANG_BTN,
+      `<span class="leaf">${dual('Story', '本传')}${THEME_BTN}</span>`,
     ].join('\n                '),
-    content: `<ul class="chapter-list">\n${items}\n</ul>`,
+    content: `<ul class="entry-list">\n${items}\n</ul>`,
   });
 
-  ensureDir(join(RAGRIFF_OUT, 'story'));
-  writeFileSync(join(RAGRIFF_OUT, 'story', 'index.html'), filled);
-}
-
-async function renderChapter(c: Chapter, index: Map<string, string>, dangling: Set<string>): Promise<void> {
-  const filled = fillTemplate(ENTRY_TEMPLATE, {
-    title: escapeHtml(c.title),
-    breadcrumb: storyBreadcrumb(c.title),
-    content: await renderMd(c.body, index, dangling),
-  });
-  const outDir = join(RAGRIFF_OUT, 'story', c.slug);
-  ensureDir(outDir);
-  writeFileSync(join(outDir, 'index.html'), filled);
+  ensureDir(join(RAGRIFF_OUT, STORY));
+  writeFileSync(join(RAGRIFF_OUT, STORY, 'index.html'), filled);
 }
 
 function extractExcerpt(md: string, maxLen = 200): string {
@@ -575,7 +560,8 @@ async function main(): Promise<void> {
 
   const tree = readTree(WIKI_SRC, [], null);
   const posts = readPosts();
-  const index = buildIndex(tree, posts);
+  const chapters = readChapters();
+  const index = buildIndex(tree, chapters, posts);
   const dangling = new Set<string>();
 
   const attachments = new Set<string>();
@@ -585,25 +571,24 @@ async function main(): Promise<void> {
   let count = 0;
   async function walk(entries: Entry[], ancestors: Entry[]): Promise<void> {
     for (const e of entries) {
-      await renderEntry(e, ancestors, index, dangling);
+      await renderEntry(e, hasZh => wikiBreadcrumb(ancestors, e, hasZh), index, dangling);
       count++;
       await walk(e.children, [...ancestors, e]);
     }
   }
   await walk(tree, []);
-  console.log(`Wiki: ${count} entries from ${tree.length} root(s).`);
+  console.log(`Archive: ${count} entries from ${tree.length} root(s).`);
 
   for (const p of posts) await renderPost(p, index, dangling);
   console.log(`Posts: ${posts.length} rendered.`);
 
-  const chapters = readChapters();
   for (const c of chapters) {
-    if (c.body.trim()) await renderChapter(c, index, dangling);
+    await renderEntry(c, hasZh => storyBreadcrumb(c, hasZh), index, dangling);
   }
-  console.log(`Story: ${chapters.filter(c => c.body.trim()).length}/${chapters.length} chapters written.`);
+  console.log(`Story: ${chapters.length} chapters.`);
 
   renderRagriffLanding(count, chapters.length, buildCorpus(tree));
-  renderWikiIndex(tree);
+  renderArchiveIndex(tree);
   renderStoryIndex(chapters);
   renderPostListing(posts);
   renderIndex(posts);
