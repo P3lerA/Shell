@@ -52,6 +52,7 @@ const IMG_OUT = 'images';
 
 const ENTRY_TEMPLATE = readFileSync('templates/entry.html', 'utf8');
 const INDEX_TEMPLATE = readFileSync('templates/index.html', 'utf8');
+const RAGRIFF_TEMPLATE = readFileSync('templates/ragriff.html', 'utf8');
 
 // === helpers ===
 function slugify(title: string): string {
@@ -414,29 +415,21 @@ function landingBreadcrumb(leafTitle: string, withLangToggle: boolean): string {
 const dual = (en: string, zh: string): string =>
   `<span data-show-lang="en">${escapeHtml(en)}</span><span data-show-lang="zh">${escapeHtml(zh)}</span>`;
 
-/** /ragriff/ — the two doors, over the hero. */
+/** /ragriff/ — its own page, not an entry: the animation and the doors, nothing else. */
 function renderRagriffLanding(entries: number, chapters: number, sections: number): void {
   const door = (href: string, en: string, zh: string, noteEn: string, noteZh: string): string =>
-    `    <li><a href="${href}"><span class="door-name">${dual(en, zh)}</span></a>
-      <span class="door-note">${dual(noteEn, noteZh)}</span></li>`;
+    `            <li><a href="${href}"><span class="door-name">${dual(en, zh)}</span></a>
+                <span class="door-note">${dual(noteEn, noteZh)}</span></li>`;
 
-  const content = `<div class="ascii-hero"><pre id="hero" aria-hidden="true"></pre></div>
-<ul class="doors">
-${door(`/${RAGRIFF_OUT}/wiki/`, 'the Wiki', '辞典',
-    `${entries} entries in ${sections} sections`, `${sections} 部 ${entries} 条`)}
-${door(`/${RAGRIFF_OUT}/story/`, 'the Story', '本传',
-    `${chapters} chapter${chapters === 1 ? '' : 's'}`, `${chapters} 章`)}
-</ul>
-<script src="/ascii.js" defer></script>`;
-
-  const filled = fillTemplate(ENTRY_TEMPLATE, {
-    title: 'Ragriff',
-    breadcrumb: landingBreadcrumb('Ragriff', true),
-    content,
-  });
+  const doors = [
+    door(`/${RAGRIFF_OUT}/wiki/`, 'the Wiki', '辞典',
+      `${entries} entries in ${sections} sections`, `${sections} 部 ${entries} 条`),
+    door(`/${RAGRIFF_OUT}/story/`, 'the Story', '本传',
+      `${chapters} chapter${chapters === 1 ? '' : 's'}`, `${chapters} 章`),
+  ].join('\n').trimStart();                  // the template already indents the first line
 
   ensureDir(RAGRIFF_OUT);
-  writeFileSync(join(RAGRIFF_OUT, 'index.html'), filled);
+  writeFileSync(join(RAGRIFF_OUT, 'index.html'), fillTemplate(RAGRIFF_TEMPLATE, { doors }));
 }
 
 /** /ragriff/wiki/ — the section index. Entries keep their old URLs one level
