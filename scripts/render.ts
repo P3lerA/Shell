@@ -415,21 +415,51 @@ function landingBreadcrumb(leafTitle: string, withLangToggle: boolean): string {
 const dual = (en: string, zh: string): string =>
   `<span data-show-lang="en">${escapeHtml(en)}</span><span data-show-lang="zh">${escapeHtml(zh)}</span>`;
 
+/** What the gate's text field is made of: the wiki's own names and openings.
+ *  ASCII only — a CJK glyph is two cells wide in a monospace grid and would
+ *  shear every row it landed in. */
+function buildCorpus(tree: Entry[], limit = 200): string[] {
+  const out = new Set<string>();
+  const clean = (s: string): string => s
+    .replace(WIKILINK, (_, bang: string, target: string, alias?: string) => (bang ? '' : alias ?? target))
+    .replace(/[#>*_`\[\]()]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const walk = (es: Entry[]): void => {
+    for (const e of es) {
+      out.add(e.title);
+      const opening = clean(e.body.en).slice(0, 64).trim();
+      if (opening) out.add(opening);
+      walk(e.children);
+    }
+  };
+  walk(tree);
+
+  return [...out]
+    .filter(s => s.length > 3 && /^[\x20-\x7E]+$/.test(s))
+    .slice(0, limit);
+}
+
 /** /ragriff/ — its own page, not an entry: the animation and the doors, nothing else. */
-function renderRagriffLanding(entries: number, chapters: number, sections: number): void {
+function renderRagriffLanding(entries: number, chapters: number, corpus: string[]): void {
   const door = (href: string, en: string, zh: string, noteEn: string, noteZh: string): string =>
-    `            <li><a href="${href}"><span class="door-name">${dual(en, zh)}</span></a>
+    `            <li><h2 class="door-name"><a href="${href}">${dual(en, zh)}</a></h2>
                 <span class="door-note">${dual(noteEn, noteZh)}</span></li>`;
 
   const doors = [
     door(`/${RAGRIFF_OUT}/wiki/`, 'the Wiki', '辞典',
-      `${entries} entries in ${sections} sections`, `${sections} 部 ${entries} 条`),
+      `${entries} entries`, `${entries} 条`),
     door(`/${RAGRIFF_OUT}/story/`, 'the Story', '本传',
       `${chapters} chapter${chapters === 1 ? '' : 's'}`, `${chapters} 章`),
   ].join('\n').trimStart();                  // the template already indents the first line
 
+  // `<` escaped so the array can never close the script tag that carries it
+  const corpusJson = JSON.stringify(corpus).replaceAll('<', '\\u003c');
+
   ensureDir(RAGRIFF_OUT);
-  writeFileSync(join(RAGRIFF_OUT, 'index.html'), fillTemplate(RAGRIFF_TEMPLATE, { doors }));
+  writeFileSync(join(RAGRIFF_OUT, 'index.html'),
+    fillTemplate(RAGRIFF_TEMPLATE, { doors, corpus: corpusJson }));
 }
 
 /** /ragriff/wiki/ — the section index. Entries keep their old URLs one level
@@ -577,7 +607,7 @@ async function main(): Promise<void> {
   }
   console.log(`Story: ${chapters.filter(c => c.body.trim()).length}/${chapters.length} chapters written${STORY_SRC ? '' : ' (no story source found)'}.`);
 
-  renderRagriffLanding(count, chapters.length, tree.length);
+  renderRagriffLanding(count, chapters.length, buildCorpus(tree));
   renderWikiIndex(tree);
   renderStoryIndex(chapters);
   renderPostListing(posts);

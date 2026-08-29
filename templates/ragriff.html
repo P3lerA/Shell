@@ -16,10 +16,11 @@
         </script>
     </head>
     <body class="gate">
-        <pre id="hero" aria-label="Ragriff"></pre>
+        <pre id="hero" role="img" aria-label="Ragriff"></pre>
         <ul class="doors">
             {{doors}}
         </ul>
+        <script>window.RAGRIFF_CORPUS = {{corpus}};</script>
         <script src="/ragriff.js" defer></script>
     </body>
 </html>

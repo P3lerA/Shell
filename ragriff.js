@@ -1,14 +1,14 @@
-/* The gate builds its own name out of its own source.
+/* A page of text with the word cut out of it.
 
-   A block of text fills the panel; everything that is not part of the
-   letterform erodes away a handful of cells at a time until only the
-   characters standing inside RAGRIFF are left. ~1.4fps, so each step is a
-   deliberate move rather than a transition.
+   Lines of the wiki's own names and openings enter at the top as illegible
+   grain and resolve as they descend — each cell has a fixed threshold, so a
+   character that surfaces stays surfaced and a line settles into itself on
+   the way down. Density never changes: an unresolved cell holds grain, not
+   emptiness, so the only void on the page is RAGRIFF itself.
 
-   SOURCE is the page's own markup. Swap it for an essay, a chapter, anything
-   with characters -- the shape does not care what it is made of. */
+   One row per step, ~1.4fps. No canvas, no dependencies. */
 
-const SOURCE = () => document.documentElement.outerHTML.replace(/\s+/g, '');
+const CORPUS = (window.RAGRIFF_CORPUS || []).filter(s => s && s.length > 3);
 
 const FONT = {
   R: ['####.', '#...#', '#...#', '####.', '#.#..', '#..#.', '#...#'],
@@ -19,67 +19,74 @@ const FONT = {
 };
 
 const WORD = 'RAGRIFF';
-const GW = 5, GH = 7, GAP = 2;              // glyph cell, and the gap between glyphs
-const SX = 2;                               // a monospace cell is about twice as tall as it
-                                            // is wide, so stretch the glyphs back to square
-const W = 88, H = 15;                       // panel
-const STEP_MS = 700;                        // ~1.4fps
-const STEPS = 13;
-const HOLD_MS = 4200;                       // how long the finished word stands
+const GW = 5, GH = 7, GAP = 2;
+const SX = 2;                    // a monospace cell is ~2x as tall as it is wide
+const W = 88, H = 24;
+const STEP_MS = 700;             // ~1.4fps: each line is a move, not a transition
+const FADE = 0.35;               // opacity of the farthest row
 
 const x0 = Math.floor((W - (WORD.length * GW * SX + (WORD.length - 1) * GAP)) / 2);
 const y0 = Math.floor((H - GH) / 2);
 
-const mask = new Set();
+const hole = new Set();
 [...WORD].forEach((ch, li) => {
   FONT[ch].forEach((row, r) => {
     [...row].forEach((c, k) => {
       if (c !== '#') return;
       const cx = x0 + li * (GW * SX + GAP) + k * SX;
-      for (let s = 0; s < SX; s++) mask.add((y0 + r) * W + cx + s);
+      for (let s = 0; s < SX; s++) hole.add((y0 + r) * W + cx + s);
     });
   });
 });
 
-const el = document.getElementById('hero');
+// the grain is made of the same material as the text, so it reads as decay
+// rather than as static
+const ALPHABET = [...new Set(CORPUS.join(''))].filter(c => c !== ' ');
+const grain = () => ALPHABET[Math.floor(Math.random() * ALPHABET.length)] || '.';
+const pick = () => CORPUS[Math.floor(Math.random() * CORPUS.length)] || '';
 
-function shuffled(xs) {
-  const a = xs.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-function draw(cells) {
-  let out = '';
-  for (let y = 0; y < H; y++) out += cells.slice(y * W, y * W + W).join('') + '\n';
-  el.textContent = out;
-}
-
-function run() {
-  const src = SOURCE();
-  const cells = Array.from({ length: W * H }, (_, i) => src[i % src.length] || '.');
-  const loose = shuffled([...Array(W * H).keys()].filter(i => !mask.has(i)));
-  const per = Math.ceil(loose.length / STEPS);
-
-  draw(cells);
-  let step = 0;
-  const tick = () => {
-    for (const i of loose.slice(step * per, (step + 1) * per)) cells[i] = ' ';
-    draw(cells);
-    step++;
-    setTimeout(step < STEPS ? tick : run, step < STEPS ? STEP_MS : HOLD_MS);
+function newRow() {
+  let text = '';
+  while (text.length < W) text += pick() + '   ';
+  return {
+    text: text.slice(0, W),
+    noise: Array.from({ length: W }, grain),
+    // how far down a cell must travel before it settles; squared to bias the
+    // thresholds low, so a line starts surfacing early and is legible well
+    // before it reaches the reader
+    at: Array.from({ length: W }, () => Math.random() ** 2),
   };
-  setTimeout(tick, STEP_MS);
 }
 
-if (el) {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const src = SOURCE();
-    draw(Array.from({ length: W * H }, (_, i) => (mask.has(i) ? src[i % src.length] || '.' : ' ')));
-  } else {
-    run();
+const el = document.getElementById('hero');
+const rows = Array.from({ length: H }, newRow);
+const lines = [];
+
+if (el && CORPUS.length) {
+  for (let y = 0; y < H; y++) {
+    const span = document.createElement('span');
+    span.style.opacity = (FADE + (1 - FADE) * (y / (H - 1))).toFixed(3);
+    el.append(span, '\n');
+    lines.push(span);
+  }
+
+  const draw = () => rows.forEach((row, y) => {
+    const depth = y / (H - 1);                       // 0 at the horizon, 1 at the reader
+    let out = '';
+    for (let x = 0; x < W; x++) {
+      out += hole.has(y * W + x) ? ' '
+        : row.at[x] <= depth ? row.text[x]
+        : row.noise[x];
+    }
+    lines[y].textContent = out;
+  });
+
+  draw();
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(() => {
+      rows.pop();
+      rows.unshift(newRow());
+      draw();
+    }, STEP_MS);
   }
 }
