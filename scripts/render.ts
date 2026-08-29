@@ -429,7 +429,7 @@ function buildCorpus(tree: Entry[], limit = 200): string[] {
   const walk = (es: Entry[]): void => {
     for (const e of es) {
       out.add(e.title);
-      const opening = clean(e.body.en).slice(0, 64).trim();
+      const opening = clean(e.body.en).slice(0, 96).trim();   // about one row wide
       if (opening) out.add(opening);
       walk(e.children);
     }

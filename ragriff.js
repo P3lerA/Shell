@@ -24,6 +24,8 @@ const SX = 2;                    // a monospace cell is ~2x as tall as it is wid
 const W = 88, H = 24;
 const STEP_MS = 700;             // ~1.4fps: each line is a move, not a transition
 const FADE = 0.35;               // opacity of the farthest row
+const SETTLED = 0.65;            // by this depth every cell has surfaced, so the
+                                 // near third of the field is unbroken text
 
 const x0 = Math.floor((W - (WORD.length * GW * SX + (WORD.length - 1) * GAP)) / 2);
 const y0 = Math.floor((H - GH) / 2);
@@ -43,18 +45,34 @@ const hole = new Set();
 // rather than as static
 const ALPHABET = [...new Set(CORPUS.join(''))].filter(c => c !== ' ');
 const grain = () => ALPHABET[Math.floor(Math.random() * ALPHABET.length)] || '.';
-const pick = () => CORPUS[Math.floor(Math.random() * CORPUS.length)] || '';
+// a screenful takes ~35 fragments, so keep that many out of circulation —
+// the same sentence showing up on three rows at once is very visible
+const recent = [];
+function pick() {
+  let s = '';
+  for (let tries = 0; tries < 8; tries++) {
+    s = CORPUS[Math.floor(Math.random() * CORPUS.length)] || '';
+    if (!recent.includes(s)) break;
+  }
+  recent.push(s);
+  if (recent.length > 40) recent.shift();
+  return s;
+}
 
 function newRow() {
   let text = '';
   while (text.length < W) text += pick() + '   ';
+  if (text.length > W) {
+    text = text.slice(0, W);
+    const cut = text.lastIndexOf(' ');        // never end a row mid-word
+    if (cut > W * 0.6) text = text.slice(0, cut);
+  }
   return {
-    text: text.slice(0, W),
+    text: text.padEnd(W),
     noise: Array.from({ length: W }, grain),
-    // how far down a cell must travel before it settles; squared to bias the
-    // thresholds low, so a line starts surfacing early and is legible well
-    // before it reaches the reader
-    at: Array.from({ length: W }, () => Math.random() ** 2),
+    // how far down a cell must travel before it surfaces; squared so a line
+    // comes up unevenly rather than all at once
+    at: Array.from({ length: W }, () => (Math.random() ** 2) * SETTLED),
   };
 }
 
