@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ragriff</title>
+        <link rel="stylesheet" href="/index.css">
+        <link rel="stylesheet" href="/ragriff.css">
+        <script>
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+            const p = new URLSearchParams(location.search).get('lang');
+            const lg = p === 'zh' || p === 'en' ? p : (localStorage.getItem('lang') || 'en');
+            document.documentElement.setAttribute('data-lang', lg);
+            document.documentElement.setAttribute('lang', lg);
+        </script>
+    </head>
+    <body class="gate">
+        <pre id="hero" role="img" aria-label="Ragriff"></pre>
+        <ul class="doors">
+            {{doors}}
+        </ul>
+        <script>window.RAGRIFF_CORPUS = {{corpus}};</script>
+        <script src="/ragriff.js" defer></script>
+    </body>
+</html>

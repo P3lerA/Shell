@@ -1,0 +1,41 @@
+/* the gate at /ragriff — no nav, no breadcrumb: one animation and the doors */
+
+body.gate {
+  max-width: none;
+  margin: 0;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 3.5rem;
+}
+
+#hero {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  /* 88 columns wide and a monospace advance is ~0.6em, so the panel wants
+     ~53em: this keeps it inside a phone without letting it grow past the
+     point where the characters stop reading as text on a wide screen */
+  font-size: min(1.7vw, 0.8rem);
+  line-height: 1.05;
+  color: var(--muted);
+  white-space: pre;
+}
+
+.doors {
+  display: grid;
+  gap: 1.4rem;
+  text-align: center;
+}
+
+.doors .door-name {
+  font-size: 1.9em;
+  margin: 0 0 0.15rem;
+}
+
+.doors .door-note {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85em;
+}
