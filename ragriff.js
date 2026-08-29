@@ -62,13 +62,11 @@ function pick() {
 function newRow() {
   let text = '';
   while (text.length < W) text += pick() + '   ';
-  if (text.length > W) {
-    text = text.slice(0, W);
-    const cut = text.lastIndexOf(' ');        // never end a row mid-word
-    if (cut > W * 0.6) text = text.slice(0, cut);
-  }
+  // hard cut, flush edge: a word that runs off the end is split, not moved.
+  // Retreating to a word boundary leaves a ragged margin, which reads as
+  // browser word-wrap and breaks the illusion of a character field.
   return {
-    text: text.padEnd(W),
+    text: text.slice(0, W),
     noise: Array.from({ length: W }, grain),
     // how far down a cell must travel before it surfaces; squared so a line
     // comes up unevenly rather than all at once
