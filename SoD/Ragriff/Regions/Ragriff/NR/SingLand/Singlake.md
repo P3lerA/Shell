@@ -10,7 +10,7 @@ modified: 2026-05-11 14:57:00
 A saltwater lake in the western part of SingLand, producing delicious saltwater fish famous throughout Ragriff.
 
 
-*Apparently, even those arrogant High Elves love to eat it!*
+*Apparently, even those arrogant High Elf nobles love to eat it!*
 
 :::
 

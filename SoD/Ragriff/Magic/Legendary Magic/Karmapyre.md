@@ -8,7 +8,7 @@ modified: 2026-05-10 22:39:00
 
 :::lang en
 
-Magic that summons [[Karman]]. It is worth noting that since the Karman does not belong to the four elements, [[Karman]] magic belongs to pure magic.
+Magic that **commands** [[Karman]]. It is worth noting that since the Karman does not belong to the four elements, Karmapyre belongs to [[Pure Magic]].
 
 Unlike [[Fireball]], the Karman shaped by Karmapyre does not exhibit a clear form.
 

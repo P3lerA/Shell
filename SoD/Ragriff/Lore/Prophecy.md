@@ -9,7 +9,7 @@ modified: 2026-05-11 18:48:00
 
 A powerful form of prediction, but not an irreversible iron law that gives away the story's answer in advance.
 
-The more powerful the destiny-speaker, the more likely their prophecy is to come true — in other words, the closer they are to destiny.
+The more powerful the destiny-speaker, the more likely their prophecy is to come true — in other words, the closer it is to destiny.
 
 :::
 

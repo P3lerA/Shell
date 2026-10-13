@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Those who deviate from causality, the forgotten [[Elf]] sorcerer [[Fandrare]].
+One who defied causality; the forgotten [[Elf]] sorcerer [[Fandrare]].
 
 :::
 

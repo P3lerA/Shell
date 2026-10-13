@@ -19,7 +19,7 @@ Before the coming of [[the Guidance]]. The land rested in darkness, waiting for 
 
 ~BG 850 [[Textor Fati]] is born
 
-~BG 600 — [[Lord]] is born
+~BG 600 [[Lord]] is born
 
 ## Deep Antiquity Era BG 600–0
 
@@ -33,13 +33,13 @@ BG 0: [[Daemon R. Brigid]] ascends to godhood, [[the Guidance]] descends
 
 [[the Guidance]] descends, and mortals gain the capacity for conscious thought — yet the world remains in chaos.
 
-~ AG 20 [[Hillkind]] ancestors arrived at what is now [[Hillkind Mountains]]
+~ AG 20 [[Hillkind]] ancestors arrive at what is now [[Hillkind Mountains]], [[the Dawn Meteor]]
 
-Age 20 [[Isis Lynne]] Ascends to Godhood
+AG 20 [[Isis Lynne]] ascends to godhood
 
 AG 433 [[F. F. Damkina]] Deification
 
-AG 656 [[Tiyo Settyuu]] 登神
+AG 656 [[Tiyo Settyuu]] ascends to godhood
 
 ## Late Antiquity AG 800–1200
 

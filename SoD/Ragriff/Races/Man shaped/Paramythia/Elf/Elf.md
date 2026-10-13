@@ -9,7 +9,7 @@ modified: 2026-05-11 14:57:00
 
 Elves are an elegant, pure, and arrogant race, possessing lifespans two times or even several times longer than those of humans.
 
-The first magic flows through the veins of Elves, which is why most magic users are Elves.
+The first magic flows through the veins of Elves, which is why most Sorcerers are Elves.
 
 Elves originated from the wasteland now known as the Pale Land, [[Eltarnern]], and after [[The Pale Night]], they migrated northward until reaching the northernmost coast of southern Ragriff.
 

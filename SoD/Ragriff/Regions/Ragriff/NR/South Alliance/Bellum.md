@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-A small northern nation of the Southern Confederacy, birthplace of [[ALLGOES]]. Once the largest nation in northern Argos's heartland, present-day Bellum is the remaining territory left after [[Argos]]'s independence.
+A small northern nation of the South Alliance, birthplace of [[ALLGOES]]. Once the largest nation in the heartland of North Ragriff, present-day Bellum is the remaining territory left after [[Argos]]'s independence.
 
 The word Bellum comes from Latin, meaning "war".
 
@@ -15,7 +15,7 @@ The word Bellum comes from Latin, meaning "war".
 
 :::lang zh
 
-南方邦联北部的小国，[[ALLGOES|阿尔戈斯]] 的出生地。曾是北阿尔戈斯腹地占地最大的国家，如今的贝鲁是[[Argos|欧戈斯]] 独立后旧贝鲁剩下的领地。
+南方邦联北部的小国，[[ALLGOES|阿尔戈斯]] 的出生地。曾是北拉格里弗腹地占地最大的国家，如今的贝鲁是[[Argos|欧戈斯]] 独立后旧贝鲁剩下的领地。
 
 Bellum一词来自拉丁语，意为“战争”。
 

@@ -7,11 +7,11 @@ modified: 2026-05-11 23:10:00
 
 :::lang en
 
-Two soldiers were discussing how their respective nations handle prisoners taken after a city falls—one came from the Southern Confederacy, the other from 欧戈斯. *(Neither place is any good—Editor's note)*
+Two soldiers were discussing how their respective nations handle prisoners taken after a city falls—one came from the South Alliance, the other from Argos. *(Neither place is any good—Editor's note)*
 
-That one from the Southern Confederacy: "We usually kill everyone taller than a wheel, regardless of gender or age."
+The one from the South Alliance: "We usually kill everyone taller than a wheel, regardless of gender or age."
 
-The one from 欧戈斯 nodded, then pulled a wheel out of who-knows-where and said, "Like this?"
+The one from Argos nodded, then pulled a wheel out of who-knows-where and said, "Like this?"
 
 "Why don't you just stand the wheel up!"
 

@@ -6,7 +6,7 @@ modified: 2026-05-11 23:40:00
 
 :::lang en
 
-A collection of short jokes published by [[SingLand]] in pamphlet form. The content is crude yet hilarious, commonly found on dimly lit bar counters in Ragriff. This is the first volume.
+A collection of short jokes published by [[SingLand]] in pamphlet form. The content is crude yet hilarious, commonly found on dimly lit bar counters in Ragriff.
 
 [[Gentleman's Joke-I]]
 

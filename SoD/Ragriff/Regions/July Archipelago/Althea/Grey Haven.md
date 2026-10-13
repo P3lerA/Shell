@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-Located in the southeast of the July Islands, it is the largest port city in Aletheia. Since the elven folk first set foot on the July Islands, grey-white sails have sailed ceaselessly across the seas.
+Located in the southeast of the July Archipelago, it is the largest port city in Althea. Since the Common Elves first set foot on the July Archipelago, grey-white sails have sailed ceaselessly across the seas.
 
 All the port buildings are gray, hence the name.
 

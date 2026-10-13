@@ -7,13 +7,13 @@ modified: 2026-05-11 11:40:00
 
 :::lang en
 
-Centuries later, the Four Seasons High Ridge, who once always calmly watched over humanity, has become chaotic and turbulent. He would randomly inflict disasters, then—for some reason—something people call "guilt"—bring blessings in the aftermath.
+Centuries later, Shiki Takaaki, who had once always calmly watched over humanity, had become deranged. He would randomly inflict disasters, then—for some reason—something people call "guilt"—bring blessings in the aftermath.
 
-When her gaze fell upon the Kaxindra clan once more, the name Theodorus had been forgotten by most of the clan members — so mediocre that he did not seem like a descendant of the great mage at all.
+When her gaze fell upon Clan Cysindera once more, the name Theodore had been forgotten by most of the clan, who had grown so mediocre they hardly seemed like descendants of an ArchMage.
 
-Now, Shiki Kogane was no longer surprised by these phenomena; she merely sought out noteworthy individuals. — [[Synomemn Laplace]], intelligent, promising, upright. — No. She had grown accustomed to the ugliness of noble souls. Yet when [[The Nameless Prophet]] told the former that [[Ferdinand C. Argos]]'s [[Prophecy]] would slay him, Shiki Kogane still could not restrain her craving for destruction.
+Now, Shiki Takaaki was no longer surprised by these phenomena; she merely sought out noteworthy individuals. — [[Synomemn Laplace]], intelligent, promising, upright. — No. She had grown accustomed to the ugliness of noble souls. Yet when [[The Nameless Prophet]] told the former the [[Prophecy]] that he would be killed by [[Ferdinand C. Argos]], Shiki Takaaki still could not restrain her craving for destruction.
 
-Contrary to her expectations, even without any intervention in Synomemn's actions, this mage, whom those around him considered "upright," still committed an unforgivable sin. To smother the [[Textor Fati]], in 2899 Synomemn attacked the town at the foot of [[Mount Angro]], Ferdinand's hometown and at that time his place of residence. Unwilling to let this farce end too soon, 四季高岭 dispatched Ferdinand to take refuge in a dragon's lair when Synomemn attacked the town (the [[Textor Fati]] of "existence" holds the authority to dispatch existence), making him the sole survivor of this disaster.
+Contrary to her expectations, even without any intervention in Synomemn's actions, this mage, whom those around him considered "upright," still committed an unforgivable sin. To smother the prophecy, in 2899 Synomemn attacked the town at the foot of [[Mount Angro]], Ferdinand's hometown and at that time his place of residence. Unwilling to let this farce end too soon, Shiki Takaaki dispatched Ferdinand to take refuge in a dragon's lair when Synomemn attacked the town (the [[Textor Fati]] of "existence" holds the authority to dispatch existence), making him the sole survivor of this disaster.
 
 :::
 

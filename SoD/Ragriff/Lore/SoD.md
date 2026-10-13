@@ -7,15 +7,15 @@ modified: 2026-05-11 19:58:00
 
 :::lang en
 
-SoD, Seed of Demon, is the pinnacle creation of [[the Peírama]]'s magical technology. The original seed (with the ability to proliferate into new seeds) exists in and only one copy, which was handed from [[Fandrare Kyren]] to [[Alice]] before the fall of Peírama and has always remained in her hands.
+SoD, Seed of Demon, is the pinnacle creation of [[the Peírama]]'s magical technology. The original seed (with the ability to proliferate into new seeds) exists in one and only one copy, which was handed from [[Fandrare Kyren]] to [[Alice]] before the fall of Peírama and has always remained in her hands.
 
 [[Oraculum]] is precisely what grew from the first copy sample of the SoD. In the deprecated story, the [[Augurium]] is a copy of another seed that never sprouted, and exists within [[Tithiel Earendel]]'s body.
 
-In short, SoD is "existence" itself, and can be shaped by injected Mana into any entity — such as [[the Tree]]. If one wishes for it to be shaped into a [[Being]], its memory is required.
+In short, SoD is "existence" itself, and can be shaped by injected Mana into any entity — such as [[the Tree]]. If one wishes for it to be shaped into a [[Being]], a memory is required.
 
 Given that there is no non-destructive method of memory transfer (memories must be moved from the original and cannot be duplicated), it is impossible to use the SoD to create a clone.
 
-You can inject [[Reflorescence]] to make it proliferate, but a copy cannot be copied again. Any attempt at a second-generation copy triggers uncontrollable self-replication — the escape of such specimens was what destroyed Peírama, and what spawned every nameless things now lurking in [[Pandemoniac]]. Hence the name: Seed of Demon. Even first-generation copies are already far weaker and less stable than the original, which is why [[Oraculum]] is so fragile.
+You can inject [[Reflorescence]] to make it proliferate, but a copy cannot be copied again. Any attempt at a second-generation copy triggers uncontrollable self-replication — the escape of such specimens was what destroyed Peírama, and what spawned every nameless thing now lurking in [[Pandemoniac]]. Hence the name: Seed of Demon. Even first-generation copies are already far weaker and less stable than the original, which is why [[Oraculum]] is so fragile.
 
 The original is an embryo-like seed contained in a small bottle, pale white in color. The replica, except for being deep black in color, has the same shape as the original in all other respects.
 

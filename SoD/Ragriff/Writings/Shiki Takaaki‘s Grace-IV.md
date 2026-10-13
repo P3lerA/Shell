@@ -7,21 +7,21 @@ modified: 2026-05-11 11:41:00
 
 :::lang en
 
-In 3140, Xinomu, driven by 四季高岭, knocked on the door of the wooden cabin. Over two hundred years had passed since these two sworn enemies last met. Ferdinand did not recognize who the visitor was, but from several hundred meters away he could distinguish that magical power that did not belong to a human.
+In 3140, Synomemn, driven by Shiki Takaaki, knocked on the door of the wooden cabin. Over two hundred years had passed since these two sworn enemies last met. Ferdinand did not recognize who the visitor was, but from several hundred meters away he could distinguish that magical power that did not belong to a human.
 
-Their battle burned the wheat fields, dimmed the sky. Even the Weavers of the World could not defeat this remarkable magician by borrowing another's body.
+Their battle burned the wheat fields, dimmed the sky. Even the weaver of the world could not defeat this remarkable mage by borrowing another's body.
 
-Defeated, Shiji Gaoling materialized in utter astonishment to face this Vandla head-on. Fortunately, [[Alice]] stopped her before she could strike—this 受位者 who had already foreseen her ending felt she could not allow Shiji Gaoling to continue running rampant.
+Defeated, Shiki Takaaki materialized in utter astonishment to face this Fandrare head-on. Fortunately, [[Alice]] stopped her before she could strike—this God, who had already foreseen her ending felt she could not allow Shiki Takaaki to continue running rampant.
 
-Alice took her away, and the field, already turned to ash, regained its tranquility. The awakened 希诺蒙 saw the scene before him, and easily understood what had probably just happened.
+Alice took her away, and the field, already turned to ash, regained its tranquility. The awakened Synomemn saw the scene before him, and easily understood what had probably just happened.
 
-Would you like a cup of tea?
+"Would you like a cup of tea?"
 
-No, thank you, 斐迪南先生.
+"No, thank you, Mr. Ferdinand."
 
-(In the novel, Shinomont's story continues afterward; in the game, players should be allowed to kill him and give them his memory die. Only by not killing him and completing the subsequent side quest can they obtain the corresponding dice container.)
+(In the novel, Synomemn's story continues afterward; in the game, players should be allowed to kill him and give them his memory die. Only by not killing him and completing the subsequent side quest can they obtain the corresponding dice container.)
 
-However, at that time 玊初 was not present. Much like Alice's arrival, it was a good thing — the weaver's 生的本能 would have been unable to endure his presence.
+It is worth noting that Epypsyny was not present at the time. Much like Alice's arrival, it was a good thing — the weaver's innate instincts would have been unable to endure his presence.
 
 :::
 

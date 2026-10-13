@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-A subspecies derived from the Hillkind, the embodiment of a harsh curse. It originally originated as a punishment from [[Riven C. Majesty]] against the Glorat clan's transgression.
+A subspecies derived from the Hillkind, the embodiment of a harsh curse. It originally originated as a punishment from [[Riven C. Majesty]] against the Glorath clan's transgression.
 
 Hillaxes have darker skin than ordinary Hillkinds, and both their physique and lifespan are far inferior to those of their former fellow kin.
 

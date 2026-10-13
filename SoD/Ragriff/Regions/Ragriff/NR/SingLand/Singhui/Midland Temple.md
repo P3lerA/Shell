@@ -7,7 +7,7 @@ modified: 2026-05-10 03:07:00
 
 :::lang en
 
-An ancient temple on the outskirts of Singland, once filled with the hustle and bustle of pilgrims. But in today's materialistic age, those devout worshippers have long since vanished without a trace.
+An ancient temple on the outskirts of SingLand, once filled with the hustle and bustle of pilgrims. But in today's materialistic age, those devout worshippers have long since vanished without a trace.
 
 *What do we truly worship — a god, or a wish?*
 

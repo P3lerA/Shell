@@ -11,7 +11,7 @@ Written entirely in [[Elvish]], it appears to be a diary. The entire volume is r
 
 ---
 
-...crossing this pass, the terrain flattens out considerably. The 埃多因河 continues flowing straight north, perhaps I should go north along its bank... Along the river are scattered some tribes of nascent intelligence, their ears short and rounded... I cannot understand their language.
+...crossing this pass, the terrain flattens out considerably. The Anduin River continues flowing straight north, perhaps I should go north along its bank... Along the river are scattered some tribes of nascent intelligence, their ears short and rounded... I cannot understand their language.
 
 I sensed some creature, some kind of dragon, on the unnamed mountain beside us—they are drawing near… I must find a way to understand what is happening. Those are some diminutive dragons, evil and cunning… I must drive them away. They seem to be mimicking my speech; it is truly disgusting.
 
@@ -21,7 +21,7 @@ I'm afraid I'm about to die. Do I regret leaving there?
 
 ---
 
-Due to being written in the distant ancient era, some of the text has faded and become illegible. 艾蒂露 recorded numerous species and even terrains that have long since perished, some of which can never again be comprehended by humans.
+Due to being written in the distant ancient era, some of the text has faded and become illegible. Edel recorded numerous species and even terrains that have long since perished, some of which can never again be comprehended by humans.
 
 :::
 

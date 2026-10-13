@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-Located in the far east of the Between Lands, this small town on the edge of [[Foggy Forest]] is frequented by all sorts of people. [[M.A.R]] has a branch here.
+Located in the far east of Gap place, this small town on the edge of [[Foggy Forest]] is frequented by all sorts of people. [[M.A.R]] has a branch here.
 
 Because it is located near the Foggy Forest, the town is often shrouded in thick fog, which is how it got its name.
 

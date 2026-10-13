@@ -7,13 +7,13 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-Located in the northern part of [[Ragriff]], it is an empire that gradually rose after gaining independence from [[Bellum]] around 2,900 years ago, and is therefore also called "New Bellum."
+Located in the northern part of [[Ragriff]], it is an empire that gradually rose after gaining independence from [[Bellum]] around the year 2900, and is therefore also called "New Bellum."
 
 Its predecessor was an unnamed small town at the foot of the Hillkind Mountains (now the capital of Argos, also named Argos), which was saved by the young [[ALLGOES]] and renamed Argos.
 
 Most residents make their living through farming, with no official language, generally using [[Lingua-Franca]]. The ancestors of the Argos people pursued the phantom of the god of war, and this became the origin of their united and resilient character.
 
-Since its formation, it has continuously sought outward expansion, making Argosians highly aggressive but also united and resilient.
+Since its formation, it has continuously sought outward expansion and is highly aggressive.
 
 
 *Because of ALLGOES's accent, they didn't quite catch that strange name.*

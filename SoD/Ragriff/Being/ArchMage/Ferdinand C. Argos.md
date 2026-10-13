@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Ferdinand C. Argos (2884-), the Final[[Fandrare]]. [[Hillkind]]’s magic greatly extended his lifespan, but he now shows his age.
+Ferdinand C. Argos (2884-), the last [[Fandrare]]. [[Hillkind]]’s magic greatly extended his lifespan, but he now shows his age.
 
 Ferdinand's original name wasn't Argos. At sixteen, [[Synomemn Laplace]] attacked his hometown [[Angro]], and as a survivor he wandered north until reaching [[Argos]].
 

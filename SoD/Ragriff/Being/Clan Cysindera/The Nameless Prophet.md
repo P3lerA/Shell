@@ -7,7 +7,7 @@ modified: 2026-05-10 18:30:00
 
 :::lang en
 
-A wandering poet and prophet residing in [[Ostia]], also a prophet. Explicitly, the origin point of [[Synomemn Laplace]]'s tragic story.
+A wandering poet and prophet residing in [[Ostia]]. Explicitly, the origin point of [[Synomemn Laplace]]'s tragic story.
 
 :::
 

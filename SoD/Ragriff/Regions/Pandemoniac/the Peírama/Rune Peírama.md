@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-A ruin situated in the southern reaches of Pandemonia, featuring an architectural style wholly unlike any known records. Now the Rune Peírama, just like [[Detholock]], has become overrun with various unnameable creatures, making approach difficult.
+A ruin situated in the southern reaches of Pandemoniac, featuring an architectural style wholly unlike any known records. Now the Rune Peírama, just like [[Detholock]], has become overrun with various unnameable creatures, making approach difficult.
 
 :::
 

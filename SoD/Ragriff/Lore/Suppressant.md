@@ -7,7 +7,7 @@ modified: 2026-05-11 18:49:00
 
 :::lang en
 
-As the name suggests, a potion that suppresses magic. On surfaces where residual magical energy remains, the suppressant can clear away (expel) the residual magical energy. Coating a [[Machinic]] with suppressant can prevent magic from being released from that Machinic (though not absolutely).
+As the name suggests, a potion that suppresses Mana. On surfaces where residual Mana remains, the suppressant can clear away (expel) the residual Mana. Coating a [[Machinic]] with suppressant can prevent magic from being released from that Machinic (though not absolutely).
 
 :::
 

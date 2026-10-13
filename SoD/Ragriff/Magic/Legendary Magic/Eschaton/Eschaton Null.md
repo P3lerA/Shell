@@ -8,7 +8,7 @@ modified: 2026-05-10 23:13:00
 
 :::lang en
 
-Magic that inverses things' [[Phase]].
+Magic that inverts the [[Phase]] of things.
 
 :::
 

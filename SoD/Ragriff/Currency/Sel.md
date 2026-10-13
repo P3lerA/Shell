@@ -9,7 +9,7 @@ modified: 2026-05-11 14:55:00
 
 The continent's standard currency, found everywhere.
 
-Once it was only the official currency of [[SingLand]], and after [[Tiyo Settyuu]], a SingLand person, ascended to divinity, it was promoted to a lingua franca currency, now uniformly issued by the governments of SingLand and [[Sylvatia]].
+Once it was only the official currency of [[SingLand]], and after [[Tiyo Settyuu]], a SingLand person, ascended to divinity, it was promoted as the universal currency, now uniformly issued by the governments of SingLand and [[Sylvatia]].
 
 It is a circular coin of mixed gold and copper, adorned on top with a sun pattern, and below it the word Sel is inscribed in [[Lingua-Franca]].
 

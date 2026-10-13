@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Cysindera (655-1395), Hillkind Archmage.
+Cysindera (655-1395), Hillkind ArchMage.
 
 :::
 

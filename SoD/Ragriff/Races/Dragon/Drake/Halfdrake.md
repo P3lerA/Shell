@@ -7,11 +7,11 @@ modified: 2026-05-09 16:04:00
 
 :::lang en
 
-Intelligent, evil beings that possess dragon wings and a range of other draconic characteristics, they are unwelcome even among quasi-dragons.
+Intelligent, evil beings that possess dragon wings and a range of other draconic characteristics, they are unwelcome even among Drakes.
 
-Halfdrakes  are adept at imitating the languages of their prey, which is their means of deceiving intelligent species.
+Halfdrakes are adept at imitating the languages of their prey, which is their means of deceiving intelligent species.
 
-First originated in the western [[Mount Angro]], and was later exiled to [[Oceanus]] by the elven mage [[Edel Elizabeth]].
+First originated in the western [[Mount Angro]], and was later exiled to [[Oceanus]] by the elven sorcerer [[Edel Elizabeth]].
 
 :::
 

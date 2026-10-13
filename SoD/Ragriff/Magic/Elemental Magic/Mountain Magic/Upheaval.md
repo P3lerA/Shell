@@ -7,7 +7,7 @@ modified: 2026-05-11 00:37:00
 
 :::lang en
 
-Magic that rocks the earth requires an absurdly massive amount of magical power.
+Magic that shakes the earth, requiring an absurdly massive amount of Mana.
 
 :::
 

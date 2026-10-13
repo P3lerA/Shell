@@ -7,11 +7,11 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-Gushing from the valleys between steep mountain ranges, the upstream of Hillbetween Upstream — unlike the tranquil downstream — frequently presents spectacular waterfalls.
+Gushing from the valleys of the steep Hillkind Mountains, the upper reaches of the Hillbetween — unlike the tranquil downstream — frequently presents spectacular waterfalls.
 
-After flowing out of the mountains, it splits into two branches—one running southward through [[Argos]], while the one flowing westward toward [[SingLand]], called [[Source River]] by the people of SingLand.
+After flowing out of the mountains, it splits into two branches—one running southward through [[Argos]], and the other westward toward [[SingLand]]; the latter is called [[Source River]] by the people of SingLand.
 
-Notably, "Hillbetween Upstream" is the name given by the Argosians. The Hillkind call it **Bendecir River**, meaning *blessing*.
+Notably, "Hillbetween" is the name given by the Argosians. The Hillkind call it **Bendecir River**, meaning *blessing*.
 
 :::
 

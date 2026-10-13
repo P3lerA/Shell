@@ -7,11 +7,11 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Fidel (Elvish: **Phèdre**) is an ancient elf empire located in the northern Ragriff, governed by [[Clan Elizabeth]]. Its rulers are elected internally through the empire, making it a nation with advanced magic and a long history.
+Fidel (Elvish: **Phèdre**) is an ancient elf empire now located in the northern part of South Ragriff, governed by [[Clan Elizabeth]]. Its monarchs are chosen through internal elections within the clan, making it a nation with advanced magic and a long history.
 
 Its capital is located in [[Olympia]], and its official language is [[Elvish]].
 
-Fidel originated in the [[Eltarnern]] , the southernmost part of Ragriff that has since become wasteland. After [[The Pale Night]], the elves migrated north to where Fidel now resides. Most [[Common Elf]] migrated further north to [[July Archipelago]].
+Fidel originated in [[Eltarnern]], the southernmost part of Ragriff that has since become wasteland. After [[The Pale Night]], the elves migrated north to where Fidel now resides. Most [[Common Elf]] migrated further north to [[July Archipelago]].
 
 
 [[Olympia]]

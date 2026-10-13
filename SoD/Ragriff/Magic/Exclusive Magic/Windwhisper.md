@@ -7,7 +7,7 @@ modified: 2026-05-11 00:00:00
 
 :::lang en
 
-Within [[Clan Sylva]]’s sorcerers’ innate magic, allowing users to communicate through the wind.
+The [[Innate Magic]] of the sorcerers of [[Clan Sylva]], allowing its users to pass messages to one another on the wind.
 
 :::
 

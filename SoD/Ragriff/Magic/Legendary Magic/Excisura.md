@@ -8,7 +8,7 @@ modified: 2026-05-10 22:54:00
 
 :::lang en
 
-Invented by [[Hillkind]] Archmage [[Cysindera]], it is a legendary magic that can only be used on hillkinds. Its most notable and famous effect is dramatically extending lifespan — some can even survive for several hundred years.
+Invented by the [[Hillkind]] [[ArchMage]] [[Cysindera]], it is a [[Legendary Magic]] that can only be used on the Hillkind. Its most notable and famous effect is dramatically extending lifespan — some can even survive for several hundred years.
 
 :::
 

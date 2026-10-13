@@ -7,9 +7,9 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Theodore Cysindera, the human branch of the Cysindera family, a politician who once lived in the southern New Continent, [[The Nameless Prophet]]'s ancestor.
+Theodore Cysindera, of the human branch of [[Clan Cysindera]], a politician who once lived in southern [[SingLand]], [[The Nameless Prophet]]'s ancestor.
 
-Due to implementing overly radical reforms, he made numerous enemies in the parliament and was framed by the conservatives. His descendants went into exile to [[SR]]; some sought political asylum from [[Ostia]], while others settled in [[Angro]], which represents the ancestral line of [[Ferdinand C. Argos]].
+Due to implementing overly radical reforms, he made numerous enemies in the parliament and was framed by the conservatives. His descendants went into exile to [[SR]]; some sought political asylum in [[Ostia]], while others settled in [[Angro]], which represents the ancestral line of [[Ferdinand C. Argos]].
 
 :::
 

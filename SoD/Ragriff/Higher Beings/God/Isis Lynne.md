@@ -9,6 +9,10 @@ modified: 2026-05-16 00:03:00
 
 The noble God of Law.
 
+#### Authority
+
+Law:
+
 :::
 
 :::lang zh

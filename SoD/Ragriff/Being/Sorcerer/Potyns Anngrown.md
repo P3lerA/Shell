@@ -7,20 +7,20 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Potyns Anngrown (1486-1523), Dragon-blooded mage, [[Angro]] person, whose parents were both [[Fire Dragon]], Potyns is a product of [[Curse]].
+Potyns Anngrown (1486-1523), Dragonblood Sorcerer, [[Angro]] native, whose parents were both [[Fire Dragon]], Potyns is a product of [[Curse]].
 
 Potyns Anngrown, who flows with pure dragon blood, is the most magically powerful Dragonblood Sorcerer in history, and this singular and extraordinary heritage frequently entangles him in racial disputes. As a descendant of Fire Dragon, Potyns possesses innate magic that allows him to harness flames, and having spent his childhood in a dragon lair, he is quite proficient in this skill.
 
 When he was ten years old, he was discovered by local explorers who mistook him for a child abducted by [[Gloomgaze]]. The explorers brought the sleeping Potyns back to Angro Town, and he thereafter returned to human society.
 
 
-Although Angro town has close ties to dragons, most residents couldn't accept Potyns, who was born bearing a Curse. It was [[Pa Anngrown]] who raised him to adulthood amid gossip and slander. This is also the origin of Potyns' human surname "Anngrown," from his birthplace in the dragon's lair.
+Although Angro town has close ties to dragons, most residents couldn't accept Potyns, who was born bearing a Curse. It was [[Pa Anngrown]] who raised him to adulthood amid gossip and slander. This is also how Potyns, born in a dragon's lair, came by the human surname "Anngrown."
 
-Born in the late Sprouting Age, at a critical moment when [[SingLand]] was attempting to unify the north and south, humans and dragons were in intense opposition. As a descendant of dragons, Potyns•Anngrown could not forgive SingLand's rulers for Angro's aggressive expansion, nor could he ignore the kindness shown to him by the humans (Pa Anngrown). Caught in this dilemma, Potyns never took any action.
+Born in the late Sprouting Age, at a critical moment when [[SingLand]] was attempting to unify the north and south, humans and dragons were in intense opposition. As a descendant of dragons, Potyns•Anngrown could not forgive SingLand's rulers for their aggressive expansion into Angro, nor could he ignore the kindness shown to him by the humans (Pa Anngrown). Caught in this dilemma, Potyns never took any action.
 
-1510, the atrocities of the SingLand government marked a turning point in the story. On August 16, 1510, a southward-marching army looted the town of Angro, with numerous inhabitants falling victim—including Pa Anngrown. Upon returning home and finding Pa Anngrown on her deathbed, Potyns could no longer stay silent. After reducing every soldier he saw to ash, he realized he needed to do something to prevent today's tragedy from ever happening again.
+In 1510, the atrocities of the SingLand government marked a turning point in the story. On August 16, 1510, a southward-marching army looted the town of Angro, with numerous inhabitants falling victim—including Pa Anngrown. Upon returning home and finding Pa Anngrown on her deathbed, Potyns could no longer stay silent. After reducing every soldier he saw to ash, he realized he needed to do something to prevent today's tragedy from ever happening again.
 
-On that day, the furious and pure Fire Dragon fire tored the land apart. Ragriff was split in two from that moment onward — the northwestern part of the continent beyond Angro was consumed entirely by the fires caused by the Dragonfire, and the north-south divided Ragriff seen today took shape as a result.
+On that day, furious, pure dragonfire tore the land apart. Ragriff was split in two from that moment onward — the part of the continent northwest of the Angro Mountains was consumed entirely by the fires caused by the Dragonfire, and the north-south divided Ragriff seen today took shape as a result.
 
 However, this exaggerated gesture could not stop the SingLand government's southward advance — this will be discussed later. At the very least, during Potyns Anngrown's lifetime, the former held back from acting rashly against Angro out of deference to his presence. For better or worse, this dragon sorcerer left an indelible mark on history.
 

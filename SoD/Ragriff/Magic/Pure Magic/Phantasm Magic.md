@@ -12,7 +12,7 @@ Magic that spies on the target's memories and creates and commands illusory shad
 
 The higher the practitioner's proficiency, the more real the phantom becomes, increasingly resembling its form as remembered, presenting a dangerous beguilement to those unfamiliar with this magic. T2 Prohibited Magic.
 
-Its origin is unclear, though it can be traced back to the earliest stages.
+Its origin is unclear, though it can be traced back to the Sprouting Age.
 
 :::
 

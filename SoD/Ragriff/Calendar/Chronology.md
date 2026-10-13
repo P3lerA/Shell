@@ -13,11 +13,11 @@ Every three months is further divided into a season, and each season is governed
 
 Spring [3,4,5] — [[Aeolus]]
 
-Summer[6,7,8] —[[Hephaestus]]
+Summer [6,7,8] — [[Hephaestus]]
 
-Autumn [9,10,11] ——[[Ourea]]
+Autumn [9,10,11] — [[Ourea]]
 
-Winter[12,1,2] ——[[Nereids]]
+Winter [12,1,2] — [[Nereids]]
 
 When the time points to a season governed by a certain Lord, it does not mean that they will become omnipotent. However, it is certain that their power will be greatly enhanced.
 

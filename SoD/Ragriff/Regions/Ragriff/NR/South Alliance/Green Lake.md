@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-A lake within the territory of the Southern Confederation, the lake water appears deep green, thus its name is derived from this.
+A lake within the territory of the South Alliance, the lake water appears deep green, thus its name is derived from this.
 
 [[Hillbetween Downstream]] ultimately flows into it.
 

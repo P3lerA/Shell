@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Its leaves are blue-grey, and it is a sparse, slow-growing, short vegetation that can only grow in soil completely free of magic. Given that most methods for promoting crop growth involve magic, and it cannot be mass-produced, Ashfield Grass is a precious commodity that can be used in many magical and experimental applications.
+Its leaves are blue-grey, and it is a sparse, slow-growing, short vegetation that can only grow in soil completely free of Mana. Given that most methods for promoting crop growth involve magic, and it cannot be mass-produced, Ashfield Grass is a precious commodity that can be used in many magical and experimental applications.
 
 :::
 

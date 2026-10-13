@@ -7,7 +7,7 @@ modified: 2026-05-11 02:29:00
 
 :::lang en
 
-If the player chooses to confide in Emboria about their background, they can invite him to join the party after the conversation. When asked whether Solandar had any descendants, Emboria said he wasn't sure, but suggested that wanting his wife and children to live undisturbed was likely one of the reasons he went to his death. This introduces two mysteries: whether this renowned archmage is related to 玊初 by blood, and where exactly the feud between the Solandar family and the Wind-Words family originated ([[Rock Beneath the Answer-Prologue]]). These tasks are all part of Under the Deep Rock, though completing them is not required for recruiting Emboria into the party.
+If the player chooses to confide in Emporiae about their background, they can invite him to join the party after the conversation. When asked whether Thurandare had any descendants, Emporiae said he wasn't sure, but suggested that wanting his wife and children to live undisturbed was likely one of the reasons he went to his death. This introduces two mysteries: whether this renowned archmage is related to Epypsyny by blood, and where exactly the feud between Clan Thurandare and Clan Sylva originated ([[Rock Beneath the Answer-Prologue]]). These tasks are all part of Rock Beneath, though completing them is not required for recruiting Emporiae into the party.
 
 :::
 

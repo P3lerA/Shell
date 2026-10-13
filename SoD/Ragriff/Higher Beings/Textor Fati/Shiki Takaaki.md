@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-**The Textor Fati **of Existence.
+The Textor Fati of **Existence**.
 
 The incarnation of will closest to the mortal world, and the only one to have rebelled.
 

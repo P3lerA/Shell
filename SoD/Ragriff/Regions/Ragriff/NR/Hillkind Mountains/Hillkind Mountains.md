@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-Mountains north of Ragriff, also called Mountain's Children Mountains. The source of the Hillbetween.
+Mountains in northern Ragriff, also called Mountain's Children Mountains. The source of the Hillbetween.
 
 [[Hillkind]]'s location.
 

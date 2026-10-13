@@ -7,7 +7,7 @@ modified: 2026-05-12 14:29:00
 
 :::lang en
 
-A historical novel about the turbulent political situation in Selene a decade ago, the book provides detailed accounts of many political secrets of that country. The author is the renowned journalist Xu Zhongyun from the New Continent, and this is the second volume.
+A historical novel about the turbulent political situation in Selene a decade ago, the book provides detailed accounts of many political secrets of that country. The author is the renowned journalist Xu Zhongyun from SingLand, and this is the second volume.
 
 The first page of the book bears the inscription "National First Library Collection," and the notes within are slightly fewer than those in the previous volume.
 

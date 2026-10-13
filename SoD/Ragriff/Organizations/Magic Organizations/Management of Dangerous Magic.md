@@ -7,7 +7,7 @@ modified: 2026-05-10 19:10:00
 
 :::lang en
 
-The following current management regulations were coordinated and promulgated by [[M.A.R]] and [[SMA]] in 1400, marking the latter as an important magical organization equal to the former. (Previously, the regulations promulgated by the M.A.R. were essentially the same as this version.)
+The following current management regulations were coordinated and promulgated by [[M.A.R]] and [[SMA]] in 1400, marking the latter as an important magical organization equal to the former. (Previously, the regulations promulgated by M.A.R. were essentially the same as this version.)
 
 Magic that poses danger is mainly divided into seven categories:
 
@@ -15,7 +15,7 @@ Magic that poses danger is mainly divided into seven categories:
 
 **D-T3**: do not use unless absolutely necessary. When needed, inexperienced mages should only cast it while accompanied by experienced mages. Misuse of Tier 3 dangerous magic may result in being recorded and losing the qualification to apply for dangerous magical materials.
 
-**D-T2**: possesses all the properties of  Tier 3 dangerous magic. In addition, the release of Tier 2 dangerous magic requires the presence of a magician with the corresponding qualifications. Violation of the above regulations may result in imprisonment.
+**D-T2**: possesses all the properties of  Tier 3 dangerous magic. In addition, the release of Tier 2 dangerous magic requires the presence of a mage with the corresponding qualifications. Violation of the above regulations may result in imprisonment.
 
 **D-T1**: possesses all the properties of Tier 2 dangerous magic. In addition, the casting of Tier 1 dangerous magic must be recognized as necessary and safe by an organization with the corresponding qualifications, and the casting must be carried out under the supervision of the latter.
 
@@ -23,11 +23,11 @@ Magic that poses danger is mainly divided into seven categories:
 
 ## Prohibited Magic
 
-**P-T1**: Magic that may cause individual casualties. Those who release such magic without justification and cause casualties will face imprisonment.
+**P-T3**: Magic that may cause individual casualties. Those who release such magic without justification and cause casualties will face imprisonment.
 
 **P-T2**: Magic that may cause large-scale casualties or irreversible damage. Same as above.
 
-**P-T3**: The possible damage is incalculable.
+**P-T1**: The possible damage is incalculable.
 
 :::
 

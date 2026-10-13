@@ -9,7 +9,7 @@ modified: 2026-05-11 23:06:00
 
 The diary, already filled and placed on a bookshelf, its early handwriting has grown somewhat faded.
 
-Through the earliest childish handwriting, you will discover that it is a common language.
+Through the earliest childish handwriting, you will discover that it is written in Lingua-Franca.
 
 ---
 

@@ -9,7 +9,7 @@ modified: 2026-05-11 00:03:00
 
 A brilliant creation combining [[Gale Magic]] and [[WindCrafting]], invented by the ArchMage [[Keaperra Thurandare]].
 
-The effects of Hurricane Magic are exactly as the name suggests — magic that uses mana to conjure hurricanes. Its genius lies in combining the massive scale of Gale Magic with the precise controllability of WindCrafting, Entombing anyone who dares to oppose it in the raging winds.
+The effects of Hurricane Magic are exactly as the name suggests — magic that uses mana to conjure hurricanes. Its genius lies in combining the massive scale of Gale Magic with the precise controllability of WindCrafting, annihilating anyone who dares to oppose it in the raging winds.
 
 :::
 

@@ -11,15 +11,15 @@ This is a weapon description.
 
 ---
 
-Weight: {WeaponWeight}
+Weight: ${WeaponWeight}$
 
-点数: + \; (nL \; + \; m)
+Points: $+ \; (nL \; + \; m)$
 
-## 固有骰子
+## Innate Dice
 
-### Dice Names
+### $[{DiceNum}]$ Dice Name
 
-Stamina Cost: {StaminaCost}
+Stamina Cost: ${StaminaCost}$
 
 Dice attribute (optional)
 

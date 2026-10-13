@@ -21,7 +21,7 @@ All things bear tears, the things of this mortal world touch the heart…
 
 ---
 
-The poem records in detail how Gelolade, a warrior among the hill subjects, challenged Gedo, the god of fate at the time, and succeeded in slaying the god. However, the reward for the hill subjects' courage was an endless curse—the Gelolade clan suffered even harsher punishment for their transgression, and this is the origin of [[Hillax]].
+The poem records in detail how Glorath, a warrior of the Hillkind, challenged Godet, the god of fate at the time, and succeeded in slaying the god. However, the reward for the Hillkind's courage was an endless curse—the clan of Glorath suffered even harsher punishment for their transgression, and this is the origin of [[Hillax]].
 
 :::
 

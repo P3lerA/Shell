@@ -9,11 +9,11 @@ modified: 2026-05-10 21:04:00
 
 A catastrophic event that occurred during the latter part of the ancient age, which the elves described in [[Discord Years]]. The specific cause and effect are as follows.
 
-Since [[Mnemosyne]] bestowed her blessing upon the elves, and since [[Oraculum]] broke through the earth, the sorcerers of [[Clan Elizabeth]] have for generations irrigated [[the Tree]] with their [[Innate Magic]].
+Since [[Mnemosyne]] bestowed her blessing upon the elves, and since [[Oraculum]] broke through the earth, the sorcerers of [[Clan Elizabeth]] have for generations guarded the Tree with their [[Innate Magic]].
 
-It doesn't feel good to release [[Mnemonia]] to irrigate the Tree. As rare geniuses,  sorcerers must even devote their entire lives to it. Obviously, not everyone is that noble.
+It doesn't feel good to release [[Mnemonia]] to irrigate the Tree. As rare geniuses, sorcerers must even devote their entire lives to it. Obviously, not everyone is that noble.
 
-Generally, multiple sorcerers who guard the sacred tree will exist simultaneously, so that if one of them suffers an accident, it won't lead to irreversible consequences. However, the talent for sorcerers is extremely rare, and there are periods when an entire clan has no magic users at all; ordinary elven mages must then take turns consuming their own memories to maintain the Tree.
+Generally, multiple sorcerers who guard the sacred tree will exist simultaneously, so that if one of them suffers an accident, it won't lead to irreversible consequences. However, the talent for sorcerers is extremely rare, and there are periods when the entire clan has no sorcerers at all; ordinary elven mages must then take turns consuming their own memories to maintain the Tree.
 
 Since its inception, the system has displayed its irrationality, with public discontent building steadily, until one night during the latter part of the ancient age when it reached its peak.
 

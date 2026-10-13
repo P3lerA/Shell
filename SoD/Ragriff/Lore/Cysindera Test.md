@@ -7,7 +7,7 @@ modified: 2026-05-11 19:17:00
 
 :::lang en
 
-The Cysindera Test works just like a Luminol test for [[Mana]] (I hope you know what that is) — as long as the surface hasn't been treated with a Suppressant such as Siment Flower honey, even after decades, any **trace** residue of Mana will produce a bright yellow glow.
+The Cysindera Test works just like a Luminol test for [[Mana]] (I hope you know what that is) — as long as the surface hasn't been treated with a Suppressant such as [[Siment Flower]] honey, even after decades, any **trace** residue of Mana will produce a bright yellow glow.
 
 Invented by the [[Hillkind]] [[ArchMage]] [[Cysindera]], hence the name.
 

@@ -7,11 +7,11 @@ modified: 2026-05-11 14:55:00
 
 :::lang en
 
-Tar Ramesses (1312-1375), human spellcaster, [[Sylvatia]] native, major contributor to [[Sight Magic]] research, co-founder of [[SMA]].
+Tar Ramesses (1312-1375), human mage, [[Sylvatia]] native, major contributor to [[Sight Magic]] research, co-founder of [[SMA]].
 
 During his school years, Tar Ramesses immediately demonstrated exceptional magical talent, and during his time at school completed important research on the simplification of [[Sight Magic]]. Everyone believed he would become an excellent mage remembered throughout history.
 
-However, aside from some assistance with construction work by [[SMA]], Tar contributed virtually nothing to the magical cause for the rest of his life.
+However, aside from helping with part of the work of building [[SMA]], Tar contributed virtually nothing to the magical cause for the rest of his life.
 
 *Mr. Ramesses... are you really content to be second fiddle?*
 

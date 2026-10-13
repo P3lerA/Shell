@@ -9,7 +9,7 @@ modified: 2026-05-11 23:06:00
 
 A diary, placed on the bedside, not yet filled — a young girl recorded her inner journey within its pages.
 
-During her travels, 缇希尔 always carried it with her.
+During her travels, Tithiel always carried it with her.
 
 ---
 

@@ -10,7 +10,7 @@ modified: 2026-05-11 00:39:00
 
 Magic that uses mana to stir the surroundings, creating wind that blows in a set direction.
 
-As stated in [[Flight Magic]], using wind created by wind field magic for flight is a feasible idea. However, flying like a bird using the above method is extremely difficult. Simultaneously controlling two types of magic to form a large-scale wind field and control it for flight requires an absurd amount of magical power and magical control ability. Except for some sorcerers with relevant talent, hardly any mages can fly freely — even quite outstanding mages can only use this method to glide when falling, reducing the damage of the impact.
+As stated in [[Flight Magic]], using wind created by Gale Magic for flight is a feasible idea. However, flying like a bird using the above method is extremely difficult. Simultaneously controlling two types of magic to form a large-scale wind field and control it for flight requires an absurd amount of magical power and magical control ability. Except for some sorcerers with relevant talent, hardly any mages can fly freely — even quite outstanding mages can only use this method to glide when falling, reducing the damage of the impact.
 
 :::
 

@@ -7,7 +7,7 @@ modified: 2026-05-10 23:11:00
 
 :::lang en
 
-Magic that cleave things.
+Magic that cleaves things.
 
 :::
 

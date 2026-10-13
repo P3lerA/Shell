@@ -9,7 +9,9 @@ modified: 2026-05-15 23:36:00
 
 Memory is a kind of [[Mana]], forming information through orderly arrangement, just like a hard drive. From this perspective, all of Ragriff's Beings are Mages.
 
-Therefore, strictly speaking, no Creation exists without Mana. However, the Mana that Memory itself possesses is several orders of magnitude lower than what is required to manipulate or be perceived, and it is practically impossible for Memory to be controlled by magic.
+Therefore, strictly speaking, no Being exists without Mana. However, the Mana that Memory itself possesses is several orders of magnitude lower than what is required to manipulate or be perceived, and it is practically impossible for Memory to be controlled by magic.
+
+The information carried by a memory: its content, feelings, a timestamp ("temporality"), and cognition.
 
 :::
 

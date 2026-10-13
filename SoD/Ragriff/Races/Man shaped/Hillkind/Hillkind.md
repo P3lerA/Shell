@@ -11,7 +11,7 @@ Race that has dwelt in [[Hillkind Mountains]] since ancient times, one of Ragrif
 
 Hillkind's physical form is generally no different from the humans of the northern nations, but the males are taller. Compared to humans, Hillkind have a pale grayish-blue skin, and hair that tends toward gray-white. The longer a Hillkind lives, the deeper the grayish-blue of their skin becomes. These characteristics are actually the result of a curse, the source of which can be found in their [[Origin]].
 
-Renowned for their mastery of [[Mountain Magic]], or rather, quite a lot of Hill Magic originated from Hillkind research.
+Renowned for their mastery of [[Mountain Magic]], or rather, quite a lot of Mountain Magic originated from Hillkind research.
 
 ## Subspecies
 

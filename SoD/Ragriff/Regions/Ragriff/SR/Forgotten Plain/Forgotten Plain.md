@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-A plain in southern Ragriff, adjacent to the July Islands.
+A plain in western South Ragriff, adjacent to the July Archipelago.
 
 While within it, all intelligent beings gradually forget everything that has happened in the past. This is how the Forgotten Plain got its name. This effect stems from the magic power of the elf sorcerer [[Edel Elizabeth]].
 

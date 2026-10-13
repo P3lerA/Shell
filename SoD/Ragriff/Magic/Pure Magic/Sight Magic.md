@@ -9,7 +9,7 @@ modified: 2026-05-11 01:16:00
 
 In contrast to [[Glamour Magic]], this is the magic that releases its shaping effects. Should the caster of the Sight Magic be significantly weaker in mana than the caster of the Glamour Magic, the Sight Magic will quite possibly fail to take effect.
 
-Revealing magic is also effective against most [[Transmutation]]. Additionally, for certain disguises and barriers, revealing magic can also reveal their true form.
+Sight Magic is also effective against most [[Transmutation]]. Additionally, for certain disguises and barriers, Sight Magic can also reveal their true form.
 
 :::
 

@@ -7,7 +7,7 @@ modified: 2026-05-11 14:55:00
 
 :::lang en
 
-A collective term for those guys called "Argos", the rapidly developing, assimilating, ubiquitously believing [[Argos]] — the number of *Argouses* is growing at an astonishing rate.
+A collective term for those guys called "Argos", In the rapidly developing, ever-assimilating [[Argos]], where believers are everywhere, the number of *Argouses* is growing at an astonishing rate.
 
 It is worth noting that, the term Argouses carries a derogatory connotation.
 

@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-After [[Hillbetween Upstream]] flows out of the valley, the tributary flowing westward crosses the entire New Continent.
+After [[Hillbetween Upstream]] flows out of the valley, the tributary flowing westward crosses the entire SingLand.
 
 The waterway was wide, the current flowing at a somewhat swift pace.
 

@@ -7,7 +7,7 @@ modified: 2026-05-10 17:53:00
 
 :::lang en
 
-That is [[Mana]], the forgotten element, corresponding to the Aether in Plato's theory of the five elements. Unlike the other four elements, which correspond to four [[Lord]], [[Textor Fati]] [[Mnemosyne]] **rule over** Mana.
+That is [[Mana]], corresponding to the Aether in Plato's theory of the five elements. Unlike the other four elements, which correspond to four [[Lord]], Mana is ruled over by the [[Textor Fati]] [[Mnemosyne]].
 
 :::
 

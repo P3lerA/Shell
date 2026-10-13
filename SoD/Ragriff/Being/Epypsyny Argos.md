@@ -9,7 +9,7 @@ modified: 2026-05-10 17:51:00
 
 The protagonist of the story, the avatar of Thousand Winds.
 
-Epypsyny  Argos (3121 - ), [[Argos]] native.
+Epypsyny Argos (3121 - ), [[Argos]] native.
 
 :::
 

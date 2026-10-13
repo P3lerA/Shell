@@ -9,7 +9,7 @@ modified: 2026-05-11 14:55:00
 
 Detholock, namely the Plateau of Finality.
 
-Located on a plateau in the northern part of [[Tenochtitlan]], surrounded by eerie cliffs.
+A plateau to the north of [[Tenochtitlan]], surrounded by eerie cliffs.
 
 The few who survived returning from Detholock can no longer properly describe the unnameable things they witnessed.
 

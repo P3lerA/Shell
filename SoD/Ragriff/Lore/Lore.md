@@ -50,6 +50,8 @@ modified: 2026-05-11 01:55:00
 
 [[the TreeKeeper]]
 
+[[The Origin of Sorcerers]]
+
 :::
 
 :::lang zh
@@ -96,4 +98,8 @@ modified: 2026-05-11 01:55:00
 
 [[the TreeKeeper|圣树存护]]
 
+[[The Origin of Sorcerers|最初的魔法使]]
+
 :::
+
+

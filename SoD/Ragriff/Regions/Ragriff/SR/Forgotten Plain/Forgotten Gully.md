@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-A short river within the Forgotten Plains, nothing more than an insignificant tributary of [[Anduin River]].
+A short river within the Forgotten Plain, nothing more than an insignificant tributary of [[Anduin River]].
 
 *Back then, the Grey Elves had briefly lingered.*
 

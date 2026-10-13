@@ -7,7 +7,7 @@ modified: 2026-05-11 01:10:00
 
 :::lang en
 
-Through absolute magical control technique, bending the barrier formed by barrier magic to achieve nearly perfectly uniform coverage of both impacts and approach proximity to [[Shield Spell]], this is a form of magic that only sorcerers and a very few mages can use.
+A magic that, through absolute mastery of Mana control, bends the barrier formed by [[Bulwark]] to achieve almost perfectly uniform impact distribution and coverage approaching that of the [[Shield Spell]]; only sorcerers and a very few mages can use it.
 
 *An unbreakable iron law.*
 

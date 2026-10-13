@@ -7,7 +7,7 @@ modified: 2026-05-12 14:38:00
 
 :::lang en
 
-Althea, **Alessia** in Elvish, is an elven federal government located in the July Islands, primarily composed of half-elves.
+Althea, **Alessia** in Elvish, is an elven federal government located in the July Archipelago, primarily composed of Common Elves.
 
 Althea is a prosperous federation, and though not as refined as their High Elven cousins, it is more tolerant.
 

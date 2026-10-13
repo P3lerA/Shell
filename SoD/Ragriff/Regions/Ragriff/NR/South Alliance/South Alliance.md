@@ -9,11 +9,11 @@ modified: 2026-05-11 14:57:00
 
 A loose federation located in the southern part of Northern Ragriff, adjacent to [[Argos]].
 
-In the past, the small nations that had fought against each other formed an unstable alliance at the start of the Rejuvenation Era, yet deep-seated contradictions among them persisted.
+In the past, the small nations that had fought against each other formed an unstable alliance during the Rejuvenation Era, yet deep-seated contradictions among them persisted.
 
 There is no de jure capital, and [[Lingua-Franca]] is used throughout the territory.
 
-*…they're just a bunch of idiots who only know how to squabble amongst themselves! If they were from the South Alliance, then Selene would be at the South Pole!*
+*…they're just a bunch of idiots who only know how to squabble amongst themselves! If they count as southerners, then Selene is at the South Pole!*
 
 
 [[Green Lake]]

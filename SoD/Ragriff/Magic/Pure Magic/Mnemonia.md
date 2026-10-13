@@ -7,17 +7,23 @@ modified: 2026-05-10 17:41:00
 
 :::lang en
 
-Magic that exploits memories is powerful and dangerous, strictly forbidden by [[M.A.R]] and [[SMA]], and classified as a first-level forbidden magic.
+Magic that commands memory. Powerful and dangerous, it is strictly forbidden by [[M.A.R]] and [[SMA]], and classified as a first-level forbidden magic.
 
 **Memory is the cornerstone of the world's composition**, and therefore memory itself, like atoms, possesses enormous energy (nuclear energy). However, how this energy should be utilized is a topic worth exploring. Mnemonia is precisely the answer to this topic.
 
-Mnemonia itself was originally a talent magic of certain spellcasters within [[Clan Elizabeth]], and the great mage [[Phatherence]] used this as a basis to create a degraded universal magic, which is today's Mnemonia. This is also how the aforementioned spellcasters' talent magic got its name.
+Mnemonia itself was originally an [[Innate Magic]] of certain sorcerers within [[Clan Elizabeth]], and the [[ArchMage]] [[Phatherence]] used this as a basis to create a degraded universal magic, which is today's Mnemonia. This is also how the aforementioned sorcerers' Innate Magic got its name.
 
-However, for other races—or even ordinary elves—Mnemonia **consumes** memories, and for creatures whose very existence depends on memory, this represents a tremendous cost. As such, the aforementioned magic has been banned by the major magical associations and sees little circulation among the general public. Even so, in certain remote regions, one can still encounter soulless wandering spirits that have lost their selves due to the abuse of Mnemonia, attacking any living creature they encounter without distinction.
+However, for other races—or even ordinary elves—Mnemonia **consumes** memories, and for Beings whose very existence depends on memory, this represents a tremendous cost. As such, the aforementioned magic has been banned by the major magical associations and sees little circulation among the general public. Even so, in certain remote regions, one can still encounter soulless wandering spirits that have lost their selves due to the abuse of Mnemonia, attacking any living creature they encounter without distinction.
 
 > *If you wish to obtain power, you must pay a price that matches it.*
 
-> *Phatherence, the First Fandrare*
+> *—Phatherence, the First Fandrare*
+
+---
+
+Mana Cost: High
+
+Difficulty: Hard
 
 :::
 

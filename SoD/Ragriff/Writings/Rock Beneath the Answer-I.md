@@ -7,11 +7,11 @@ modified: 2026-05-11 02:30:00
 
 :::lang en
 
-Under Serrano's strong political leadership, CHANGE developed rapidly, and by 1359 had already assembled a group of excellent mages conducting organized research in various magical disciplines. Among the original four, aside from Windwhisper, who declined to ascend to higher standing out of personal preference, the other three—especially initiator Serrano—all held considerable influence within the organization.
+Under Sellano's strong political leadership, CHANGE developed rapidly, and by 1359 had already assembled a group of excellent mages conducting organized research in various magical disciplines. Among the original four, aside from Sylva, who declined to ascend to higher standing out of personal preference, the other three—especially initiator Sellano—all held considerable influence within the organization.
 
-The absence of 风语 laid the groundwork for a later turning point. In 1362, Serrano hoped to rename the already authoritative CHANGE to SMA, the Southern Magic Alliance, and sought recognition from the governments of southern nations. The vast majority of members, including the first three of the 四人组 (except for 风语), agreed with the approach. Since 风语 had long been obscure in the association's management, his opinion failed to influence the implementation of CHANGE's formalization.
+Sylva's absence laid the groundwork for a later turning point. In 1362, Sellano hoped to rename the already authoritative CHANGE to SMA, the Southern Magic Alliance, and sought recognition from the governments of southern nations. The vast majority of members, including the first three of the quartet (all but Sylva), agreed with the approach. Since Sylva had long been obscure in the association's management, his opinion failed to influence the implementation of CHANGE's formalization.
 
-In March 1363, [[Sylvatia]] and the [[Lukatýsrika]] government jointly passed legislation recognizing SMA as the official magical management organization of the southern nations. On this matter, the peace-loving 风语 made no comment, and at that time, neither did 塞拉诺 realize that this was the beginning of the tragedy.
+In March 1363, [[Sylvatia]] and the [[Lukatýsrika]] government jointly passed legislation recognizing SMA as the official magical management organization of the southern nations. On this matter, the peace-loving Sylva made no comment, and at that time, neither did Sellano realize that this was the beginning of the tragedy.
 
 :::
 

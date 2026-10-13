@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-A vast forest spanning northern Ragriff and the realm of Fidel, perpetually green thanks to elven magic.
+A vast forest in northern Ragriff, within the realm of Fidel, perpetually green thanks to elven magic.
 
 :::
 

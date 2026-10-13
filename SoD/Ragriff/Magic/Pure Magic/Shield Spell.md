@@ -10,7 +10,7 @@ modified: 2026-05-11 01:23:00
 
 A spell that creates a [[Phase Inverse]] mana cluster, which can be used to block mana.
 
-There's no particular technique involved—simply coating your surroundings with mana forms a barrier. Shield Magic is an basic yet practical defensive spell. Correspondingly, its fatal flaw is that when faced with high-density magic attacks, Shield Magic's barrier can be easily pierced, becoming a Maginot Line. [[Bulwark]] was invented to improve upon this flaw.
+There's no particular technique involved—simply coating your body with mana forms a barrier. the Shield Spell is a basic yet practical defensive spell. Correspondingly, its fatal flaw is that when faced with high-density magic attacks, the Shield Spell's shield can be easily pierced, becoming a Maginot Line. [[Bulwark]] was invented to improve upon this flaw.
 
 :::
 

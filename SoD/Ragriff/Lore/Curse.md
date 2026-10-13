@@ -11,7 +11,7 @@ A curse is not a trigger-based mechanism — that is, it is not "do something an
 
 Like [[Prophecy]], curses are not unbreakable. The stronger the caster's magic, or the higher the proficiency in [[Execrantia]] or [[Hex]], the more likely the curse is to become reality.
 
-A curse is a broad concept — it can refer to a form of [[Mana]] , or it can be a tragedy bound by the chains of fate. Relatively speaking, [[Hillkind]] have a stronger ability to control magic, because the curse flowing in their blood is itself a form of mana. The vast majority of curses are magical, though individual counterexamples include [[Daemon R. Brigid]]'s [[Execrantia]] (which directly manipulates fate itself).
+A curse is a broad concept — it can refer to a form of [[Mana]] , or it can be a tragedy bound by the chains of fate. Relatively speaking, [[Hillkind]] have a stronger ability to control magic, because the curse flowing in their blood is itself a form of magic. The vast majority of curses are magical, though individual counterexamples include [[Daemon R. Brigid]]'s [[Execrantia]] (which directly manipulates fate itself).
 
 :::
 

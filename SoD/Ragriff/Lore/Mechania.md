@@ -7,7 +7,7 @@ modified: 2026-05-11 19:34:00
 
 :::lang en
 
-As mentioned in the [[Mana]] entry, Mana is not evenly distributed throughout a Creation's body — the hands, for instance, contain the most, as they are constantly used for casting spells. However, some psionic magic requires direct manipulation through the brain, so mages' brains generally contain relatively more Mana. This facilitates casting such magic, but also makes it possible for other mages to manipulate this Mana and thereby control others' minds or even their behavior. Over the long course of evolution, Creations developed a mechanism to counter this threat: Mechania.
+As mentioned in the [[Mana]] entry, Mana is not evenly distributed throughout a Being's body — the hands, for instance, contain the most, as they are constantly used for casting spells. However, some psionic magic requires direct manipulation through the brain, so mages' brains generally contain relatively more Mana. This facilitates casting such magic, but also makes it possible for other mages to manipulate this Mana and thereby control others' minds or even their behavior. Over the long course of evolution, Beings developed a mechanism to counter this threat: Mechania.
 
 Biologically speaking, Mechania refers to the soft tissue on the inner side of the skull. This tissue is generally more developed in mages. It blocks foreign Mana from passing through — "foreign" meaning the Voiceprint does not match the individual (see [[Mana]]) — making mental manipulation considerably more challenging.
 
@@ -27,6 +27,6 @@ Sorcerers lack this structure, and Mechania also cannot prevent Sorcerers from m
 
 心智屏障是可以被主动练习，强化的，这也是精神防御术的重要讨论话题。
 
-魔法使缺乏这种结构，并且这种结构也不能对魔法使操控他人心智造成阻碍，因为魔法使没有声纹（依旧见[[Mana|魔力]] ）。这也使得操控魔法使的心智**几乎**不可能。
+魔法使缺乏这种结构，并且这种结构也不能对魔法使操控他人心智造成阻碍，因为魔法使没有声纹（依旧见[[Mana|魔力]]）。这也使得操控魔法使的心智**几乎**不可能。
 
 :::

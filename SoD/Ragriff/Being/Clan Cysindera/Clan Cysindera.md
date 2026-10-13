@@ -7,7 +7,7 @@ modified: 2026-05-11 14:55:00
 
 :::lang en
 
-An ancient clan of [[Hillkind]]s, originating from the Archmage [[Cysindera]].
+An ancient clan of [[Hillkind]]s, originating from the ArchMage [[Cysindera]].
 
 One lineage of offspring from intermarriage with humans has lived for generations in [[Angro]], the bloodline that produced the ArchMage [[Ferdinand C. Argos]].
 

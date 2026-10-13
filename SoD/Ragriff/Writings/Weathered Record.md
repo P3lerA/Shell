@@ -12,11 +12,11 @@ An investigation record, worn and deteriorated, concerning the petrification cur
 
 ---
 
-I was born and raised in that little town—the one I think you call 石中镇. I can still remember everything about the town. I can remember how that child used to call out my name.
+I was born and raised in that little town—the one I think you call Stone-in-the-Middle Town. I can still remember everything about the town. I can remember how that child used to call out my name.
 
 The expression on her face when she spoke, her features, her long hair caught by the wind — I remember it all. Had it not been for her, these memories would have been preserved forever in stone.
 
-Now they have all turned to stubborn stones, and I can no longer distinguish the因果 from the报应 within it.
+—Now they have turned to mere stone, and I can no longer tell cause and effect from retribution.
 
 —No, not a stone carving, it's just ordinary stone.
 
@@ -36,15 +36,15 @@ Before the deadline she had announced, I only deceived myself, letting the uneas
 
 Upon my return, from a great distance I could already see that heart-wrenching gray. In the lifeless town, I beheld Purgatory for the first time. I sat in the prayer room for a long while, realizing that I couldn't even pick her out from among the countless ordinary stones.
 
-Yes, it seems only 生命体 turned to stone.
+-Yes, it seems only living things turned to stone.
 
-Are you disgusted by those miners? I don't understand what you mean. They have nothing to do with me. I think they're neither especially wicked nor particularly noble.
+-Do I resent those miners? I don't understand what you mean. They have nothing to do with me. I think they're neither especially wicked nor particularly noble.
 
 - The karma of all this?
 
 …
 
-Please speak.
+-Please, go on.
 
 ---
 

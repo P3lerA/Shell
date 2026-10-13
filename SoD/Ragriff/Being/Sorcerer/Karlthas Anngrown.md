@@ -7,9 +7,9 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Karlthas•Anngrown (3102-), mage, [[Angro]], has one-quarter [[Dragon]] blood.
+Karlthas Anngrown (3102-), sorcerer, [[Angro]] native, has one-quarter [[Dragon]] blood.
 
-In the Anngrown family, where dragon blood is everywhere, relatively few display magical talent. Karlthas is a prominent one. As a descendant of [[Blue Dragon]], he possesses quite reasonable innate magic: his gaze can gather magical power. (A dragon's gaze carries magical power)
+In the Anngrown family, where dragon blood is everywhere, relatively few show the gift of a sorcerer. Karlthas is a prominent one. As a descendant of [[Blue Dragon]], he possesses quite reasonable innate magic: his gaze can gather magical power. (A dragon's gaze carries magical power)
 
 :::
 

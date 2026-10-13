@@ -7,7 +7,7 @@ modified: 2026-05-09 15:09:00
 
 :::lang en
 
-A subspecies of the Giants, found only along the northeastern edge of the 終焉高原.
+A subspecies of the Giants, found only along the northeastern edge of Detholock.
 
 Effigies move slowly and lack intelligence, but can instinctively wield magic.
 

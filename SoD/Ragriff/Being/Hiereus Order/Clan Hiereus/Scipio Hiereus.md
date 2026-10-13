@@ -13,7 +13,7 @@ As an adult, despite having considerable mastery over the art of controlling mag
 
 That night, an elf with no destination understood the future beneath the starry sky—the calculations of countless years are not in vain; when the moment arrives, they will arrange themselves into the sigil of destiny. This is the beginning of [[Astreia]].
 
-From then on, the elves possessed a unique means of gazing into fate. Compared to the ordinary priests of other races, the elves truly "understood" fate. The clan Hiereus also occupied an irreplaceable position among the elves.
+From then on, the elves possessed a unique means of gazing into fate. Compared to the ordinary priests of other races, the elves truly "understood" fate. [[Clan Hiereus]] also came to occupy an irreplaceable position among the elves.
 
 :::
 

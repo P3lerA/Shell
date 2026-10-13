@@ -9,7 +9,7 @@ modified: 2026-05-11 14:55:00
 
 The language used by the [[Elf]], like this race itself, is elegant and precise. It is worth mentioning that [[Common Elf]] have a slight accent difference from [[High Elf]].
 
-Elvish possesses an extraordinarily rich vocabulary and highly complex grammar, and it is also known as Elvish,  meaning *wisdom*.
+Elvish possesses an extraordinarily rich vocabulary and highly complex grammar, and it is also known as Eldarin, meaning *wisdom*.
 
 :::
 

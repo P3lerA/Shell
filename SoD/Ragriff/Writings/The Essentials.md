@@ -13,7 +13,7 @@ A book written by [[Ryne Lynne]] covering basic magical knowledge, completed aro
 
 * *
 
-*Surface contradicts essence; outside and within interchange. *
+*Surface contradicts essence; outside and within interchange.*
 
 ---
 

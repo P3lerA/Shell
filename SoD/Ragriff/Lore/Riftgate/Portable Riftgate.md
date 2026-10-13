@@ -7,7 +7,7 @@ modified: 2026-05-11 18:56:00
 
 :::lang en
 
-[[Elf]], through [[Mnemosyne]]'s spiritual enlightenment, created this super magic technology. It allows a self-igniting, one-time portal to be easily unfolded via pre-injected magical energy, permanently bound to the portal frame of a specified target door frame.
+[[Elf]], through [[Mnemosyne]]'s spiritual enlightenment, created this super magic technology. By pre-infusing it with Mana, one can easily unfold a self-igniting, single-use [[Riftgate]] frame bound to a designated target gate frame.
 
 :::
 

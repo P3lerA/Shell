@@ -9,7 +9,7 @@ modified: 2026-05-11 14:56:00
 
 Located in the southern part of Sylvatia, the rolling hills rich in various precious metals were the original source of wealth for Sylvatia.
 
-The transformed Silvatia no longer mines the Platinum Ridge, but instead gazes upon it as the source of their prosperity. Thanks to the Silvatia government's policies, the precious metals in the Platinum Ridge still radiate their magnificent brilliance.
+Sylvatia, no longer what it once was, no longer mines the Platinum Ridge, but instead gazes upon it as the source of their prosperity. Thanks to the Sylvatian government's policies, the precious metals in the Platinum Ridge still radiate their magnificent brilliance.
 
 :::
 

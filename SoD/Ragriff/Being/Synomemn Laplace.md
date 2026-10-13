@@ -9,7 +9,7 @@ modified: 2026-05-11 14:55:00
 
 Synomemn Laplace (2879- ), [[Ostia]] native. Professor of Mental Defense Studies at [[Bar Baro Academy]].
 
-*Against the so-called world, we care more about tomorrow. Don't burden the creatures of this land with your self-righteous sanctimony.*
+*More than the so-called world, we care about tomorrow. Don't burden the creatures of this land with your self-righteous sanctimony.*
 
 :::
 

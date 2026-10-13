@@ -15,7 +15,7 @@ This war did not conclusively split the [[Hillkind Mountains]], but it greatly c
 
 :::lang zh
 
-[[Hillax|山灵]] 是勇敢者的后裔，然而，这并未为这个种族带来尊重。时间唯一没能冲淡的只有神的诅咒，这令山灵在山臣社会中被广泛排挤，歧视，不满逐渐累积。在AG 1032年， [[Strabo|斯特拉波]] 带领山臣进行了长达四年的独立战争。
+[[Hillax|山灵]] 是勇敢者的后裔，然而，这并未为这个种族带来尊重。时间唯一没能冲淡的只有神的诅咒，这令山灵在山臣社会中被广泛排挤，歧视，不满逐渐累积。在AG 1032年， [[Strabo|斯特拉波]] 带领山灵进行了长达四年的独立战争。
 
 这场战争并未彻底性地分裂 [[Hillkind Mountains|山臣群山]] ，但极大程度促成了如今 [[Hillkind|山臣]] 与山灵在 [[Mount Thorn|藤山]] 两侧对立的局面。
 

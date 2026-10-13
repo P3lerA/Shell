@@ -13,13 +13,13 @@ People bestowed a mission upon a naive youth — at that time, I did not underst
 
 They told the boy that facing death head-on is the highest form of courage. But I cherish my own life — all I have is nothing but foolhardy courage.
 
-A naive but brave youth ascended to the summit of 山臣, witnessing the fleeting instant that tore through eternity.
+A naive but brave youth climbed the heights of the Hillkind, witnessing the fleeting instant that tore through eternity.
 
 That lonely yet strong person taught me what courage is, what freedom is.
 
 Now, standing at the end of the journey, I can understand everything in the prophecy.
 
-Even the free 千风 will have a moment of hesitation.
+Even the free thousand winds have a moment of hesitation.
 
 When he rose again, his courage could do anything.
 

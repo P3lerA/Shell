@@ -7,9 +7,9 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-Located in the eastern part of Sylvatia, this desert means *Land of Scorching Heat*.
+Located in the eastern part of Sylvatia, this desert's name means *Land of Scorching Heat*.
 
-*Don't look, there's no gold here.*
+*Stop looking, there's no gold here.*
 
 :::
 

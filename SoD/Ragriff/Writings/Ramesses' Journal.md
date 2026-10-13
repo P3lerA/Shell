@@ -7,19 +7,19 @@ modified: 2026-05-11 02:33:00
 
 :::lang en
 
-Intisar's close friend, [[Tar Ramesses]], left behind a diary recording some incredible stories.
+Versatilys's close friend, [[Tar Ramesses]], left behind a diary recording some incredible stories.
 
 ---
 
-To this day, I still cannot forget how I felt when I learned the truth that day. I could never have imagined that an old friend I had known for decades was such a scoundrel — orchestrating my father's murder, forcing Miss Crio to speak well of him, and framing 風語. Visatiras·塞拉诺, the origin point of all the tragedies I now find myself in. Now I am old and frail, and I write these words in the hope that one day, when the truth surfaces and justice is served, I will not have been dishonored; that one day, all of this will be traceable.
+To this day, I still cannot forget how I felt when I learned the truth that day. I could never have imagined that an old friend I had known for decades was such a scoundrel — orchestrating my father's murder, forcing Miss Cleo to speak well of him, and framing Sylva. Versatilys Sellano, the origin point of all the tragedies I now find myself in. Now I am old and frail, and I write these words in the hope that one day, when the truth surfaces and justice is served, I will not have been dishonored; that one day, all of this will be traceable.
 
 At age 21, when I graduated from [[Cyrene Academy]], my miner father unfortunately perished in a mine tunnel accident. To care for my elderly and sickly mother, I had to abandon my beloved magical research career and take a job at [[Zeska]]. I have no desire to display whatever talents I possess; in fact, I would rather be a mediocre person, for it is precisely the malice incurred by that insignificant talent that has brought me immeasurable suffering.
 
-It is not baseless to say that he was responsible for our father's death. In the collapsed Lasor mine tunnel, the broken sections of the load-bearing beams all show traces of magical destruction under [[Cysindera Test]], which indicates a high likelihood that this was deliberately caused. Furthermore, surviving miners reported that on the day of the accident, they had been instructed by the mine's administrator to pay attention to safety — and among us, only he possessed both a reasonable motive and sufficient standing to have instructed the administrator to do so.
+It is not baseless to say that he was responsible for my father's death. In the collapsed Lasor mine tunnel, the broken sections of the load-bearing beams all show traces of magical destruction under [[Cysindera Test]], which indicates a high likelihood that this was deliberately caused. Furthermore, surviving miners reported that on the day of the accident, they had been instructed by the mine's administrator to pay attention to safety — and among us, only he possessed both a reasonable motive and sufficient standing to have instructed the administrator to do so.
 
-To strangle the future of a longtime friend, he resorted to such a vicious scheme—the sophistication of his methods, the treachery of his character—I cannot fathom what manner of person my friend truly is. Were it not for 克拉's reminder, I would never have come to recognize the truth. How fortunate I am to have her in this 永暗 existence of mine, for she revealed the truth to me, walking with me through those utterly dark moments.
+To strangle the future of a longtime friend, he resorted to such a vicious scheme—the sophistication of his methods, the treachery of his character—I cannot fathom what manner of person my friend truly is. Were it not for Cla's reminder, I would never have come to recognize the truth. How fortunate I am to have her in this lifelong darkness of mine, for she revealed the truth to me, walking with me through those utterly dark moments.
 
-Cla was also harmed by it. In fact, [[Sellano at the Turning Point]] was precisely what she wrote under coercion by 维萨第拉斯·塞拉诺, and the author name "Arlo Pecat" is in fact a rescrambling of "CleoPatra". Moreover, he blamed the breakup of the four on the [[Feng Yu|风语]] who was not good at arguing—these alleged truths could not be found by later observers. What they saw was only the betrayal of 风语, the mediocre me, and the silent Cla—all of which reflected his merit and glory, that foul glory soaked in blood.
+Cla, too, was his victim. In fact, [[Sellano at the Turning Point]] was precisely what she wrote under coercion by Versatilys Sellano, and the author name "Arlo Pecat" is in fact a rescrambling of "CleoPatra". Moreover, he blamed the breakup of the four on Sylva, who was never one to argue—to later observers, these truths are nowhere to be found. What they saw was only the treacherous Sylva, the mediocre me, and the silent Cla—all of which reflected his merit and glory, that foul glory soaked in blood.
 
 Tar Ramesses at Home
 

@@ -11,17 +11,17 @@ modified: 2026-05-11 02:34:00
 
 ---
 
-Driven by the desperate need to clear my father's name, I've finally arrived here. Now it seems that 希尔瓦提亚 has ceased its mining operations in these caves, which actually makes my investigation much easier — all I need is a bit of 惑言术 to freely come and go through the tunnels.
+Driven by the desperate need to clear my father's name, I've finally arrived here. Now it seems that Sylvatia has ceased its mining operations in these caves, which actually makes my investigation much easier — all I need is a bit of 惑言术 to freely come and go through the tunnels.
 
-But that is not my top priority for now. Obtaining information on the high-ranking Serrano is no easy task, but the former residence of the two who lived on the outskirts of Zeska city had no protection at all, so I easily sneaked into their home and found this hand record ([[Ramesses' Journal]]).
+But that is not my top priority for now. Obtaining information on the high-ranking Sellano is no easy task, but the former residence of the two who lived on the outskirts of Zeska city had no protection at all, so I easily sneaked into their home and found this journal ([[Ramesses' Journal]]).
 
 If what Ramesses said is all true, I simply cannot believe that the founder of SMA is such a scumbag. So the truth comes out so easily — no. I think something's not quite right, I need to go check the mine tunnel.
 
-Cleopatra Solandare, that bastard. I should consider myself fortunate that I didn't immediately end the investigation. Anyone who had entered that mine tunnel could recognize the contradictions in her statements — we were all cleverly misled by her. The chisel marks on the main passage were obviously the traces of [[Mountain Magic]], and among the four, only Solandare had any experience studying [[Elemental Magic]]. Serrano's magical level was clearly insufficient to let him cut through the supports, and [[Pure Magic]] should also present obvious chisel marks.
+Cleopatra Thurandare, that bastard. I should consider myself fortunate that I didn't immediately end the investigation. Anyone who had entered that mine tunnel could recognize the contradictions in her statements — we were all cleverly misled by her. The impact marks on the main passage were obviously the traces of [[Mountain Magic]], and among the four, only Thurandare had any experience studying [[Elemental Magic]]. Sellano's magical level was clearly insufficient to let him cut through the supports, and [[Pure Magic]] would also have left obvious cutting marks.
 
-倘若索兰达尔是这一切的真凶，许多此前的不合理之处便得到了解释。以索兰达尔口中塞拉诺老谋深算的形象来考虑，在胁迫索兰达尔为他著传时，应当确保自己对她的行动保有完全控制。然而，成书期间SMA已经迁移到普特奥利，四人已经分道扬镳，唆使远在百里外的索兰达尔显然是不理智的。
+If Thurandare was the true culprit behind all this, many of the earlier inconsistencies would be explained. Going by Thurandare's own portrayal of Sellano as cunning and calculating, he would have made sure to keep complete control over her actions while coercing her into writing his biography. Yet by the time the book was written, SMA had already moved to Puteoli and the four had gone their separate ways; manipulating Thurandare from a hundred miles away would clearly have been unwise.
 
-The truth is already evident. With SMA developing at a rapid pace, the Hilvatiya government obviously will not tolerate any act of publicizing scandals about the organization's founder. No matter. Someday, I will clear my father's name. Solandal is dead, but someone will pay the price for it, no matter how long it takes or by what means.
+The truth is already evident. With SMA developing at a rapid pace, the Sylvatia government obviously will not tolerate any act of publicizing scandals about the organization's founder. No matter. Someday, I will clear my father's name. Thurandare is dead, but someone will pay the price for it, no matter how long it takes or by what means.
 
 :::
 

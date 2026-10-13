@@ -8,11 +8,11 @@ modified: 2026-05-09 15:09:00
 
 **Errans:** Latin, wandering, lost.
 
-**Planos** (πλάνος) — wandering/straying. Sounds similar to [[the Peírama]].
+**Planos** (πλάνος) — wandering/straying. Sounds similar to Peírama.
 
-[[the Peírama]]'s descendants, who originally advocated for staying among their people, remain as arrogant, as enigmatic as ever, still possessing the finest sorcerers in Ragriff — but no longer perfect.
+Descendants of the people of [[the Peírama]] who originally argued for staying behind, they remain as arrogant, as enigmatic as ever, still possessing, in fact, the finest magical scholars in Ragriff — but no longer perfect.
 
-Pale, silent, unsettling — such is the common trait of all ancient peoples. Unlike [[Ulter]], the Planos seem convinced they can still recreate Peírama's glory — perhaps for them, pausing to look back like Ulter would be the gentler choice.
+Pale, silent, unsettling — such is the common trait of all the Prisci. Unlike [[Ulter]], the Planos seem convinced they can still recreate Peírama's glory — perhaps for them, pausing to look back like Ulter would be the gentler choice.
 
 [[Peírama-SideStory]] 
 

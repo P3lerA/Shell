@@ -9,7 +9,7 @@ modified: 2026-05-11 14:56:00
 
 The Four Elements that make up the world—fire, water, wind, and mountains—were adapted from classical alchemical theory with minor modifications.
 
-There are actually five elements in Four Elements, namely the four mentioned above plus [[Element V]] and [[Mana]]. This evolutionary relationship corresponds to Plato's theory of five elements and the four elements of Western alchemy. Over the course of long transmission, [[Mana]] (the ether among the five elements) was forgotten, and nowadays it's commonly believed there are only four elements.
+There are actually five elements in Four Elements, namely the four mentioned above plus the [[Element V]], [[Mana]]. This evolutionary relationship corresponds to Plato's theory of five elements and the four elements of Western alchemy. Over the course of long transmission, [[Mana]] (the ether among the five elements) was forgotten, and nowadays it's commonly believed there are only four elements.
 
 :::
 

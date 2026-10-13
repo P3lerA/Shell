@@ -7,7 +7,7 @@ modified: 2026-05-11 14:56:00
 
 :::lang en
 
-The** Textor Fati **of Cognition.
+The Textor Fati of **Cognition**.
 
 :::
 

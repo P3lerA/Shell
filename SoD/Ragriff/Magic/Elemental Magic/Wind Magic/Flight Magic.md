@@ -7,9 +7,9 @@ modified: 2026-05-10 23:47:00
 
 :::lang en
 
-The magic that to fly wielding the wind.
+Magic that **rises on the wind**.
 
-To avoid any possible ambiguity, note: magic such as [[Fireball]] requires fire to use, can only be used in wind, and cannot fly freely — only glide with the wind. Before [[Gale Magic]] was invented, the limitations were significant.
+To avoid any possible ambiguity, note: just as [[Fireball]] requires fire to use, this magic can only be used in wind, and cannot fly freely — only glide with the wind. Before [[Gale Magic]] was invented, the limitations were significant.
 
 Only after Gale Magic was invented did it become possible to use the Flight Magic by borrowing wind fields. For details, see [[Gale Magic]].
 

@@ -11,7 +11,7 @@ The free God of Wisdom.
 
 ### Authority
 
-Wisdon: Grant [[Being]] the *Mind to Think*.
+Wisdom: Grant [[Being]] the *Mind to Think*.
 
 *Wisdom may not necessarily be such a kind thing…*
 

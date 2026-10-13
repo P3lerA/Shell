@@ -9,15 +9,15 @@ modified: 2026-05-10 02:04:00
 
 Hillkind's ancestors were the first humans to gain wisdom after [[the Guidance]] descended and migrated north.
 
-At that time, the divine seat of the God of Fate had already descended, but the brave sojourners knew not what deities were—all they possessed was mere foolhardy courage. However, the owner of that divine seat was at their destination: the proud, fallen God of Fate, Godo.
+At that time, the divine seat of the God of Fate had already descended, but the brave sojourners knew not what deities were—all they possessed was mere foolhardy courage. However, the owner of that divine seat was at their destination: the proud, fallen God of Fate, Godet.
 
-The traveler's overreach offended Godo, and the latter decided to prevent the former from entering his domain.
+The travelers' overreach offended Godet, and the latter decided to prevent the former from entering his domain.
 
-Facing the chosen ones blocking their advance, among them the sturdy Glorat stepped forward, proposing a duel with Godo. The arrogant Godo regarded the ordinary human before him with disdain and accepted his request.
+Facing the Chosen One who barred their advance, the sturdiest among them, Glorath, stepped forward and challenged Godet to a duel. The arrogant Godet regarded the ordinary human before him with disdain and accepted his request.
 
-Glorat's swordsmanship exceeded Godo's imagination, and the latter was defeated and slain in that duel. On that day, falling stars illuminated all of Ragriff.
+Glorath's swordsmanship exceeded Godet's imagination, and the latter was defeated and slain in that duel. On that day, falling stars illuminated all of Ragriff.
 
-Upon hearing this, the furious [[Riven C. Majesty]] cursed the travelers, which is the origin of the mountain vassals' appearance today. The authority over Gado's fate lay in the hands of the only God at that time, [[Alice]]. This also made the latter the only God to possess multiple authorities.
+Upon hearing this, the furious [[Riven C. Majesty]] cursed the travelers, which is the origin of the Hillkind's appearance today. Godet's authority of Fate passed into the hands of the only God at that time, [[Alice]]. This also made the latter the only God to possess multiple authorities.
 
 However, even the curse of the gods could not kill the brave travelers. They made their home in the mountains of the far northern Ragriff, multiplied, and thrived into a civilization of their own, giving rise to [[Cysindera]] and other outstanding figures.
 

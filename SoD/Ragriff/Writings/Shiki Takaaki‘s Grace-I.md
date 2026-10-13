@@ -9,9 +9,9 @@ modified: 2026-05-11 11:40:00
 
 The story begins with the politician [[Theodore Cysindera]]. Even before he faced political persecution, the weaver [[Shiki Takaaki]] had already been watching him with great interest for a long time.
 
-At that time, people had already learned to use their wisdom to slaughter one another in the court. 四季高岭 lacked understanding of the meaning behind such behavior, yet could still grasp its amusement. Were it not for the blessing of 四季高岭, this politician who possessed no political talent whatsoever could clearly not have survived within the court.
+At that time, people had already learned to use their wisdom to slaughter one another in the court. Shiki Takaaki lacked understanding of the meaning behind such behavior, yet could still grasp its amusement. Were it not for the blessing of Shiki Takaaki, this politician who possessed no political talent whatsoever could clearly not have survived within the court.
 
-So, on the day when 四季高岭 lost interest in him, his reforms and his self-righteous justice collapsed together. To avoid political persecution, 西奥多 fled with many vassals to [[SR]]. One branch stopped at the foot of 安格洛山 with 西奥多, and another branch went to [[Ostia]].
+So, on the day when Shiki Takaaki lost interest in him, his reforms and his self-righteous justice collapsed together. To avoid political persecution, Theodore fled with much of his family to [[SR]]. One branch stopped at the foot of Mount Angro, Theodore among them, and another branch went to [[Ostia]].
 
 :::
 

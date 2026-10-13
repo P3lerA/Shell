@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-In Sindarin, **Anduinë** means *Long River*, and its downstream refers to [[Twilight Forest]] to its northern estuary.
+In Elvish, **Anduinë** means *Long River*, and its downstream refers to [[Twilight Forest]] to its northern estuary.
 
 After purification by the Twilight Forest, the river water returned to its clarity.
 

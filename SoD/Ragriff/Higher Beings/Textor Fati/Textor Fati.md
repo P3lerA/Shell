@@ -13,17 +13,11 @@ All shifts in causality are tuned by Textor Fati. What distinguishes Textor Fati
 
 The three Textors and their authorities are as follows:
 
-### Memory
+Memory - [[Mnemosyne]]
 
-[[Shiki Takaaki]]
+Existence - [[Shiki Takaaki]]
 
-### Existence 
-
-[[Munitio]]
-
-### Cognition  
-
-[[Mnemosyne]]
+Cognition - [[Munitio]]
 
 :::
 

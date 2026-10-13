@@ -91,7 +91,7 @@ Scattered across the continent, they are the crystallization of knowledge of int
 
 [[Rock Beneath the Answer-Conclusion]]
 
-## By the Lagos
+## By Lake Luna
 
 [[In the Woods,Part I]]
 

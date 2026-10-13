@@ -9,7 +9,7 @@ modified: 2026-05-11 14:57:00
 
 Among the descendants of [[Kiloeye]] and [[Fire Dragon]], an indescribable entity that, for some reason, sets itself apart from other dragons.
 
-There is doubt about whether Crimson is a dragon; it is considered a descendant of a quasi-dragon and a dragon, and is classified here. Like other descendants of 千目 and 火龙, Crimson exhibits more characteristics of 千目.
+There is doubt about whether Crimson is a dragon; it is considered a descendant of a Drake and a dragon, and is classified here. Like other descendants of Kiloeye and Fire Dragon, Crimson exhibits more characteristics of Kiloeye.
 
 :::
 

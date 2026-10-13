@@ -7,9 +7,9 @@ modified: 2026-05-10 23:55:00
 
 :::lang en
 
-A magic that compress wind into high-density arrows and fire them at targets, based on [[WindCrafting]].
+Magic that drives Mana to compress wind into high-density wind arrows and fires them at targets, based on [[WindCrafting]].
 
-Since wind arrows are elemental constructs, they carry only the magic power that was imbued during their shaping. Their speed also being very fast makes them difficult to perceive in time to mount a defense, making them a type of magic that is extremely easy to hit with.
+Since wind arrows are elemental constructs, they carry only the Mana that was imbued during their shaping. Their speed also being very fast makes them difficult to perceive in time to mount a defense, making them a type of magic that is extremely easy to hit with.
 
 Correspondingly, wind arrows have low lethality; even [[Keaperra Thurandare]] cannot tear through overly hard rigid bodies such as sturdy city walls with wind arrows. Ordinary mages' wind arrow magic cannot even cut through skin.
 

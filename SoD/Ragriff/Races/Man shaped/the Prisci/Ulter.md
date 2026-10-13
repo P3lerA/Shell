@@ -8,7 +8,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-[[the Peírama]] originally advocated for the descendants of those who migrated south, whose builds differ subtly from the humans of the [[Lukatýsrika]] region: short but not stocky, lean but not agile.
+Descendants of the people of [[the Peírama]] who originally advocated migrating south, their build differs subtly from the humans of the [[Lukatýsrika]] region: short but not stocky, lean but not agile.
 
 Although they inhabit almost exclusively the north bank of Lukatýsrika, separated from [[Katafýgio]] by only [[Mountains of Yore]], there are few records of contact with the people of Katafýgio.
 

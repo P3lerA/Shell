@@ -7,9 +7,9 @@ modified: 2026-05-11 02:29:00
 
 :::lang en
 
-Today, [[SMA]] is an important organization that manages magical affairs across the southern nations, making it hard to imagine that its predecessor was merely a magical research organization founded by four young people. These four are: [[Versatilys Sellano]], [[Tar Ramesses]], [[Cleopatra Thurandare]], and the fairy mage [[Elvin Sylva]].
+Today, [[SMA]] is an important organization that manages magical affairs across the southern nations, making it hard to imagine that its predecessor was merely a magical research organization founded by four young people. These four are: [[Versatilys Sellano]], [[Tar Ramesses]], [[Cleopatra Thurandare]], and the Fallax sorcerer [[Elvin Sylva]].
 
-The story begins with three students from [[Cyrene Academy]] who were conducting research on the magical mechanisms of mages (the first three founders of SMA) and their encounter with the westbound mage [[Elvin Sylva]]. The four hit it off remarkably well, and even after Ramesses and Thurandare graduated, Sellano turned to politics, and Sylva set off on a journey again, they still kept up correspondence with each other.
+The story begins with three students from [[Cyrene Academy]] who were conducting research on the mana mechanisms of sorcerers (the first three founders of SMA) and their encounter with the sorcerer [[Elvin Sylva]], who was traveling west. The four hit it off remarkably well, and even after Ramesses and Thurandare graduated, Sellano turned to politics, and Sylva set off on a journey again, they still kept up correspondence with each other.
 
 During the decades that Sellano served in politics, Ramesses's father (a miner) unfortunately died in an accident, causing the former to have to stay in [[Sylvatia]] to work and support his elderly mother; Thurandare went to [[SingLand]] to pursue further studies, and after graduation, conducted magical research work at [[National University of Singhui]].
 

@@ -7,7 +7,7 @@ modified: 2026-05-10 14:42:00
 
 :::lang en
 
-The capital of Althea, a city built of gray-white marble, with a style imbued with geometric beauty, symbolizing the aesthetics of the [[Common Elf]] s.
+The capital of Althea, a city built of gray-white marble, with a style imbued with geometric beauty, symbolizing the aesthetics of the Common Elves.
 
 
 *Crossing the continent, we gather here.*

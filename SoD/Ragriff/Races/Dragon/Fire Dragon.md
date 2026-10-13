@@ -11,7 +11,7 @@ A common subspecies skilled at [[Fire Magic]], with an aggressive temperament.
 
 Mostly found on [[Mount Angro]], but can also occasionally be found in all warm places.
 
-*Idiot, who told you to mess with that ****red thing****?*
+*Idiot, who told you to mess with that red thing?*
 
 ## Subspecies
 

@@ -22,9 +22,9 @@ modified: 2026-05-16 00:21:00
 
 [[The Demon Migration]]
 
-[[Trisom]]
-
 [[the Dawn Meteor]]
+
+[[the First Evening]]
 
 :::
 
@@ -45,5 +45,7 @@ modified: 2026-05-16 00:21:00
 [[Sunglow Tower Inverts|晨曦高塔倒悬]]
 
 [[The Demon Migration|恶魔北迁]]
+
+[[the First Evening|佩拉莫的覆灭]]
 
 :::

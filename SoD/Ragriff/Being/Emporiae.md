@@ -7,7 +7,7 @@ modified: 2026-05-11 14:55:00
 
 :::lang en
 
-Emporiae (2352 - ), [[Hillkind]], [[SingLand]] native, the former friend of Archmage [[Keaperra Thurandare]], has been dormant in [[Mountains of Tide]] since Keaperra's death.
+Emporiae (2352 - ), [[Hillkind]], [[SingLand]] native, an old friend of ArchMage [[Keaperra Thurandare]], has been dormant in [[Mountains of Tide]] since Keaperra's death.
 
 
 *…That self-righteous, noble expression of yours is exactly like his. It is precisely that nobility that has led you to where you are now, yet it is also that very same nobility that compels you to set out on this journey…*

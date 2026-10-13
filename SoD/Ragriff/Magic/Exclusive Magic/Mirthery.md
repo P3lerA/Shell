@@ -11,6 +11,12 @@ A magic unique to [[Mirth]] that requires no casting medium. It can beguile the 
 
 Notably, even if the casting target possesses greater magical power, countering mirthery still requires actively deploying a defense. Given that mirth tend to appear in swarms, this can sometimes be a rather tricky form of magic.
 
+---
+
+Mana Cost: Low
+
+Difficulty: Exclusive Magic, immeasurable
+
 :::
 
 :::lang zh

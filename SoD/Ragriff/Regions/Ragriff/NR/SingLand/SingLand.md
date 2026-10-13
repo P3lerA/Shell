@@ -9,7 +9,7 @@ modified: 2026-05-11 14:57:00
 
 A multi-ethnic republic primarily consisting of Humans, located in the western part of North Ragriff and bordering Argos.
 
-Its origin: A republic founded around the year 600 with [[Singhui]] as its capital, which gradually expanded over a century and finally unified the western part of North Ragriff in 1582 — this is today's SingLand.
+Its origin: A republic founded around the year 600 with [[Singhui]] as its capital, which gradually expanded over the centuries and finally unified the western part of North Ragriff in 1582 — this is today's SingLand.
 
 It is a culturally diverse, highly developed nation that values harmony. Its capital is located in [[Singhui]], and the [[Lingua-Franca]] is spoken throughout its territory.
 

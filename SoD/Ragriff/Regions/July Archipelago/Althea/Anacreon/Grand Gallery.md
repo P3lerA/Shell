@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-The art museum within the city of Anaclerion, which is also the largest art center within Alethia. Within it are preserved countless embodiments of beauty.
+The art museum within the city of Anacreon, which is also the largest art center within Althea. Within it are preserved countless embodiments of beauty.
 
 :::
 

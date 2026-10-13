@@ -7,7 +7,7 @@ modified: 2026-05-12 14:26:00
 
 :::lang en
 
-A very old newspaper, on which 缇希尔 had made numerous circles, dots, and marks — she had even put a big X on the main headline.
+A very old newspaper, on which Tithiel had made numerous circles, dots, and marks — she had even put a big X on the main headline.
 
 ---
 

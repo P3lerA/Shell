@@ -7,7 +7,7 @@ modified: 2026-05-10 02:02:00
 
 :::lang en
 
-A small-bodied flying species, agile and noisy, with some intelligence and magical ability. They can speak Common, although they don't particularly enjoy doing so. They possess a unique magic of the same name, [[Mirthery]], capable of enchanting the minds of intelligent creatures.
+A small-bodied flying species, agile and noisy, with some intelligence and magical ability. They can speak Lingua-Franca, although they don't particularly enjoy doing so. They possess a unique magic of the same name, [[Mirthery]], capable of enchanting the minds of intelligent creatures.
 
 Excluding subspecies, it is found almost exclusively in [[Forest Bartow]].
 

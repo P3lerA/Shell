@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-A low mountain range stretches across the northern border of the New Continent, blocking the biting cold winds that sweep southward in winter. As a result, the New Continent enjoys spring-like weather all year round.
+A low mountain range stretches across the northern border of SingLand, blocking the biting cold winds that sweep southward in winter. As a result, SingLand enjoys spring-like weather all year round.
 
 [[Summit Late-years]]
 

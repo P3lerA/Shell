@@ -7,7 +7,7 @@ modified: 2026-05-12 02:33:00
 
 :::lang en
 
-A book written in the Common Tongue on thin, light paper, which details the entire course of [[First Argos-Hillkind War(Roadright War I)]]. The paper has yellowed severely. The author's name has been deliberately erased.
+A book written in Lingua-Franca on thin, light paper, which details the entire course of [[First Argos-Hillkind War(Roadright War I)]]. The paper has yellowed severely. The author's name has been deliberately erased.
 
 ---
 

@@ -7,7 +7,7 @@ modified: 2026-05-11 14:57:00
 
 :::lang en
 
-A kingdom that originated during the Sprouting Period, located in the eastern part of Southern Ragriff, and possesses the most beautiful moonlight in all of Ragriff.
+A kingdom that originated during the Sprouting Age, located in the eastern part of Southern Ragriff, and possesses the most beautiful moonlight in all of Ragriff.
 
 The Selene are an elegant and artistic people who are not adept at swordplay, yet possess great mastery of the harp.
 

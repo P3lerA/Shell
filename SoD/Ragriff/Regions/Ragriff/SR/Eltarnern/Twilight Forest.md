@@ -9,7 +9,7 @@ modified: 2026-05-11 14:57:00
 
 A forest in the northern part of Eltarnern, named for its majestic trees that block out the sky, leaving only the faint glow of fireflies visible.
 
-When the Twilight Forest was [[The Pale Night]], the elves who migrated north were formed from the bodies of the martyred to prevent the spread of pallorization.
+The Twilight Forest was in fact made during [[The Pale Night]]: to halt the spread of pallorization, the northward-migrating elves transformed the bodies of the martyred into it.
 
 :::
 

@@ -9,9 +9,9 @@ modified: 2026-05-11 14:56:00
 
 Lefkôs Elizabeth (?-893), an [[Eltarnern]] native, the last [[the TreeKeeper]], the originator of [[The Pale Night]], who committed suicide immediately after the incident, authored [[On the White]].
 
-Since childhood, Lefkôs displayed extraordinary magical talent, and was therefore selected at an early age as a TreeKeeper. Compared to her diligent predecessors, Lefkôs was more interested in the so-called freedom, and he was reprimanded by elders in the family on more than one occasion for neglect of her duties.
+Since childhood, Lefkôs displayed extraordinary magical talent, and was therefore selected at an early age as a TreeKeeper. Compared to his diligent predecessors, Lefkôs was more interested in the so-called freedom, and he was reprimanded by elders in the family on more than one occasion for neglect of his duties.
 
-During an ordinary argument, Lefkôs’s careless strike caused the Tree to be rapidly whitened by her innate magic. Unnamable beings slipped through a rift in time and space, running rampant through the streets of [[Golhertarna]]. The elves' territory was soon completely devoured.
+During an ordinary argument, Lefkôs’s careless strike caused the Tree to be rapidly whitened by his innate magic. Unnamable beings slipped through a rift in time and space, running rampant through the streets of [[Golhertarna]]. The elves' territory was soon completely devoured.
 
 After witnessing the utter devastation, Lefkôs could no longer bear the torment in his heart, and finally took his own life through self-inflicted death using [[Mnemonia]] , the art he was most skilled in. Ironically, his corpse and everything the elves once possessed turned into the color he liked most during his lifetime—white.
 

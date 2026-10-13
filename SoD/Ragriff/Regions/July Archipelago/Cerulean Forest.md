@@ -7,7 +7,7 @@ modified: 2026-05-10 14:44:00
 
 :::lang en
 
-Woodland on the eastern coast of the July Archipelago, where the [[Wood Elf]]  dwell. When one sets foot within, their whispers can often be heard.
+Woodland on the eastern coast of the July Archipelago, where the [[Wood Elf]] dwell. When one sets foot within, their whispers can often be heard.
 
 :::
 

@@ -11,7 +11,7 @@ The river originating from [[Platinum Ridge]] splits into two branches at the fo
 
 One branch that flows through [[Zeska]] leads to the route towards [[South Alliance]], while the other flows towards the route to [[Lukatýsrika]] and [[NR]].
 
-The Golden River does not actually produce gold sand; rather, its superior location brought countless wealth to the cities along its banks, making Silvatia a nation of trade. This is how the Golden River earned its epithet.
+The Golden River does not actually produce gold sand; rather, its superior location brought countless wealth to the cities along its banks, making Sylvatia a nation of trade. This is how the Golden River earned its epithet.
 
 :::
 

@@ -9,7 +9,7 @@ modified: 2026-05-11 14:56:00
 
 A wonder located in the southern part of Lukatýsrika, a city-state completely suspended in the air.
 
-Katafýgio was originally a peaceful ordinary city-state located beside [[River Yara]]. However, [[Demon]] that migrated northward in large numbers during its formative period transformed the ordinary city into hell.
+Katafýgio was originally a peaceful ordinary city-state located beside [[River Yara]]. However, the [[Demon]]s that migrated northward in large numbers during the Sprouting Period transformed the ordinary city into hell.
 
 Some of the Katafýgio people who were unwilling to leave collected large amounts of [[Pierre de Couhard]] from [[Mountains of Yore]], and by this means raised their homeland into the sky — such is the origin of the spectacle that is the floating city.
 

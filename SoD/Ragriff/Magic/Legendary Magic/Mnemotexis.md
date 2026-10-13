@@ -8,7 +8,7 @@ modified: 2026-05-10 22:48:00
 
 :::lang en
 
-Defying the laws of the world, the magic of weaving memories. Born from the [[Royal Magic Academy]]  in [[Eltarnern]] , now lost to time.
+Defying the laws of the world, the magic of weaving memories. Born from the [[Royal Magic Academy]] in [[Eltarnern]], now lost to time.
 
 :::
 

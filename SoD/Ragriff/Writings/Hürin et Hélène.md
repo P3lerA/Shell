@@ -7,13 +7,13 @@ modified: 2026-05-12 14:13:00
 
 :::lang en
 
-A bestselling book created by the author [[Selene]], pen name Luna•Moon, that became wildly popular throughout Ragriff. The story tells of Hu Lun, a man of low status, who encounters the noble maiden Eileen, and the two gradually fall in love, only to find themselves unacceptable to society, ultimately ending in the tragic tale of both of them drowning themselves in a lake as a double suicide.
+A bestselling book written by a [[Selene]] author under the pen name Luna•Moon, that became wildly popular throughout Ragriff. The story tells of Hürin, a man of low status, who encounters the noble maiden Hélène, and the two gradually fall in love, only to find themselves unacceptable to society, ultimately ending in the tragic tale of both of them drowning themselves in a lake as a double suicide.
 
 ---
 
-The priests in the countryside won't bless us, but the gods will. Elena! I only resent that I am the son of a barber — I cannot be by your side for all your life!
+The priests in the countryside won't bless us, but the gods will. Hélène! I only resent that I am the son of a barber — I cannot be by your side for all your life!
 
-Why must you mourn, my dear! Your father was generous to you. Come, bestow one last kiss upon my hand, my beloved Lorren.
+Why should you regret it, my dear? Your father was generous to you. Come, bestow one last kiss upon my hand, my beloved Hürin.
 
 ---
 
