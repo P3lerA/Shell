@@ -7,6 +7,8 @@ name_tentative.en: false
 etymology.en: ""
 etymology.zh: ""
 modified: 2026-08-2822:58:20
+banner: https://images.unsplash.com/photo-1449150144911-98ac0ce52948?ixid=M3wxMTEyNDQ2fDB8MXxzZWFyY2h8OTJ8fHBhbGFjZXxlbnwxfDB8fHwxNzkyODg3MTQ3fDA&ixlib=rb-4.1.0&w=2400&q=80&fm=jpg&fit=max
+banner_credit: "[Lizelle De Wit](https://unsplash.com/@zeldw?utm_source=organon&utm_medium=referral)"
 ---
 
 :::lang en
@@ -15,43 +17,43 @@ modified: 2026-08-2822:58:20
 
 "Finished at last—the study on the homogeneity of the Seed of Demons." The scholarly-looking man let out a long breath, rose, and tucked the sorted manuscript into a drawer. He picked up one of the two small vials on the desk and studied it closely; inside, some deep black, embryo-like matter lay steeping.
 
-The hearth burned warm and bright. Someone pushed the door open, bringing in with her the faint glow of a [[Pandemoniac]] dusk. The scholar turned his head, saw who it was, and smiled fondly. "What is it, Thalia?"
+The hearth burned warm and bright. Someone pushed the door open, bringing in with her the faint glow of a [[Pandemoniac]] dusk. The scholar turned his head, saw who it was, and smiled fondly. "What is it, Tháleia?"
 
 The girl tilted her head at the glass vial in his hand. "Can I see that?"
 
 The scholar hesitated only briefly, then bent down and handed her the vial. "Careful now. This is very precious."
 
-The instant the girl took the vial, something terrible happened. The earth shook as if in agony, and from far away came a dreadful sound: screams, cut short as people were torn apart. As if he had been prepared for it, the scholar began to deal with all of it with astonishing calm. "Thalia, hide in the fireplace."
+The instant the girl took the vial, something terrible happened. The earth shook as if in agony, and from far away came a dreadful sound: screams, cut short as people were torn apart. As if he had been prepared for it, the scholar began to deal with all of it with astonishing calm. "Tháleia, hide in the fireplace."
 
 The girl only tilted her head at him, still puzzled. Someone burst into the study in a hurry. "Fandrare? The thing's gotten out."
 
 The scholar called Fandrare kept his baffling composure, and even smiled at the newcomer. "See? This is something that cannot be escaped. The Seed of Demons was released long ago."
 
-The newcomer looked as if he did not know whether to laugh or cry. "What about Thalia?"
+The newcomer looked as if he did not know whether to laugh or cry. "What about Tháleia?"
 
-"It's ready. That thing can't sense the fireplace, and it can't break through the [[Preservation Magic]]." He turned to the girl called Thalia and repeated, earnestly, "Hide in there, and whatever happens, don't come out. All right? Uh… take this too." Fandrare handed her the other vial as well.
+"It's ready. That thing can't sense the fireplace, and it can't break through the [[Preservation Magic]]." He turned to the girl called Tháleia and repeated, earnestly, "Hide in there, and whatever happens, don't come out. All right? Uh… take this too." Fandrare handed her the other vial as well.
 
 She nodded as if she half understood, and did as she was told. Fandrare dimmed the fire with a silencing charm, signaled to the newcomer, and the two of them left the laboratory together.
 
-Thalia hid in the fireplace for a long time. The door stood half open, but no light came through it anymore; outside, the screaming and the clamor were drifting away. "That thing" seemed to have feasted on the Pandemoniac evening, snuffing out the setting sun together with the fire.
+Tháleia hid in the fireplace for a long time. The door stood half open, but no light came through it anymore; outside, the screaming and the clamor were drifting away. "That thing" seemed to have feasted on the Pandemoniac evening, snuffing out the setting sun together with the fire.
 
-She sat crouched, gazing at the other vial, in which a similar, pale embryo floated. No one came back—until she heard the Preservation Magic shatter. She looked up. A figure stood there, wrapped in cloak and hood. He brushed the ash from her head, and took the gold of her long hair along with it; Thalia's long golden hair faded, as lifeless as the ash. Thalia knew who it was, but she said nothing.
+She sat crouched, gazing at the other vial, in which a similar, pale embryo floated. No one came back—until she heard the Preservation Magic shatter. She looked up. A figure stood there, wrapped in cloak and hood. He brushed the ash from her head, and took the gold of her long hair along with it; Tháleia's long golden hair faded, as lifeless as the ash. Tháleia knew who it was, but she said nothing.
 
 He bent down and pointed at the vial in her hand. "Can I see that?"
 
-Thalia handed him one of the vials.
+Tháleia handed him one of the vials.
 
 He turned it in his fingers, seemingly quite amazed by what was inside. "What's your name?"
 
-Thalia still said nothing, only watched him with those deep red eyes. The silence began to unsettle him. "What will you do from here?"
+Tháleia still said nothing, only watched him with those deep red eyes. The silence began to unsettle him. "What will you do from here?"
 
 Silence again.
 
-He gave the vial back to Thalia, stood, and looked around.
+He gave the vial back to Tháleia, stood, and looked around.
 
-"Come with me. Out of the bottom of this hell," he said. Thalia took the hand he held out.
+"Come with me. Out of the bottom of this hell," he said. Tháleia took the hand he held out.
 
-The two walked through the ruins of civilization, and not one of the nameless monsters dared come near. "Mr. Azathoth," Thalia said suddenly.
+The two walked through the ruins of civilization, and not one of the nameless monsters dared come near. "Mr. Azathoth," Tháleia said suddenly.
 
 "That's not my name." He weighed his words. "Majesty, if you want something to call me. What's your name?"
 
@@ -61,7 +63,7 @@ The two walked through the ruins of civilization, and not one of the nameless mo
 
 "Alice. Do you want to stay here?"
 
-Thalia looked back. "…I can't think of anything left to miss." She held out her hand to Majesty once more.
+Tháleia looked back. "…I can't think of anything left to miss." She held out her hand to Majesty once more.
 
 Majesty froze for a moment. "How did you know… you've seen it all?"
 
