@@ -24,7 +24,7 @@ import {
   copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs';
 import { homedir } from 'node:os';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
 import { marked } from 'marked';
 import { parse as parseYaml } from 'yaml';
 import type { Entry, Post, Stat } from '../types/vault.js';
@@ -35,8 +35,13 @@ import type { Entry, Post, Stat } from '../types/vault.js';
 const VAULT = process.env.VAULT
   ?? ['SoD', join(homedir(), 'Documents', 'SoD')].find(existsSync)
   ?? 'SoD';
-const WIKI_SRC = join(VAULT, 'Ragriff');
+/** The wiki half: `Archive/` (named `Ragriff/` before 2026-10-25). */
+const WIKI_SRC = ['Archive', 'Ragriff'].map(d => join(VAULT, d)).find(existsSync) ?? join(VAULT, 'Archive');
 const POST_SRC = join(VAULT, 'BlogPosts');
+
+/** Images the published notes embed, gathered from anywhere in the vault by
+ *  publish.sh (they may live in unpublished folders like `_image/`). */
+const ATTACH_SRC = join(VAULT, 'Attachments');
 
 /** The novel. A published top-level folder like the other two. */
 const STORY_SRC = join(VAULT, 'Story');
@@ -270,7 +275,7 @@ function resolveLinks(md: string, index: Map<string, string>, dangling: Set<stri
   return md.replace(WIKILINK, (_, bang: string, target: string, alias?: string) => {
     const name = target.trim();
     const text = alias?.trim() ?? name;
-    if (bang) return `![${text}](${encodeURI(`/${IMG_OUT}/${name}`)})`;
+    if (bang) return `![${text}](${encodeURI(`/${IMG_OUT}/${basename(name)}`)})`;
     const url = index.get(name);
     if (!url) {
       dangling.add(name);
@@ -280,9 +285,18 @@ function resolveLinks(md: string, index: Map<string, string>, dangling: Set<stri
   });
 }
 
+/** `![alt](some/dir/pic.png)` with a vault-relative path → `/images/pic.png`;
+ *  web URLs are left alone. */
+const MD_IMAGE = /!\[([^\]]*)\]\((?!https?:|data:|\/)(<[^>]+>|[^)\s]+)\)/g;
+
+function resolveImages(md: string): string {
+  return md.replace(MD_IMAGE, (_, alt: string, src: string) =>
+    `![${alt}](${encodeURI(`/${IMG_OUT}/${basename(decodeURI(src.replace(/^<|>$/g, '')))}`)})`);
+}
+
 async function renderMd(md: string, index: Map<string, string>, dangling: Set<string>): Promise<string> {
   if (!md.trim()) return '';
-  return marked.parse(resolveLinks(md, index, dangling));
+  return marked.parse(resolveImages(resolveLinks(md, index, dangling)));
 }
 
 const THEME_BTN = `<button class="theme-toggle" aria-label="Toggle theme"></button>`;
@@ -567,6 +581,7 @@ async function main(): Promise<void> {
   const attachments = new Set<string>();
   copyAttachments(WIKI_SRC, attachments);
   if (existsSync(POST_SRC)) copyAttachments(POST_SRC, attachments);
+  if (existsSync(ATTACH_SRC)) copyAttachments(ATTACH_SRC, attachments);
 
   let count = 0;
   async function walk(entries: Entry[], ancestors: Entry[]): Promise<void> {
