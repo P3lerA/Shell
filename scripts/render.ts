@@ -296,7 +296,7 @@ function resolveImages(md: string): string {
 
 async function renderMd(md: string, index: Map<string, string>, dangling: Set<string>): Promise<string> {
   if (!md.trim()) return '';
-  return marked.parse(resolveImages(resolveLinks(md, index, dangling)));
+  return marked.parse(resolveImages(resolveLinks(md, index, dangling)), { breaks: true });
 }
 
 const THEME_BTN = `<button class="theme-toggle" aria-label="Toggle theme"></button>`;
